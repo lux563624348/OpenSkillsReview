@@ -1,9 +1,14 @@
-# OpenSkillsReview
+# Open Skills Review
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
+[![Skills](https://img.shields.io/badge/Skills-100-brightgreen.svg)](#whats-included)
+[![Databases](https://img.shields.io/badge/Databases-10%2B-orange.svg)](#whats-included)
+[![Agent Skills](https://img.shields.io/badge/Verified-Agent_Skills-blueviolet.svg)](https://agentskills.io/)
+[![Works with](https://img.shields.io/badge/Works_with-All_|_AI_|_Agents.svg)](#getting-started)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-LUFFING--FUTURE_LLC.-0A66C2?logo=linkedin)](https://www.linkedin.com/in/xiangli-lucky-guy/)
 
 ![OpenSkillsReview Header](images/header.png)
 
-OpenSkillsReview is for review the open-source AI Agent Skills. <br>
-We hope to build a knowledgebase that human can feel safe before invoking third-party Skills.
+For a knowledgebase that we can feel safe before invoking third-party Skills.
 
 ## Review Table for Skills-Source 
 
@@ -55,8 +60,6 @@ Path: `skills/<function-department>/`
 
 <details>
 <summary><strong>🧪 [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)</strong></summary>
-
-**Subcategories**
 
 <details>
 <summary>&nbsp;&nbsp;↳ 🧬 Life & Biomedical Sciences</summary>
