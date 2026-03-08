@@ -1,8 +1,8 @@
-# Deep Research on AI Agent Skills Marketplaces, Directories, and Repos
+# Review on AI Agent Skills Marketplaces, Directories, and Repos
 
 ## Scope and research method
 
-This research verifies (or updates) the **current “skills published” counts** and the **primary search/list interfaces or commands** for the marketplaces/directories you listed, using each site’s own UI/Docs/README where possible. All figures below reflect what the sites themselves display **as of March 8, 2026 (America/New_York)** and should be treated as *living metrics* that can change daily.
+This review the **current “skills published” counts** and the **primary search/list interfaces or commands** using each site’s own UI/Docs/README where possible. All figures below reflect what the sites themselves display **as of March 7, 2026 (America/New_York)** and should be treated as *living metrics* that can change daily.
 
 ## Filled and verified table
 
