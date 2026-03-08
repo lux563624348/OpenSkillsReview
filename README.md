@@ -7,7 +7,7 @@ We hope to build a knowledgebase that human can feel safe before invoking third-
 
 ## Filled and verified table
 
-| Name & URL | Approx. # Skills | Review Stars | Skill Discovery Access|
+| Name & URL | Approx. # Skills | Review Stars | Access Methods|
 | --- | --- | --- | --- |
 | [skills.sh](https://skills.sh) | **86,630+** | ⭐⭐⭐⭐☆ | Web, CLI |
 | [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | ⭐⭐⭐⭐☆ | GitHub |
@@ -31,9 +31,9 @@ We hope to build a knowledgebase that human can feel safe before invoking third-
 
 </details>
 
-## Skill for Skill-Search
+We also provide a collection of Human-verified skills. (Path: `skills/<function department>`)
 
-Path: `skills/Skill-Search/`
+## Skill for Skill-Search
 
 | Skill | Platform Support | Source |
 | --- | --- | --- |
@@ -43,8 +43,6 @@ Path: `skills/Skill-Search/`
 | `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) |
 
 ## Skill for Skill-Safe
-
-Path: `skills/Skill-Safe/`
 
 | Skill | Platform Support | Source |
 | --- | --- | --- |
