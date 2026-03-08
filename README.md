@@ -2,7 +2,8 @@
 
 ![OpenSkillsReview Header](images/header.png)
 
-OpenSkillsReview is an open-source initiative to review the most popular AI Agent Skills, document their behavior, and surface the reliable, testable implementations that agents can trust. We keep an ongoing catalog of knowledge that agents can inspect before invoking third-party Skills so that every action has a verified safety and performance profile.
+OpenSkillsReview is for review the open-source AI Agent Skills.
+We hope to build a knowledgebase that human can feel safe before invoking third-party Skills.
 
 ## Filled and verified table
 
