@@ -3,7 +3,7 @@
 [![Skills](https://img.shields.io/badge/Skills-100-brightgreen.svg)](#whats-included)
 [![Databases](https://img.shields.io/badge/Databases-10%2B-orange.svg)](#whats-included)
 [![Agent Skills](https://img.shields.io/badge/Verified-Agent_Skills-blueviolet.svg)](https://agentskills.io/)
-[![Works with](https://img.shields.io/badge/Works_with-All_|_AI_|_Agents.svg)](#getting-started)
+[![Works with](https://img.shields.io/badge/Works_with-All_|_AI_|_Agent-blue.svg)](#getting-started)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-LUFFING--FUTURE_LLC.-0A66C2?logo=linkedin)](https://www.linkedin.com/in/xiangli-lucky-guy/)
 
 ![OpenSkillsReview Header](images/header.png)
