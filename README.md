@@ -10,7 +10,6 @@ We hope to build a knowledgebase that human can feel safe before invoking third-
 | Name & URL | Approx. # Skills | Review Stars | Access Methods|
 | --- | --- | --- | --- |
 | [skills.sh](https://skills.sh) | **86,630+** | ⭐⭐⭐⭐☆ | Web, CLI |
-| [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | ⭐⭐⭐⭐☆ | GitHub |
 | [anthropics/skills](https://github.com/anthropics/skills) | **17+** | ⭐⭐⭐⭐☆ | GitHub |
 | [clawhub.ai/skills](https://clawhub.ai/skills) | **17,852+** | ⭐⭐⭐☆☆ | Web |
 | [SkillsMP](https://skillsmp.com) | **400,856+** | ⭐⭐⭐☆☆ | Web |
@@ -18,6 +17,7 @@ We hope to build a knowledgebase that human can feel safe before invoking third-
 | [agentskill.sh](https://agentskill.sh) | **107,000+** | ⭐⭐⭐☆☆ | Web, CLI |
 | [AgentSkills Directory](https://agentskills.to/skills) | **24,000+**  | ⭐⭐⭐☆☆ | Web |
 | [prompts.chat](https://prompts.chat) | **35+** **1,402+prompts** | ⭐⭐⭐☆☆ | Web |
+| [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | ⭐⭐⭐⭐☆ | GitHub |
 
 <details>
 <summary>Show more rows</summary>
@@ -50,6 +50,31 @@ Path: `skills/<function-department>/`
 | Skill | Platform Support | Source | Verified |
 | --- | --- | --- | --- |
 | `skill-scanner` | `Clawdbot, MCP` | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) | ❓ |
+
+### Skill for Science
+
+Scientific skills span life sciences, healthcare, AI, engineering, and research operations, covering core workflows from data generation and analysis to modeling, simulation, and communication.
+Source: [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)
+
+| Domain | Scope Summary |
+| --- | --- |
+| Bioinformatics & Genomics | Sequence analysis, variant interpretation, functional annotation, and genomic pipelines. |
+| Cheminformatics & Drug Discovery | Molecular representation, virtual screening, QSAR, and lead optimization workflows. |
+| Proteomics & Mass Spectrometry | Protein identification/quantification and MS data processing for biological insights. |
+| Clinical Research & Precision Medicine | Trial data workflows, biomarker-driven stratification, and personalized treatment analysis. |
+| Healthcare AI & Clinical ML | Clinical prediction models, risk scoring, triage support, and ML evaluation in care settings. |
+| Medical Imaging & Digital Pathology | Image-based diagnostics, segmentation, detection, and pathology slide analysis. |
+| Machine Learning & AI | General model development, training, evaluation, and deployment-oriented AI tasks. |
+| Materials Science & Chemistry | Property prediction, synthesis planning, and computational chemistry/material discovery. |
+| Physics & Astronomy | Scientific computing for physical systems, observations, and simulation-driven discovery. |
+| Engineering & Simulation | Modeling, finite-element or system simulation, and performance/reliability analysis. |
+| Data Analysis & Visualization | Statistical analysis, exploratory workflows, and clear visual communication of results. |
+| Geospatial Science & Remote Sensing | Spatial data processing, Earth observation, mapping, and geospatial inference. |
+| Laboratory Automation | Instrument integration, robotic workflows, protocol execution, and reproducible lab operations. |
+| Scientific Communication | Manuscript drafting, figure/story structuring, and technical communication support. |
+| Multi-omics & Systems Biology | Integration of genomics, transcriptomics, proteomics, and network-level system analysis. |
+| Protein Engineering & Design | Sequence/structure-guided protein optimization, design, and functional assessment. |
+| Research Methodology | Study design, reproducibility practices, statistical rigor, and experimental planning. |
 
 
 ## Goals
