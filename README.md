@@ -25,8 +25,8 @@ Path: `skills/Skill-Search/`
 | --- | --- | --- |
 | `find-skills` | `skills.sh` | [github.com/vercel-labs](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) |
 | `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) |
-| `skill-finder` | `clawhub` | [https://clawic.com/skills/skill-finder](https://clawic.com/skills/skill-finder) |
-| `skills-search` | `skills.sh` | [clawhub/Skills.sh Search] https://clawhub.ai/TheSethRose/skills-search |
+| `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) |
+| `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) |
 
 
 ## Goals
@@ -53,3 +53,7 @@ Path: `skills/Skill-Search/`
 
 ## Marketplace data refresh
 - To keep the research report counts current, run `python scripts/refresh_marketplace_counts.py` from the repo root; it scrapes each marketplace home page for the latest counters and writes the results to `data/marketplace_counts.json`. Review the extracted entries, verify the matches, and copy any confirmed updates back into the report along with the new timestamp.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=PSC/OpenSkillsReview&type=Date)](https://star-history.com/#PSC/OpenSkillsReview&Date)
