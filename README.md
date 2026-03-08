@@ -53,28 +53,14 @@ Path: `skills/<function-department>/`
 
 ### Skill for Science
 
-Scientific skills span life sciences, healthcare, AI, engineering, and research operations, covering core workflows from data generation and analysis to modeling, simulation, and communication.
 Source: [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)
 
-| Domain | Scope Summary |
-| --- | --- |
-| Bioinformatics & Genomics | Sequence analysis, variant interpretation, functional annotation, and genomic pipelines. |
-| Cheminformatics & Drug Discovery | Molecular representation, virtual screening, QSAR, and lead optimization workflows. |
-| Proteomics & Mass Spectrometry | Protein identification/quantification and MS data processing for biological insights. |
-| Clinical Research & Precision Medicine | Trial data workflows, biomarker-driven stratification, and personalized treatment analysis. |
-| Healthcare AI & Clinical ML | Clinical prediction models, risk scoring, triage support, and ML evaluation in care settings. |
-| Medical Imaging & Digital Pathology | Image-based diagnostics, segmentation, detection, and pathology slide analysis. |
-| Machine Learning & AI | General model development, training, evaluation, and deployment-oriented AI tasks. |
-| Materials Science & Chemistry | Property prediction, synthesis planning, and computational chemistry/material discovery. |
-| Physics & Astronomy | Scientific computing for physical systems, observations, and simulation-driven discovery. |
-| Engineering & Simulation | Modeling, finite-element or system simulation, and performance/reliability analysis. |
-| Data Analysis & Visualization | Statistical analysis, exploratory workflows, and clear visual communication of results. |
-| Geospatial Science & Remote Sensing | Spatial data processing, Earth observation, mapping, and geospatial inference. |
-| Laboratory Automation | Instrument integration, robotic workflows, protocol execution, and reproducible lab operations. |
-| Scientific Communication | Manuscript drafting, figure/story structuring, and technical communication support. |
-| Multi-omics & Systems Biology | Integration of genomics, transcriptomics, proteomics, and network-level system analysis. |
-| Protein Engineering & Design | Sequence/structure-guided protein optimization, design, and functional assessment. |
-| Research Methodology | Study design, reproducibility practices, statistical rigor, and experimental planning. |
+| Life & Biomedical | AI & Data | Physical & Engineering | Research Operations |
+| --- | --- | --- | --- |
+| 🧬 Bioinformatics & Multi-omics | 🧠 Healthcare AI & Clinical ML | 🔮 Materials Science & Chemistry | 🧪 Laboratory Automation |
+| 🧬 Protein Engineering & Design | 🤖 Machine Learning & AI | 🌌 Physics & Astronomy | 📚 Scientific Communication |
+| 🔬 Proteomics & Mass Spectrometry | 📊 Data Analysis & Visualization | ⚙️ Engineering & Simulation | 🎓 Research Methodology |
+| 🧪 Cheminformatics & Drug Discovery | 🖼️ Medical Imaging & Digital Pathology | 🌍 Geospatial Science & Remote Sensing | 🏥 Clinical Research & Precision Medicine |
 
 
 ## Goals
