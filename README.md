@@ -7,27 +7,27 @@ We hope to build a knowledgebase that human can feel safe before invoking third-
 
 ## Filled and verified table
 
-| Name & URL | Approx. # Skills | Skill Discovery Access (Web/API/CLI) | Review Stars |
+| Name & URL | Approx. # Skills | Review Stars | Skill Discovery Access|
 | --- | --- | --- | --- |
-| [skills.sh](https://skills.sh) | **86,630+** | Web, CLI | ⭐⭐⭐⭐☆ |
-| [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | GitHub | ⭐⭐⭐⭐☆ |
-| [anthropics/skills](https://github.com/anthropics/skills) | **17+** | GitHub | ⭐⭐⭐⭐☆ |
-| [clawhub.ai/skills](https://clawhub.ai/skills) | **17,852+** | Web | ⭐⭐⭐☆☆ |
-| [SkillsMP](https://skillsmp.com) | **400,856+** | Web | ⭐⭐⭐☆☆ |
-| [Agent Skills Directory](https://www.skillsdirectory.org) | **309,322+** | Web | ⭐⭐⭐☆☆ |
-| [agentskill.sh](https://agentskill.sh) | **107,000+** | Web, CLI | ⭐⭐⭐☆☆ |
-| [AgentSkills Directory](https://agentskills.to/skills) | **24,000+**  | Web | ⭐⭐⭐☆☆ |
-| [prompts.chat](https://prompts.chat) | **35+** **1,402+prompts** | Web | ⭐⭐⭐☆☆ |
+| [skills.sh](https://skills.sh) | **86,630+** | ⭐⭐⭐⭐☆ | Web, CLI |
+| [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | ⭐⭐⭐⭐☆ | GitHub |
+| [anthropics/skills](https://github.com/anthropics/skills) | **17+** | ⭐⭐⭐⭐☆ | GitHub |
+| [clawhub.ai/skills](https://clawhub.ai/skills) | **17,852+** | ⭐⭐⭐☆☆ | Web |
+| [SkillsMP](https://skillsmp.com) | **400,856+** | ⭐⭐⭐☆☆ | Web |
+| [Agent Skills Directory](https://www.skillsdirectory.org) | **309,322+** | ⭐⭐⭐☆☆ | Web |
+| [agentskill.sh](https://agentskill.sh) | **107,000+** | ⭐⭐⭐☆☆ | Web, CLI |
+| [AgentSkills Directory](https://agentskills.to/skills) | **24,000+**  | ⭐⭐⭐☆☆ | Web |
+| [prompts.chat](https://prompts.chat) | **35+** **1,402+prompts** | ⭐⭐⭐☆☆ | Web |
 
 <details>
 <summary>Show more rows</summary>
 
-| Name & URL | Approx. # Skills | Skill Discovery Access (Web/API/CLI) | Review Stars |
+| Name & URL | Approx. # Skills | Review Stars | Skill Discovery Access|
 | --- | --- | --- | --- |
-| [MCP Market](https://mcpmarket.com/tools/skills) | **59,272+** | Web | ⭐⭐☆☆☆ |
-| [AwesomeSkill.ai](https://awesomeskill.ai) | **50,000+** | Web | ⭐⭐☆☆☆ |
-| [awesomeskills.dev](https://awesomeskills.dev) | **2,287+** | Web | ⭐⭐☆☆☆ |
-| [Awesome Claude Skills](https://awesome-skills.com) | **122+** | Web | ⭐☆☆☆☆ |
+| [MCP Market](https://mcpmarket.com/tools/skills) | **59,272+** | ⭐⭐☆☆☆ | Web |
+| [AwesomeSkill.ai](https://awesomeskill.ai) | **50,000+** | ⭐⭐☆☆☆ | Web |
+| [awesomeskills.dev](https://awesomeskills.dev) | **2,287+** | ⭐⭐☆☆☆ | Web |
+| [Awesome Claude Skills](https://awesome-skills.com) | **122+** | ⭐☆☆☆☆ | Web |
 
 </details>
 
@@ -35,7 +35,7 @@ We hope to build a knowledgebase that human can feel safe before invoking third-
 
 Path: `skills/Skill-Search/`
 
-| Skill | Platform Support | Related URL (from skill README) |
+| Skill | Platform Support | Source |
 | --- | --- | --- |
 | `find-skills` | `skills.sh` | [github.com/vercel-labs](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) |
 | `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) |
@@ -46,7 +46,7 @@ Path: `skills/Skill-Search/`
 
 Path: `skills/Skill-Safe/`
 
-| Skill | Platform Support | Related URL (from skill README) |
+| Skill | Platform Support | Source |
 | --- | --- | --- |
 | `skill-scanner` | `Clawdbot, MCP` | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) |
 
