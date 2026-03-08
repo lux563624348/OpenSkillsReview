@@ -38,18 +38,18 @@ Path: `skills/<function-department>/`
 
 ### Skill for Skill-Search
 
-| Skill | Platform Support | Source |
-| --- | --- | --- |
-| `find-skills` | `skills.sh` | [github.com/vercel-labs](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) |
-| `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) |
-| `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) |
-| `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) |
+| Skill | Platform Support | Source | Verified(❓) |
+| --- | --- | --- | --- |
+| `find-skills` | `skills.sh` | [github.com/vercel-labs](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) | ✅ |
+| `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) | ✅ |
+| `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) | ✅ |
+| `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) | ✅ |
 
 ### Skill for Skill-Safe
 
-| Skill | Platform Support | Source |
-| --- | --- | --- |
-| `skill-scanner` | `Clawdbot, MCP` | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) |
+| Skill | Platform Support | Source | Verified |
+| --- | --- | --- | --- |
+| `skill-scanner` | `Clawdbot, MCP` | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) | ✅ |
 
 
 ## Goals
