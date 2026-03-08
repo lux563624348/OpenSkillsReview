@@ -13,15 +13,23 @@ We hope to build a knowledgebase that human can feel safe before invoking third-
 | [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | GitHub | ⭐⭐⭐⭐☆ |
 | [anthropics/skills](https://github.com/anthropics/skills) | **17+** | GitHub | ⭐⭐⭐⭐☆ |
 | [SkillsMP](https://skillsmp.com) | **400,856+** | Web | ⭐⭐⭐☆☆ |
-| [Agent Skills Directory](https://www.skillsdirectory.org) | **309,322+ unique** | Web | ⭐⭐⭐☆☆ |
+| [Agent Skills Directory](https://www.skillsdirectory.org) | **309,322+** | Web | ⭐⭐⭐☆☆ |
 | [agentskill.sh](https://agentskill.sh) | **107,000+** | Web, CLI | ⭐⭐⭐☆☆ |
 | [AgentSkills Directory](https://agentskills.to/skills) | **24,000+**  | Web | ⭐⭐⭐☆☆ |
 | [clawhub.ai/skills](https://clawhub.ai/skills) | **17,852+** | Web | ⭐⭐⭐☆☆ |
-| [prompts.chat](https://prompts.chat) | **35+** **1,402+** prompts | Web | ⭐⭐⭐☆☆ |
+| [prompts.chat](https://prompts.chat) | **35+** **1,402+ prompts** | Web | ⭐⭐⭐☆☆ |
+
+<details>
+<summary>Show more rows</summary>
+
+| Name & URL | Approx. # Skills | Skill Discovery Access (Web/API/CLI) | Review Stars |
+| --- | --- | --- | --- |
 | [MCP Market](https://mcpmarket.com/tools/skills) | **59,272+** | Web | ⭐⭐☆☆☆ |
 | [AwesomeSkill.ai](https://awesomeskill.ai) | **50,000+** | Web | ⭐⭐☆☆☆ |
 | [awesomeskills.dev](https://awesomeskills.dev) | **2,287+** | Web | ⭐⭐☆☆☆ |
 | [Awesome Claude Skills](https://awesome-skills.com) | **122+** | Web | ⭐☆☆☆☆ |
+
+</details>
 
 ## Skill for Skill-Search
 
