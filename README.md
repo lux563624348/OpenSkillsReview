@@ -56,8 +56,10 @@ Path: `skills/<function-department>/`
 <details>
 <summary><strong>🧪 [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)</strong></summary>
 
+**Subcategories**
+
 <details>
-<summary>🧬 Life & Biomedical Sciences</summary>
+<summary>&nbsp;&nbsp;↳ 🧬 Life & Biomedical Sciences</summary>
 
 - 🧬 Bioinformatics & Multi-omics
 - 🧬 Protein Engineering & Design
@@ -68,7 +70,7 @@ Path: `skills/<function-department>/`
 </details>
 
 <details>
-<summary>🧠 AI, ML & Data</summary>
+<summary>&nbsp;&nbsp;↳ 🧠 AI, ML & Data</summary>
 
 - 🧠 Healthcare AI & Clinical ML
 - 🤖 Machine Learning & AI
@@ -78,7 +80,7 @@ Path: `skills/<function-department>/`
 </details>
 
 <details>
-<summary>⚙️ Physical, Spatial & Engineering Sciences</summary>
+<summary>&nbsp;&nbsp;↳ ⚙️ Physical, Spatial & Engineering Sciences</summary>
 
 - 🔮 Materials Science & Chemistry
 - 🌌 Physics & Astronomy
@@ -88,7 +90,7 @@ Path: `skills/<function-department>/`
 </details>
 
 <details>
-<summary>📚 Research Operations & Communication</summary>
+<summary>&nbsp;&nbsp;↳ 📚 Research Operations & Communication</summary>
 
 - 🧪 Laboratory Automation
 - 📚 Scientific Communication
