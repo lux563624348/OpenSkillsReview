@@ -2,10 +2,10 @@
 
 ![OpenSkillsReview Header](images/header.png)
 
-OpenSkillsReview is for review the open-source AI Agent Skills.
+OpenSkillsReview is for review the open-source AI Agent Skills. <br>
 We hope to build a knowledgebase that human can feel safe before invoking third-party Skills.
 
-## Filled and verified table
+## Review Table for Skills-Source 
 
 | Name & URL | Approx. # Skills | Review Stars | Access Methods|
 | --- | --- | --- | --- |
@@ -31,9 +31,12 @@ We hope to build a knowledgebase that human can feel safe before invoking third-
 
 </details>
 
-We also provide a collection of Human-verified skills. (Path: `skills/<function department>`)
+## Human-verified skills
 
-## Skill for Skill-Search
+We also provide a collection of human-verified skills.
+Path: `skills/<function-department>/`
+
+### Skill for Skill-Search
 
 | Skill | Platform Support | Source |
 | --- | --- | --- |
@@ -42,7 +45,7 @@ We also provide a collection of Human-verified skills. (Path: `skills/<function 
 | `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) |
 | `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) |
 
-## Skill for Skill-Safe
+### Skill for Skill-Safe
 
 | Skill | Platform Support | Source |
 | --- | --- | --- |
