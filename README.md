@@ -56,4 +56,4 @@ Path: `skills/Skill-Search/`
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=PSC/OpenSkillsReview&type=Date)](https://star-history.com/#PSC/OpenSkillsReview&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=lux563624348/OpenSkillsReview&type=Date)](https://star-history.com/#lux563624348/OpenSkillsReview&Date)
