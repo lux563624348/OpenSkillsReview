@@ -21,7 +21,7 @@ Create Your Own Skill: Click [Anthropic Skills](https://github.com/anthropics/sk
 | [SkillsMP](https://skillsmp.com) | **400,856+** | ⭐⭐⭐☆☆ | Web |
 | [Agent Skills Directory](https://www.skillsdirectory.org) | **309,322+** | ⭐⭐⭐☆☆ | Web |
 | [agentskill.sh](https://agentskill.sh) | **107,000+** | ⭐⭐⭐☆☆ | Web, CLI |
-| [AgentSkills Directory](https://agentskills.to/skills) | **24,000+**  | ⭐⭐⭐☆☆ | Web |
+| [AgentSkills](https://agentskills.to/skills) | **24,000+**  | ⭐⭐⭐☆☆ | Web |
 | [prompts.chat](https://prompts.chat) | **35+** **1,402+prompts** | ⭐⭐⭐☆☆ | Web |
 | [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | ⭐⭐⭐⭐☆ | GitHub |
 
@@ -31,9 +31,12 @@ Create Your Own Skill: Click [Anthropic Skills](https://github.com/anthropics/sk
 | Name & URL | Approx. # Skills | Review Stars | Skill Discovery Access|
 | --- | --- | --- | --- |
 | [MCP Market](https://mcpmarket.com/tools/skills) | **59,272+** | ⭐⭐☆☆☆ | Web |
+| [agent-skills.cc](https://agent-skills.cc/) | **63,000+** | ⭐⭐☆☆☆ | Web |
 | [AwesomeSkill.ai](https://awesomeskill.ai) | **50,000+** | ⭐⭐☆☆☆ | Web |
 | [awesomeskills.dev](https://awesomeskills.dev) | **2,287+** | ⭐⭐☆☆☆ | Web |
+| [AgentSkillsHub](https://agentskillshub.dev/) | **458+** | ⭐☆☆☆☆ | Web |
 | [Awesome Claude Skills](https://awesome-skills.com) | **122+** | ⭐☆☆☆☆ | Web |
+| [Skill Registry](https://skillregistry.io/) | **61+** | ⭐☆☆☆☆ | Web |
 
 </details>
 
