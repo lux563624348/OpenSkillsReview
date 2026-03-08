@@ -10,14 +10,14 @@ We hope to build a knowledgebase that human can feel safe before invoking third-
 | Name & URL | Approx. # Skills | Skill Discovery Access (Web/API/CLI) | Review Stars |
 | --- | --- | --- | --- |
 | [skills.sh](https://skills.sh) | **86,630+** | Web, CLI | ⭐⭐⭐⭐☆ |
-| [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | GitHub | ⭐⭐⭐⭐☆ |
+| [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | GitHub | ⭐⭐⭐⭐☆ |
 | [anthropics/skills](https://github.com/anthropics/skills) | **17+** | GitHub | ⭐⭐⭐⭐☆ |
+| [clawhub.ai/skills](https://clawhub.ai/skills) | **17,852+** | Web | ⭐⭐⭐☆☆ |
 | [SkillsMP](https://skillsmp.com) | **400,856+** | Web | ⭐⭐⭐☆☆ |
 | [Agent Skills Directory](https://www.skillsdirectory.org) | **309,322+** | Web | ⭐⭐⭐☆☆ |
 | [agentskill.sh](https://agentskill.sh) | **107,000+** | Web, CLI | ⭐⭐⭐☆☆ |
 | [AgentSkills Directory](https://agentskills.to/skills) | **24,000+**  | Web | ⭐⭐⭐☆☆ |
-| [clawhub.ai/skills](https://clawhub.ai/skills) | **17,852+** | Web | ⭐⭐⭐☆☆ |
-| [prompts.chat](https://prompts.chat) | **35+** **1,402+ prompts** | Web | ⭐⭐⭐☆☆ |
+| [prompts.chat](https://prompts.chat) | **35+** **1,402+prompts** | Web | ⭐⭐⭐☆☆ |
 
 <details>
 <summary>Show more rows</summary>
@@ -41,6 +41,14 @@ Path: `skills/Skill-Search/`
 | `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) |
 | `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) |
 | `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) |
+
+## Skill for Skill-Safe
+
+Path: `skills/Skill-Safe/`
+
+| Skill | Platform Support | Related URL (from skill README) |
+| --- | --- | --- |
+| `skill-scanner` | `Clawdbot, MCP` | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) |
 
 
 ## Goals
