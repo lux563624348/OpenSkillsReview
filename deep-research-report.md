@@ -2,7 +2,7 @@
 
 ## Scope and research method
 
-This research verifies (or updates) the **current “skills published” counts** and the **primary search/list interfaces or commands** for the marketplaces/directories you listed, using each site’s own UI/Docs/README where possible. All figures below reflect what the sites themselves display **as of March 8, 2026 (America/New_York)** and should be treated as *living metrics* that can change daily. citeturn17view0turn17view3turn3view0turn3view2turn12view0turn14view0
+This research verifies (or updates) the **current “skills published” counts** and the **primary search/list interfaces or commands** for the marketplaces/directories you listed, using each site’s own UI/Docs/README where possible. All figures below reflect what the sites themselves display **as of March 8, 2026 (America/New_York)** and should be treated as *living metrics* that can change daily.
 
 ## Filled and verified table
 
@@ -23,35 +23,35 @@ This research verifies (or updates) the **current “skills published” counts*
 
 A key reason marketplace counts can look wildly different (even when they all reference the same SKILL.md-style ecosystem) is that the platforms often count **different units**:
 
-SkillsMP exposes a **global “Total Skills”** metric (400,856) on its timeline page, and frames the dataset as skills “pushed to GitHub over time,” implying a GitHub-indexed corpus with time-series aggregation. citeturn17view0
+SkillsMP exposes a **global “Total Skills”** metric (400,856) on its timeline page, and frames the dataset as skills “pushed to GitHub over time,” implying a GitHub-indexed corpus with time-series aggregation.
 
-Agent Skills Directory distinguishes **“unique AI agent skills”** from **“indexed skill files”** (309,322 unique skills vs. 878,423 indexed files), signaling deduplication and/or normalization logic across repos/forks/paths. citeturn2search0
+Agent Skills Directory distinguishes **“unique AI agent skills”** from **“indexed skill files”** (309,322 unique skills vs. 878,423 indexed files), signaling deduplication and/or normalization logic across repos/forks/paths.
 
-skills.sh’s “All Time (86,630)” appears to reflect the count of skills in **its own directory/leaderboard registry**, which is then paired with CLI flows (`npx skills ...`) for install/search/list. citeturn3view0turn21view0
+skills.sh’s “All Time (86,630)” appears to reflect the count of skills in **its own directory/leaderboard registry**, which is then paired with CLI flows (`npx skills ...`) for install/search/list.
 
-prompts.chat uses the word “Skills” for a much smaller, curated/created set inside prompts.chat itself (“35 found”), and counts “Prompts” separately at “1402 found.” citeturn11view1turn12view0
+prompts.chat uses the word “Skills” for a much smaller, curated/created set inside prompts.chat itself (“35 found”), and counts “Prompts” separately at “1402 found.”
 
-The practical implication: for product/market analysis or due diligence, you typically want to record the count *and* the platform’s definition (unique skills vs. skill files vs. curated entries), otherwise comparisons can be misleading. citeturn2search0turn17view0turn3view0turn12view0
+The practical implication: for product/market analysis or due diligence, you typically want to record the count *and* the platform’s definition (unique skills vs. skill files vs. curated entries), otherwise comparisons can be misleading.
 
 ## How search and installation flows differ across platforms
 
 Across your list, there are three dominant “interfaces” for discovery and adoption:
 
-Web-first directories: SkillsMP, Agent Skills Directory, MCP Market, AwesomeSkill.ai, and AgentSkills.to all emphasize browsing/searching in the browser (often with categories/tags). SkillsMP’s interface is explicitly built around a search/filter UX and even frames “AI search” as an interaction mode (enter to search). citeturn17view1turn3view2turn4view0turn3view4
+Web-first directories: SkillsMP, Agent Skills Directory, MCP Market, AwesomeSkill.ai, and AgentSkills.to all emphasize browsing/searching in the browser (often with categories/tags). SkillsMP’s interface is explicitly built around a search/filter UX and even frames “AI search” as an interaction mode (enter to search).
 
-CLI-first ecosystems: skills.sh is tightly linked to the `npx skills` CLI, which supports both **search** (`npx skills find [query]`) and **listing** (`npx skills list`), plus repo-level listing without install (`npx skills add owner/repo --list`). This is a more “package-manager-like” model than web-only directories. citeturn21view0turn3view0
+CLI-first ecosystems: skills.sh is tightly linked to the `npx skills` CLI, which supports both **search** (`npx skills find [query]`) and **listing** (`npx skills list`), plus repo-level listing without install (`npx skills add owner/repo --list`). This is a more “package-manager-like” model than web-only directories.
 
-Slash-command / agent-integrated install: agentskill.sh’s core pitch is “Install any skill with `/learn @owner/skill-name`,” and their docs show how to add their marketplace JSON and install the learn plugin so that `/learn` becomes available inside supported agents (not just the website). citeturn17view3turn0search2
+Slash-command / agent-integrated install: agentskill.sh’s core pitch is “Install any skill with `/learn @owner/skill-name`,” and their docs show how to add their marketplace JSON and install the learn plugin so that `/learn` becomes available inside supported agents (not just the website).
 
-prompts.chat sits somewhat between categories: it’s web-first for browsing prompts/skills, but it also supports agent integration pathways (e.g., it maintains a Claude Code plugin described in its repo docs). citeturn12view0turn11view1turn8search1
+prompts.chat sits somewhat between categories: it’s web-first for browsing prompts/skills, but it also supports agent integration pathways (e.g., it maintains a Claude Code plugin described in its repo docs).
 
 ## Caveats and reliability notes
 
-Counts are volatile by design. Many of these sites are indexing Git repos or continuously ingesting community contributions, so “approximate # skills” should be timestamped and periodically re-verified (especially SkillsMP, Agent Skills Directory, agentskill.sh, skills.sh, MCP Market). citeturn17view0turn2search0turn17view3turn3view0turn3view2
+Counts are volatile by design. Many of these sites are indexing Git repos or continuously ingesting community contributions, so “approximate # skills” should be timestamped and periodically re-verified (especially SkillsMP, Agent Skills Directory, agentskill.sh, skills.sh, MCP Market).
 
-Curated vs. indexed matters for trust and risk. Curated directories like awesomeskills.dev and awesome-skills.com inherently have smaller counts, but often provide clearer install instructions and implied human review/selection, whereas large-scale indexes maximize coverage but can include duplicates or low-signal entries. The awesome-skills.com page explicitly frames itself as “a curated list” and includes structured tags + install commands per entry. citeturn14view0turn16view2
+Curated vs. indexed matters for trust and risk. Curated directories like awesomeskills.dev and awesome-skills.com inherently have smaller counts, but often provide clearer install instructions and implied human review/selection, whereas large-scale indexes maximize coverage but can include duplicates or low-signal entries. The awesome-skills.com page explicitly frames itself as “a curated list” and includes structured tags + install commands per entry.
 
-Finally, “skills” are not necessarily safe to run blindly. Some ecosystems explicitly caution users to review skills before installing/using (the skills.sh docs include a safety disclaimer about not guaranteeing quality/security of every listed skill). citeturn0search11
+Finally, “skills” are not necessarily safe to run blindly. Some ecosystems explicitly caution users to review skills before installing/using (the skills.sh docs include a safety disclaimer about not guaranteeing quality/security of every listed skill).
 
 ## Automating the refresh
 
