@@ -23,9 +23,10 @@ Path: `skills/Skill-Search/`
 
 | Skill | Platform Support | Related URL (from skill README) |
 | --- | --- | --- |
-| `find-skills` | `vercel-labs` | [https://github.com/vercel-labs/skills/tree/main#](https://github.com/vercel-labs/skills/tree/main#) |
-| `skill-lookup` | `prompts.chat` | [https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) |
-| `skills-search` | `skills.sh` | N/A |
+| `find-skills` | `skills.sh` | [github.com/vercel-labs](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) |
+| `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) |
+| `skill-finder` | `clawhub` | [https://clawic.com/skills/skill-finder](https://clawic.com/skills/skill-finder) |
+| `skills-search` | `skills.sh` | [clawhub/Skills.sh Search] https://clawhub.ai/TheSethRose/skills-search |
 
 
 ## Goals
