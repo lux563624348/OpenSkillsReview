@@ -6,9 +6,9 @@
 [![Works with](https://img.shields.io/badge/Works_with-All_|_AI_|_Agents-blue.svg)](#getting-started)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-LUFFING--FUTURE_LLC.-0A66C2?logo=linkedin)](https://www.linkedin.com/in/xiangli-lucky-guy/)
 
-<img src="images/header.png" alt="OpenSkillsReview Header" width="60%">
+<img src="images/header.png" alt="OpenSkillsReview Header" width="66%">
 
-For a knowledgebase that we can feel safe before invoking third-party Skills<br>.
+For a knowledgebase that we can feel safe before invoking third-party Skills.<br>
 Create Your Own Skill: Click [Anthropic Skills](https://github.com/anthropics/skills)
 
 ## Review Table for Skills-Source 
