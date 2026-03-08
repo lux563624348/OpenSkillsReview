@@ -55,12 +55,34 @@ Path: `skills/<function-department>/`
 
 Source: [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)
 
-| Life & Biomedical | AI & Data | Physical & Engineering | Research Operations |
-| --- | --- | --- | --- |
-| 🧬 Bioinformatics & Multi-omics | 🧠 Healthcare AI & Clinical ML | 🔮 Materials Science & Chemistry | 🧪 Laboratory Automation |
-| 🧬 Protein Engineering & Design | 🤖 Machine Learning & AI | 🌌 Physics & Astronomy | 📚 Scientific Communication |
-| 🔬 Proteomics & Mass Spectrometry | 📊 Data Analysis & Visualization | ⚙️ Engineering & Simulation | 🎓 Research Methodology |
-| 🧪 Cheminformatics & Drug Discovery | 🖼️ Medical Imaging & Digital Pathology | 🌍 Geospatial Science & Remote Sensing | 🏥 Clinical Research & Precision Medicine |
+<details>
+<summary><strong>🧪 K-Dense-AI/scientific-skills</strong></summary>
+
+- 🧬 Life & Biomedical Sciences
+  - 🧬 Bioinformatics & Multi-omics
+  - 🧬 Protein Engineering & Design
+  - 🔬 Proteomics & Mass Spectrometry
+  - 🧪 Cheminformatics & Drug Discovery
+  - 🏥 Clinical Research & Precision Medicine
+
+- 🧠 AI, ML & Data
+  - 🧠 Healthcare AI & Clinical ML
+  - 🤖 Machine Learning & AI
+  - 🖼️ Medical Imaging & Digital Pathology
+  - 📊 Data Analysis & Visualization
+
+- ⚙️ Physical, Spatial & Engineering Sciences
+  - 🔮 Materials Science & Chemistry
+  - 🌌 Physics & Astronomy
+  - ⚙️ Engineering & Simulation
+  - 🌍 Geospatial Science & Remote Sensing
+
+- 📚 Research Operations & Communication
+  - 🧪 Laboratory Automation
+  - 📚 Scientific Communication
+  - 🎓 Research Methodology
+
+</details>
 
 
 ## Goals
