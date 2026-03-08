@@ -9,18 +9,18 @@ We hope to build a knowledgebase that human can feel safe before invoking third-
 
 | Name & URL | Approx. # Skills | Skill Discovery Access (Web/API/CLI) | Review Stars |
 | --- | --- | --- | --- |
+| [skills.sh](https://skills.sh) | **86,630+** | Web, CLI | ⭐⭐⭐⭐☆ |
+| [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | GitHub | ⭐⭐⭐⭐☆ |
+| [anthropics/skills](https://github.com/anthropics/skills) | **17+** | GitHub | ⭐⭐⭐⭐☆ |
 | [SkillsMP](https://skillsmp.com) | **400,856+** | Web | ⭐⭐⭐☆☆ |
 | [Agent Skills Directory](https://www.skillsdirectory.org) | **309,322+ unique** | Web | ⭐⭐⭐☆☆ |
 | [agentskill.sh](https://agentskill.sh) | **107,000+** | Web, CLI | ⭐⭐⭐☆☆ |
-| [skills.sh](https://skills.sh) | **86,630+** | Web, CLI | ⭐⭐⭐⭐☆ |
+| [AgentSkills Directory](https://agentskills.to/skills) | **24,000+**  | Web | ⭐⭐⭐☆☆ |
+| [clawhub.ai/skills](https://clawhub.ai/skills) | **17,852+** | Web | ⭐⭐⭐☆☆ |
+| [prompts.chat](https://prompts.chat) | **35+** **1,402+** prompts | Web | ⭐⭐⭐☆☆ |
 | [MCP Market](https://mcpmarket.com/tools/skills) | **59,272+** | Web | ⭐⭐☆☆☆ |
 | [AwesomeSkill.ai](https://awesomeskill.ai) | **50,000+** | Web | ⭐⭐☆☆☆ |
-| [AgentSkills Directory](https://agentskills.to/skills) | **24,000+**  | Web | ⭐⭐⭐☆☆ |
-| [prompts.chat](https://prompts.chat) | **35+** **1,402+** prompts | Web | ⭐⭐⭐☆☆ |
 | [awesomeskills.dev](https://awesomeskills.dev) | **2,287+** | Web | ⭐⭐☆☆☆ |
-| [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | GitHub | ⭐⭐⭐⭐☆ |
-| [anthropics/skills](https://github.com/anthropics/skills) | **17+** | GitHub | ⭐⭐⭐⭐☆ |
-| [clawhub.ai/skills](https://clawhub.ai/skills) | **17,852+** | Web | ⭐⭐⭐☆☆ |
 | [Awesome Claude Skills](https://awesome-skills.com) | **122+** | Web | ⭐☆☆☆☆ |
 
 ## Skill for Skill-Search
