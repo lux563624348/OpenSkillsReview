@@ -53,34 +53,48 @@ Path: `skills/<function-department>/`
 
 ### Skill for Science
 
-Source: [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)
+<details>
+<summary><strong>🧪 [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)</strong></summary>
 
 <details>
-<summary><strong>🧪 K-Dense-AI/scientific-skills</strong></summary>
+<summary>🧬 Life & Biomedical Sciences</summary>
 
-- 🧬 Life & Biomedical Sciences
-  - 🧬 Bioinformatics & Multi-omics
-  - 🧬 Protein Engineering & Design
-  - 🔬 Proteomics & Mass Spectrometry
-  - 🧪 Cheminformatics & Drug Discovery
-  - 🏥 Clinical Research & Precision Medicine
+- 🧬 Bioinformatics & Multi-omics
+- 🧬 Protein Engineering & Design
+- 🔬 Proteomics & Mass Spectrometry
+- 🧪 Cheminformatics & Drug Discovery
+- 🏥 Clinical Research & Precision Medicine
 
-- 🧠 AI, ML & Data
-  - 🧠 Healthcare AI & Clinical ML
-  - 🤖 Machine Learning & AI
-  - 🖼️ Medical Imaging & Digital Pathology
-  - 📊 Data Analysis & Visualization
+</details>
 
-- ⚙️ Physical, Spatial & Engineering Sciences
-  - 🔮 Materials Science & Chemistry
-  - 🌌 Physics & Astronomy
-  - ⚙️ Engineering & Simulation
-  - 🌍 Geospatial Science & Remote Sensing
+<details>
+<summary>🧠 AI, ML & Data</summary>
 
-- 📚 Research Operations & Communication
-  - 🧪 Laboratory Automation
-  - 📚 Scientific Communication
-  - 🎓 Research Methodology
+- 🧠 Healthcare AI & Clinical ML
+- 🤖 Machine Learning & AI
+- 🖼️ Medical Imaging & Digital Pathology
+- 📊 Data Analysis & Visualization
+
+</details>
+
+<details>
+<summary>⚙️ Physical, Spatial & Engineering Sciences</summary>
+
+- 🔮 Materials Science & Chemistry
+- 🌌 Physics & Astronomy
+- ⚙️ Engineering & Simulation
+- 🌍 Geospatial Science & Remote Sensing
+
+</details>
+
+<details>
+<summary>📚 Research Operations & Communication</summary>
+
+- 🧪 Laboratory Automation
+- 📚 Scientific Communication
+- 🎓 Research Methodology
+
+</details>
 
 </details>
 
