@@ -6,6 +6,7 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 SKILL_REPO_PATHS=(
   "Skills_Hub/Skill-Science/claude-scientific-skills"
   "Skills_Hub/Skill-Science/ClawBio"
+  "Skills_Hub/Skill-Science/OpenClaw-Medical-Skills"
   "Skills_Hub/Skill-Finance/Awesome-finance-skills"
   "Skills_Hub/Skill-Finance/OpenFinTech"
   "Skills_Hub/Skill-Finance/binance-skills-hub"

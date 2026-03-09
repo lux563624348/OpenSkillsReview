@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🦖 10 Tips for Becoming a Top 1% AI User — ClawBio — Manuel Corpas</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="apple-touch-icon" href="../img/clawbio-logo.jpeg">
+
+<!-- Open Graph (LinkedIn, Facebook, etc.) -->
+<meta property="og:title" content="10 Tips for Becoming a Top 1% AI User — ClawBio">
+<meta property="og:description" content="ClawBio: The first bioinformatics-native AI agent skill library. Local-first, privacy-focused, reproducible. Presented at the London Bioinformatics Meetup, Feb 2026.">
+<meta property="og:image" content="https://clawbio.github.io/ClawBio/img/clawbio-social-preview.png">
+<meta property="og:image:width" content="2560">
+<meta property="og:image:height" content="1280">
+<meta property="og:url" content="https://clawbio.github.io/ClawBio/slides/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ClawBio">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="10 Tips for Becoming a Top 1% AI User — ClawBio">
+<meta name="twitter:description" content="ClawBio: The first bioinformatics-native AI agent skill library. Local-first, privacy-focused, reproducible.">
+<meta name="twitter:image" content="https://clawbio.github.io/ClawBio/img/clawbio-social-preview.png">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #0d1117; color: #e6edf3; }
+
+/* ===== SLIDE ENGINE ===== */
+.deck { position: relative; width: 100vw; height: 100vh; }
+.slide {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 4vh 6vw;
+    opacity: 0; visibility: hidden; transition: opacity 0.4s ease;
+}
+.slide.active { opacity: 1; visibility: visible; }
+
+/* ===== TYPOGRAPHY ===== */
+h1 { font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 700; text-align: center; line-height: 1.2; margin-bottom: 1.5rem; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.6rem); font-weight: 600; text-align: center; line-height: 1.3; margin-bottom: 1.2rem; }
+h3 { font-size: clamp(1.2rem, 2vw, 1.8rem); font-weight: 500; color: #adbac7; text-align: center; margin-bottom: 1rem; }
+p, li { font-size: clamp(1rem, 1.8vw, 1.4rem); line-height: 1.6; }
+ul { list-style: none; text-align: left; max-width: 80%; }
+ul li { padding: 0.4em 0; padding-left: 1.5em; position: relative; }
+ul li::before { content: "→"; position: absolute; left: 0; color: #58a6ff; }
+.small { font-size: clamp(0.85rem, 1.4vw, 1.1rem); color: #adbac7; }
+
+/* ===== COLOURS ===== */
+.accent { color: #58a6ff; }
+.green { color: #56d364; }
+.orange { color: #e3b341; }
+.red { color: #ffa198; }
+.purple { color: #d2a8ff; }
+.highlight { background: rgba(88,166,255,0.15); padding: 0.15em 0.4em; border-radius: 4px; }
+
+/* ===== LAYOUT HELPERS ===== */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3vw; width: 90%; align-items: center; }
+.two-col > * { text-align: left; }
+.center { text-align: center; }
+.content { width: 90%; max-width: 1100px; }
+.gap { margin-top: 1.5rem; }
+
+/* ===== IMAGES ===== */
+.slide img { max-width: 85%; max-height: 55vh; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+.slide img.small-img { max-height: 40vh; }
+.slide img.full-img { max-width: 95%; max-height: 65vh; }
+
+/* ===== CODE BLOCKS ===== */
+pre {
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 1.2em 1.5em; font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: clamp(0.8rem, 1.4vw, 1.1rem); line-height: 1.5;
+    text-align: left; overflow-x: auto; max-width: 90%; width: fit-content;
+}
+code { font-family: 'SF Mono', 'Fira Code', monospace; }
+.cmd { color: #56d364; }
+.out { color: #adbac7; }
+.val { color: #e3b341; }
+
+/* ===== TIP NUMBER ===== */
+.tip-num {
+    display: inline-block; background: #58a6ff; color: #0d1117;
+    font-size: clamp(0.9rem, 1.6vw, 1.3rem); font-weight: 700;
+    padding: 0.3em 0.8em; border-radius: 20px; margin-bottom: 0.8rem;
+}
+
+/* ===== SCORE BADGE ===== */
+.score-badge {
+    display: inline-block; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800;
+    color: #56d364;
+    background: linear-gradient(135deg, #56d364, #58a6ff);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress { position: fixed; bottom: 0; left: 0; height: 3px; background: #58a6ff; transition: width 0.3s; z-index: 100; }
+
+/* ===== SLIDE COUNTER ===== */
+.counter {
+    position: fixed; bottom: 12px; right: 20px; font-size: 0.85rem;
+    color: #768390; z-index: 100;
+}
+
+/* ===== SLIDE LOGO (bottom-left on every slide) ===== */
+.slide-logo {
+    position: fixed; bottom: 10px; left: 16px; z-index: 100;
+    width: 44px; height: 44px; opacity: 0.8;
+    border-radius: 6px;
+}
+
+/* ===== SPEAKER NOTES (hidden, for reference) ===== */
+.notes { display: none; }
+
+/* ===== TITLE SLIDE SPECIAL ===== */
+.title-slide h1 { font-size: clamp(2.2rem, 4.5vw, 4rem); }
+.title-slide .subtitle { font-size: clamp(1.1rem, 2vw, 1.6rem); color: #adbac7; margin-top: 0.5rem; }
+.title-slide .author { margin-top: 2rem; font-size: clamp(1rem, 1.6vw, 1.3rem); color: #58a6ff; }
+.title-slide .meta { margin-top: 0.5rem; font-size: clamp(0.85rem, 1.3vw, 1rem); color: #768390; }
+</style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+<!-- ============================================================ -->
+<!-- SLIDE 1: TITLE -->
+<!-- ============================================================ -->
+<section class="slide title-slide">
+    <h1>10 Tips for Becoming a<br>Top 1% AI User</h1>
+    <div class="subtitle">Practical AI fluency for researchers who want to ship faster</div>
+    <div class="author">Manuel Corpas</div>
+    <div class="meta">
+        Senior Lecturer, University of Westminster &middot; Turing Fellow<br>
+        London Bioinformatics Meetup &middot; 26 February 2026
+    </div>
+    <div class="notes">
+        Welcome everyone. I'm Manuel Corpas. Tonight I want to share 10 practical
+        techniques that separate casual AI users from the top 1% who are shipping
+        research faster than ever. This is about AI fluency: the habits, tools, and
+        workflows that compound your productivity. We'll start with quick wins you
+        can adopt tomorrow morning, and end with a live demo of an open-source
+        bioinformatics skill I built this week.
+        TIMING: 2 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 2: THE GAP -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>The 99% vs the 1%</h2>
+    <div class="two-col content">
+        <div>
+            <h3 style="text-align:left">Most researchers</h3>
+            <ul>
+                <li>Use ChatGPT for one-off questions</li>
+                <li>Copy-paste into web UIs</li>
+                <li>Treat AI as a search engine</li>
+                <li>No memory across sessions</li>
+            </ul>
+        </div>
+        <div>
+            <h3 style="text-align:left" class="accent">Top 1%</h3>
+            <ul>
+                <li>AI agents run overnight</li>
+                <li>Persistent memory + RAG pipelines</li>
+                <li>Automated research workflows</li>
+                <li>Build tools, not just use them</li>
+            </ul>
+        </div>
+    </div>
+    <div class="notes">
+        Here's the gap. Most researchers interact with AI the same way they'd use
+        Google: ask a question, get an answer, move on. The top 1% have moved past
+        that. They have systems that remember, agents that work while they sleep,
+        and infrastructure that compounds.
+        TIMING: 3 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3: TIP 1 — IDE INTEGRATION -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div class="tip-num">Tip 1</div>
+    <h2>Use AI Inside Your IDE, Not a Browser</h2>
+    <div class="content center">
+        <ul>
+            <li><span class="accent">Claude Code</span> in your terminal: reads your codebase, edits files, runs tests</li>
+            <li><span class="accent">Cursor / Windsurf</span>: AI-native editors with inline code generation</li>
+            <li><span class="accent">GitHub Copilot</span>: autocomplete on steroids</li>
+        </ul>
+        <p class="gap small">The browser is for chatting. The IDE is for building.</p>
+    </div>
+    <div class="notes">
+        Tip 1 is the lowest-hanging fruit. Stop copy-pasting code between ChatGPT
+        and your editor. Use Claude Code in your terminal — it reads your entire
+        codebase, understands context, edits files directly, and runs your tests.
+        If you do one thing after tonight, install Claude Code.
+        TIMING: 2 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3b: WHAT IS CLAUDE CODE? -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>What Is Claude Code?</h2>
+    <div class="content center">
+        <p class="gap small">An <span class="accent">agentic coding tool</span> that lives in your terminal — not a chat window.</p>
+        <ul>
+            <li><span class="accent">Reads your entire codebase</span> — understands project structure, conventions, dependencies</li>
+            <li><span class="accent">Edits files directly</span> — no copy-paste; it writes, refactors, and commits for you</li>
+            <li><span class="accent">Runs commands</span> — executes tests, installs packages, runs scripts, checks output</li>
+            <li><span class="accent">Multi-step reasoning</span> — plans before coding, iterates until tests pass</li>
+            <li><span class="accent">CLAUDE.md</span> — a project file it reads every session so it already knows your rules</li>
+            <li><span class="accent">Custom skills</span> — slash commands you define (<code>/handoff</code>, <code>/inbox-triage</code>, <code>/meeting-prep</code>)</li>
+        </ul>
+        <p class="gap small">Think of it as a <span class="accent">junior developer</span> who knows your project, follows your standards, and never forgets context.</p>
+    </div>
+    <div class="notes">
+        So what actually is Claude Code? It's Anthropic's agentic coding tool. You
+        install it in your terminal with npm, and it becomes an AI pair-programmer
+        that can see your entire project. It doesn't just suggest code — it reads
+        files, edits them, runs your tests, and iterates until things work. You give
+        it a CLAUDE.md file with your project rules, and every session it starts
+        already understanding your architecture. You can also define custom skills —
+        slash commands like /handoff or /inbox-triage — that trigger complex
+        multi-step workflows. It's the difference between asking an AI a question
+        and having an AI that actually works alongside you.
+        TIMING: 2 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4: TIP 2 — PROMPT LIBRARIES -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div class="tip-num">Tip 2</div>
+    <h2>Build Persistent Memory</h2>
+    <div class="content">
+        <pre style="font-size: clamp(0.65rem, 1.1vw, 0.88rem);">
+<span class="cmd"># MEMORY.md — the AI accumulates this across sessions</span>
+
+<span class="cmd">## Lecture Efficiency Rules</span> <span style="color:#6e7681">(learned from strategy v7.2)</span>
+- New lecture: <span class="val">2 hours max</span>. Repeat lecture: <span class="val">30 min update only</span>
+- <span class="val">Reuse first</span> — always check slide bank before creating new
+- 60% of slides should be reusable across contexts
+
+<span class="cmd">## Slide Style Preferences</span> <span style="color:#6e7681">(stable pattern)</span>
+- Concept slides: <span class="val">max 30 words</span>. Method slides: max 40 words
+- Structure: title → outcomes → concepts → case study → summary
+- Tone: <span class="val">scientific and rigorous</span> — equity as quality, not just ethics
+
+<span class="cmd">## HEIM Integration Rules</span> <span style="color:#6e7681">(auto-include when relevant)</span>
+- Include in any lecture on <span class="val">GWAS, biobanks, AI in health</span>
+- Placement: early (after intro) or as implications section
+- Depth: 2-3 slides for awareness; more for equity-focused lectures
+
+<span class="cmd">## Reusable Slide Modules</span> <span style="color:#6e7681">(built over time)</span>
+- Genomic data formats: <span class="val">5 slides</span> (FASTA, VCF, BAM...)
+- GWAS fundamentals: <span class="val">8 slides</span> (design, stats, Manhattan plots)
+- ML in genomics: <span class="val">6 slides</span> (algorithms, applications, bias)</pre>
+        <p class="gap center small">These are real entries. Lecture time budgets, slide style rules, content modules — all <span class="accent">accumulated automatically</span> across sessions.</p>
+        <p class="center small gap">Every session ends with <code>/handoff</code>. Decisions, preferences, and lessons <span class="accent">feed back in</span>. The next session already knows how I teach. The system gets sharper every day.</p>
+    </div>
+    <div class="notes">
+        Tip 2: what you're looking at is my actual memory file for lecture creation.
+        The AI knows my time budget — 2 hours max for a new lecture, 30 minutes for a
+        repeat. It knows my slide style — max 30 words per concept slide, scientific tone.
+        It knows when to include equity content automatically. It has a bank of reusable
+        slide modules it built up over time — GWAS fundamentals, genomic formats, ML intro.
+
+        None of this was a one-off prompt. It accumulated session by session. Every time I
+        prepare a lecture, the system learns what worked and feeds it back. After a semester,
+        it knows how I teach — my style, my rules, my content library — without me having
+        to repeat anything. That's persistent memory.
+        TIMING: 2.5 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5: TIP 3 — FEED IT YOUR CONTEXT -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div class="tip-num">Tip 3</div>
+    <h2>Feed It Your Context</h2>
+    <div class="content center">
+        <ul>
+            <li>A generic AI gives <span class="accent">generic answers</span>. Give it your context and it becomes <span class="accent">yours</span>.</li>
+            <li>Upload your notes, papers, meeting transcripts, protocols — anything relevant</li>
+            <li>The more specific the context, the more <span class="accent">useful</span> the output</li>
+        </ul>
+        <!-- RAG diagram -->
+        <div class="gap" style="display:flex; align-items:center; justify-content:center; gap:clamp(0.5rem,1.5vw,1.2rem); flex-wrap:nowrap; font-size:clamp(0.7rem,1.1vw,0.92rem); margin-top:1.5em;">
+            <!-- Sources column -->
+            <div style="display:flex; flex-direction:column; gap:0.5em; text-align:center;">
+                <div style="background:#1a2332; border:1px solid #30363d; border-radius:8px; padding:0.6em 1em;">Notes</div>
+                <div style="background:#1a2332; border:1px solid #30363d; border-radius:8px; padding:0.6em 1em;">Emails</div>
+                <div style="background:#1a2332; border:1px solid #30363d; border-radius:8px; padding:0.6em 1em;">Papers</div>
+                <div style="background:#1a2332; border:1px solid #30363d; border-radius:8px; padding:0.6em 1em;">Transcripts</div>
+            </div>
+            <!-- Arrow 1 -->
+            <div style="display:flex; flex-direction:column; align-items:center; color:#6e7681;">
+                <span style="font-size:1.6em;">→</span>
+                <span style="font-size:0.75em;">embed</span>
+            </div>
+            <!-- Vector DB -->
+            <div style="background:#1c2d1c; border:2px solid #3fb950; border-radius:10px; padding:1.2em 1.4em; text-align:center; line-height:1.6;">
+                <span style="color:#3fb950; font-weight:600;">Vector Database</span><br>
+                <span style="color:#8b949e; font-size:0.85em;">semantic search<br>across everything</span>
+            </div>
+            <!-- Arrow 2 -->
+            <div style="display:flex; flex-direction:column; align-items:center; color:#6e7681;">
+                <span style="font-size:1.6em;">→</span>
+                <span style="font-size:0.75em;">retrieve</span>
+            </div>
+            <!-- LLM -->
+            <div style="background:#2d1f3d; border:2px solid #a371f7; border-radius:10px; padding:1.2em 1.4em; text-align:center; line-height:1.6;">
+                <span style="color:#a371f7; font-weight:600;">LLM</span><br>
+                <span style="color:#8b949e; font-size:0.85em;">answers grounded<br>in your data</span>
+            </div>
+            <!-- Arrow 3 -->
+            <div style="display:flex; flex-direction:column; align-items:center; color:#6e7681;">
+                <span style="font-size:1.6em;">→</span>
+                <span style="font-size:0.75em;">output</span>
+            </div>
+            <!-- Output -->
+            <div style="background:#2d2a1a; border:2px solid #d29922; border-radius:10px; padding:1.2em 1.4em; text-align:center; line-height:1.6;">
+                <span style="color:#d29922; font-weight:600;">Answer</span><br>
+                <span style="color:#8b949e; font-size:0.85em;">specific to you,<br>with sources</span>
+            </div>
+        </div>
+        <p class="gap center small" style="margin-top:1em;"><span class="accent">RAG</span> = Retrieval-Augmented Generation — the AI searches your own documents before answering</p>
+    </div>
+    <div class="notes">
+        Tip 3: the single biggest upgrade you can make. A generic AI gives you generic
+        answers. Feed it YOUR context — your papers, your notes, your protocols — and
+        it becomes dramatically more useful. Without context, asking for a lecture on
+        genomic equity gives you a Wikipedia summary. With context — your own HEIM paper,
+        your previous slides — it gives you something that sounds like you and builds on
+        your actual work. You can do this by simply pasting text into the chat, attaching
+        files, or for larger collections, building a RAG pipeline. The key insight: AI
+        is only as good as the context you give it.
+        TIMING: 2 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6: TIP 4 — VOICE CODING -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div class="tip-num">Tip 4</div>
+    <h2>Use Voice, Not Just Text</h2>
+    <div class="content center">
+        <ul>
+            <li><span class="accent">Whisper</span> (local, Apple Silicon): transcribe meetings, lectures, ideas</li>
+            <li><span class="accent">Voice memos → structured notes</span>: talk for 5 min, get formatted output</li>
+            <li><span class="accent">Dictation for prompts</span>: faster than typing, more natural phrasing</li>
+        </ul>
+        <p class="gap small">Your brain outputs ideas faster as speech. Let AI handle the formatting.</p>
+    </div>
+    <div class="notes">
+        Tip 4: voice. I run Whisper locally on Apple Silicon. I record a 5-minute
+        voice memo with my thoughts, transcribe it, and feed it to Claude for
+        structuring. This is how I draft papers, plan projects, and capture ideas
+        on walks. Your brain is faster at speaking than typing. Use that.
+        TIMING: 1.5 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7: TIP 5 — AUTOMATE DAILY TASKS -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div class="tip-num">Tip 5</div>
+    <h2>Automate Your Daily Intelligence</h2>
+    <div class="content center">
+        <ul>
+            <li><span class="accent">arXiv radar</span>: daily paper ranking by relevance to your research</li>
+            <li><span class="accent">Podcast extraction</span>: transcribe + summarise AI/science podcasts automatically</li>
+            <li><span class="accent">X/Twitter digest</span>: summarise what key AI voices are saying today</li>
+        </ul>
+        <pre class="gap">
+<span class="cmd"># Every morning at 06:30, my bot sends me this:</span>
+<span class="out">📰 Top 3 Papers Today:
+1. "Ancestry-aware PRS improves prediction in..." (Score: 9.2)
+2. "Foundation models for single-cell..." (Score: 8.7)
+3. "Equitable genomic data sharing..." (Score: 8.4)</span></pre>
+    </div>
+    <div class="notes">
+        Tip 5: automate your information diet. I have scheduled jobs that run at
+        6:30am: arXiv ranking, podcast extraction, Twitter digest. By the time I open
+        my laptop, my AI bot has already summarised the top papers, podcasts, and
+        what key AI influencers are talking about. This saves me an hour every day.
+        TIMING: 2 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8: TIP 6 — AI AGENTS -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div class="tip-num">Tip 6</div>
+    <h2>Deploy Persistent AI Agents</h2>
+    <div class="content center">
+        <ul>
+            <li><span class="accent">RoboTerri</span> (Telegram): 15 commands, 13 tools, 8 scheduled job groups</li>
+            <li><span class="accent">RoboIsaac</span> (WhatsApp): analytical critique partner (Newton persona)</li>
+            <li>Both share a <span class="accent">memory bridge</span>: same ChromaDB, same knowledge</li>
+        </ul>
+        <p class="gap small">These aren't chatbots. They're research assistants that run 24/7.</p>
+    </div>
+    <div class="notes">
+        Tip 6: build persistent agents. I have two: RoboTerri on Telegram handles
+        daily operations — paper summaries, podcast publishing, email drafts, strategy
+        reviews. RoboIsaac on WhatsApp plays devil's advocate on my research plans.
+        They share the same memory bridge. They never forget a conversation.
+        TIMING: 2 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8b: MEET ROBOTERRI -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>Meet RoboTerri</h2>
+    <div class="content" style="display:flex; align-items:flex-start; gap:clamp(1.5rem,3vw,3rem); justify-content:center;">
+        <!-- Left: photo + caption -->
+        <div style="text-align:center; flex-shrink:0;">
+            <img src="../img/AttwoodTerri.jpeg" alt="Professor Teresa K. Attwood" style="width:clamp(160px,18vw,260px); border-radius:12px; border:2px solid #30363d;">
+            <p style="margin-top:0.6em; font-size:clamp(0.75rem,1.1vw,0.95rem); color:#e6edf3;"><strong>Prof. Teresa K. Attwood</strong></p>
+            <p style="font-size:clamp(0.65rem,0.9vw,0.8rem); color:#8b949e; line-height:1.4;">Pioneer in bioinformatics<br>University of Manchester<br>Founding Chair of GOBLET<br>Manuel Corpas' PhD supervisor</p>
+        </div>
+        <!-- Right: SOUL.md snippet -->
+        <div style="flex:1; max-width:36em;">
+            <p style="font-size:clamp(0.75rem,1.1vw,0.92rem); color:#8b949e; margin-bottom:0.8em;">From RoboTerri's <code style="color:#a371f7;">SOUL.md</code>:</p>
+            <pre style="font-size:clamp(0.6rem,0.95vw,0.8rem); line-height:1.6; white-space:pre-wrap;">
+<span class="cmd">## Identity</span>
+RoboTerri is an AI agent inspired by Professor
+Teresa K. Attwood — her communication style,
+expertise, and <span class="val">collaborative approach</span>.
+
+<span class="cmd">## Voice Rules</span>
+Keep it short and direct. British spellings.
+Sign-offs: <span class="val">"T."</span> (default), <span class="val">"Tx"</span> (casual).
+Characteristic phrases: <span class="val">"Indeed"</span>, <span class="val">"Great stuff!"</span>
+Emoticons: <span class="val">;-)</span> (humour), <span class="val">;-)))</span> (strong amusement)
+
+<span class="cmd">## Operational Lane</span>
+Primary job: gather evidence, validate claims,
+surface contradictions, identify information gaps.
+<span class="val">Default to evidence retrieval, not coaching.</span></pre>
+        </div>
+    </div>
+    <div class="notes">
+        This is the real person behind RoboTerri. Professor Teresa Attwood — Terri —
+        is a pioneer of bioinformatics at Manchester, founding Chair of GOBLET, and
+        my mentor and collaborator for over 20 years. RoboTerri is an AI agent inspired
+        by her communication style and collaborative approach. The SOUL.md file you see
+        here is the identity prompt that shapes every response. The agent knows to
+        gather evidence and validate claims, not to give motivational coaching.
+        That's Terri's style: rigorous, supportive, direct.
+        TIMING: 1.5 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9: TIP 7 — COMPOUND OUTPUTS -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div class="tip-num">Tip 7</div>
+    <h2>Let AI Compound Your Outputs</h2>
+    <div class="content center">
+        <p style="margin-bottom:0.8em;">One research insight → <span class="accent">5 outputs</span>. You think once. AI reformats everywhere.</p>
+
+        <!-- Compound outputs diagram -->
+        <div style="display:flex; align-items:center; justify-content:center; gap:clamp(0.8rem,2vw,1.5rem); flex-wrap:nowrap; font-size:clamp(0.65rem,1.05vw,0.88rem); margin-top:1em;">
+            <!-- Input -->
+            <div style="background:#1c2d1c; border:2px solid #3fb950; border-radius:10px; padding:1.2em 1.4em; text-align:center; line-height:1.5; min-width:8em;">
+                <span style="color:#3fb950; font-weight:600; font-size:1.1em;">Research<br>Insight</span><br>
+                <span style="color:#8b949e; font-size:0.8em;">"Your 23andMe says<br>you're a CYP2D6<br>poor metaboliser"</span>
+            </div>
+
+            <!-- Fan-out arrow -->
+            <div style="display:flex; flex-direction:column; align-items:center; color:#6e7681; gap:0.2em;">
+                <span style="font-size:1.8em;">→</span>
+            </div>
+
+            <!-- Outputs column -->
+            <div style="display:flex; flex-direction:column; gap:0.5em;">
+                <div style="display:flex; align-items:center; gap:0.6em;">
+                    <div style="background:#2d1f3d; border:1px solid #a371f7; border-radius:7px; padding:0.5em 1em; min-width:11em;">
+                        <span style="color:#a371f7; font-weight:600;">Drug report</span><br>
+                        <span style="color:#8b949e; font-size:0.75em;">10 drugs to avoid</span>
+                    </div>
+                    <code style="color:#6e7681; font-size:0.8em;">ClawBio</code>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.6em;">
+                    <div style="background:#2d2a1a; border:1px solid #d29922; border-radius:7px; padding:0.5em 1em; min-width:11em;">
+                        <span style="color:#d29922; font-weight:600;">Blog post</span><br>
+                        <span style="color:#8b949e; font-size:0.75em;">"What I learned from<br>my DNA about drugs"</span>
+                    </div>
+                    <code style="color:#6e7681; font-size:0.8em;">/substack</code>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.6em;">
+                    <div style="background:#1a2332; border:1px solid #58a6ff; border-radius:7px; padding:0.5em 1em; min-width:11em;">
+                        <span style="color:#58a6ff; font-weight:600;">Tweet thread</span><br>
+                        <span style="color:#8b949e; font-size:0.75em;">"Did you know your<br>genes affect codeine?"</span>
+                    </div>
+                    <code style="color:#6e7681; font-size:0.8em;">/tweets</code>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.6em;">
+                    <div style="background:#2d1a1a; border:1px solid #f85149; border-radius:7px; padding:0.5em 1em; min-width:11em;">
+                        <span style="color:#f85149; font-weight:600;">Podcast episode</span><br>
+                        <span style="color:#8b949e; font-size:0.75em;">Pharmacogenomics<br>explained in 10 min</span>
+                    </div>
+                    <code style="color:#6e7681; font-size:0.8em;">/playbook</code>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.6em;">
+                    <div style="background:#1c2d2d; border:1px solid #3fb9a0; border-radius:7px; padding:0.5em 1em; min-width:11em;">
+                        <span style="color:#3fb9a0; font-weight:600;">Lecture slides</span><br>
+                        <span style="color:#8b949e; font-size:0.75em;">CYP2D6 case study<br>for students</span>
+                    </div>
+                    <code style="color:#6e7681; font-size:0.8em;">/lecture</code>
+                </div>
+            </div>
+        </div>
+
+        <p class="gap small center" style="margin-top:1em;">All via <span class="accent">RoboTerri</span> on Telegram. One insight in, five formats out.</p>
+    </div>
+    <div class="notes">
+        Tip 7: compound your outputs. Say you run your 23andMe data through ClawBio
+        and discover you're a CYP2D6 poor metaboliser — codeine won't work for you,
+        10 drugs flagged. That one insight becomes a drug report, a blog post explaining
+        what you learned, a tweet thread, a podcast episode on pharmacogenomics, and
+        lecture slides with a CYP2D6 case study. One insight, five formats. The AI
+        handles the reformatting. You handle the thinking once.
+        TIMING: 1.5 min. "Now we get to the real stuff."
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9b: LIVE DEMO — COMPOUND OUTPUT -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>Live Demo: Compound Output</h2>
+    <div class="content center">
+        <p style="margin-bottom:1.5em;">In Telegram, I send RoboTerri one message:</p>
+        <pre style="font-size:clamp(0.8rem, 1.3vw, 1.1rem); padding:1.2em 1.6em; background:#1a2332; border:2px solid #58a6ff; border-radius:10px; display:inline-block; text-align:left;">Write me a tweet thread explaining why everyone
+should check if they're a CYP2D6 poor metaboliser
+before taking codeine</pre>
+        <p class="gap" style="font-size:clamp(0.85rem,1.3vw,1.05rem); line-height:1.8;">
+            RoboTerri replies in <span class="accent">Terri's voice</span> — with a ready-to-post thread.<br>
+            Same insight → <code>/substack</code> for a blog post → <code>/playbook</code> for a podcast.<br>
+            <span class="val">One question. Multiple formats. Zero reformatting.</span>
+        </p>
+    </div>
+    <div class="notes">
+        This is the live demo for Tip 7. Open Telegram, type this exact message to
+        RoboTerri. It will respond in Terri's style with a tweet thread about CYP2D6
+        and codeine. Point out: same pharmacogenomics insight from the ClawBio demo,
+        now repurposed as social media content. Then mention: /substack turns it into
+        a blog post, /playbook turns it into a podcast episode. One insight, many
+        formats, all from Telegram.
+        TIMING: 1 min (live demo)
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 10: TRANSITION -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2 style="margin-bottom: 2rem;">Tips 1-7 are about <span class="accent">using</span> AI.</h2>
+    <h2>Tips 8-10 are about <span class="green">building</span> with it.</h2>
+    <p class="gap small center">This is where it gets interesting for bioinformaticians.</p>
+    <div class="notes">
+        Transition slide. Pause here. "Everything so far is about using AI tools
+        that already exist. Now I want to talk about building. Because the
+        bioinformatics community has specific needs that general AI tools don't
+        address."
+        TIMING: 30 sec
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 11: TIP 8 — OPEN SOURCE AI -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div class="tip-num">Tip 8</div>
+    <h2>Why Not Just Use ChatGPT?</h2>
+    <div class="content center">
+        <p>Ask Claude to "profile my pharmacogenes from this 23andMe file."</p>
+        <p class="gap small">It will try. It'll write plausible-looking Python. But:</p>
+        <div class="gap">
+            <ul>
+                <li>It <span class="red">hallucinates</span> star allele calls and uses outdated CPIC guidelines</li>
+                <li>It <span class="red">forgets</span> CYP2D6 *4 is no-function (not reduced)</li>
+                <li>You spend <span class="orange">45 minutes debugging</span> its output</li>
+                <li>No reproducibility bundle. No audit log. No checksums.</li>
+            </ul>
+        </div>
+        <p class="gap">Announcing: <span class="accent" style="font-size:1.3em; font-weight:700">🦖 ClawBio</span></p>
+        <img src="../img/clawbio-logo.jpeg" alt="ClawBio Logo" style="max-height:20vh; margin: 1rem 0;">
+        <p class="small">A domain expert's judgement, frozen into code that an AI agent executes correctly every time.</p>
+    </div>
+    <div class="notes">
+        "Now, some of you are thinking: can't I just ask ChatGPT to do this?
+        You can try. Ask it to profile pharmacogenes from a 23andMe file. It'll
+        write plausible Python. But it'll hallucinate star allele calls. It'll
+        use outdated CPIC guidelines. It won't know that CYP2D6 *4 is no-function,
+        not just reduced. You'll spend 45 minutes debugging output that looks right
+        but isn't. ClawBio encodes the correct bioinformatics decisions so the agent
+        gets it right first time, every time. The skill is a domain expert's judgement,
+        frozen into code. Let me show you what that looks like."
+        TIMING: 3 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 11b: WHAT IS CLAWBIO? -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>🦖 What Is ClawBio?</h2>
+    <div class="content center">
+        <ul>
+            <li><span class="accent">The first bioinformatics-native skill library</span> for AI coding agents</li>
+            <li>Built on <span class="accent">OpenClaw</span> — 180,000+ GitHub stars, the fastest-growing open-source AI project</li>
+            <li>A <strong>skill</strong> = a domain expert's knowledge <span class="green">frozen into code</span> that an agent executes correctly every time</li>
+            <li><span class="accent">Local-first</span>: your genomic data never leaves your laptop</li>
+            <li><span class="accent">MIT licensed</span>: open-source, free, community-driven</li>
+        </ul>
+        <p class="gap">Think of it this way:</p>
+        <pre class="gap" style="font-size: clamp(0.75rem, 1.3vw, 1rem);">
+<span class="out">ChatGPT/Claude</span> = a smart generalist who <span class="red">guesses</span> at bioinformatics
+<span class="green">🦖 ClawBio skill</span> = a domain expert's <span class="green">proven pipeline</span> that the AI <em>executes</em></pre>
+        <p class="gap small">Not a web app. Not a SaaS. Expert skills that run on your machine.</p>
+    </div>
+    <div class="notes">
+        "So what exactly is ClawBio? It's the first bioinformatics-native skill library
+        for AI coding agents. It's built on OpenClaw — which has over 180,000 stars on
+        GitHub and is the fastest-growing open-source AI project right now.
+
+        Here's the key concept: a skill is a domain expert's judgement, frozen into code.
+        When an AI agent needs to do pharmacogenomics or ancestry analysis, instead of
+        hallucinating an answer, it loads the ClawBio skill and executes it correctly
+        every time. The difference: ChatGPT guesses at bioinformatics. A ClawBio skill
+        is a proven pipeline that the AI executes. Everything runs locally — your genomic
+        data never leaves your laptop. MIT licensed, fully open-source."
+        TIMING: 2 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 12: OPENCLAW BIO ARCHITECTURE -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>🦖 ClawBio: How It Works</h2>
+    <div class="content" style="display:flex; gap:clamp(1rem,2.5vw,2.5rem); align-items:flex-start; justify-content:center;">
+
+        <!-- Left: architecture diagram -->
+        <div style="flex:1; max-width:28em;">
+            <!-- User question -->
+            <div style="background:#1a2332; border:2px solid #58a6ff; border-radius:10px; padding:0.7em 1em; text-align:center; font-size:clamp(0.7rem,1.05vw,0.9rem);">
+                <span style="color:#58a6ff;">You ask:</span> <span style="color:#e6edf3;">"What drugs should I worry about from my 23andMe?"</span>
+            </div>
+            <!-- Arrow -->
+            <div style="text-align:center; color:#6e7681; font-size:1.2em; line-height:1.8;">↓</div>
+            <!-- CLAUDE.md routes -->
+            <div style="background:#2d1f3d; border:2px solid #a371f7; border-radius:10px; padding:0.6em 1em; text-align:center; font-size:clamp(0.65rem,1vw,0.85rem);">
+                <span style="color:#a371f7; font-weight:600;">CLAUDE.md</span> <span style="color:#8b949e;">reads the routing table → matches intent</span>
+            </div>
+            <!-- Arrow -->
+            <div style="text-align:center; color:#6e7681; font-size:1.2em; line-height:1.8;">↓</div>
+            <!-- Skills row -->
+            <div style="display:flex; gap:0.4em; justify-content:center; flex-wrap:wrap; font-size:clamp(0.55rem,0.85vw,0.72rem);">
+                <div style="background:#1c2d1c; border:2px solid #3fb950; border-radius:7px; padding:0.5em 0.6em; text-align:center;">
+                    <span style="color:#3fb950; font-weight:600;">PharmGx</span><br><span style="color:#8b949e;">12 genes<br>51 drugs</span>
+                </div>
+                <div style="background:#1a2332; border:1px solid #30363d; border-radius:7px; padding:0.5em 0.6em; text-align:center;">
+                    <span style="color:#8b949e;">Equity<br>Scorer</span>
+                </div>
+                <div style="background:#1a2332; border:1px solid #30363d; border-radius:7px; padding:0.5em 0.6em; text-align:center;">
+                    <span style="color:#8b949e;">NutriGx<br>Advisor</span>
+                </div>
+                <div style="background:#1a2332; border:1px solid #30363d; border-radius:7px; padding:0.5em 0.6em; text-align:center;">
+                    <span style="color:#8b949e;">Ancestry<br>PCA</span>
+                </div>
+                <div style="background:#1a2332; border:1px solid #30363d; border-radius:7px; padding:0.5em 0.6em; text-align:center;">
+                    <span style="color:#8b949e;">Lit<br>Synth</span>
+                </div>
+                <div style="background:#1a2332; border:1px solid #30363d; border-radius:7px; padding:0.5em 0.6em; text-align:center;">
+                    <span style="color:#8b949e;">+6<br>more</span>
+                </div>
+            </div>
+            <!-- Arrow -->
+            <div style="text-align:center; color:#6e7681; font-size:1.2em; line-height:1.8;">↓</div>
+            <!-- Output -->
+            <div style="background:#2d2a1a; border:2px solid #d29922; border-radius:10px; padding:0.6em 1em; text-align:center; font-size:clamp(0.65rem,1vw,0.85rem);">
+                <span style="color:#d29922; font-weight:600;">Report</span> <span style="color:#8b949e;">+ figures + checksums + reproducibility bundle</span>
+            </div>
+        </div>
+
+        <!-- Right: CLAUDE.md snippet -->
+        <div style="flex:1; max-width:26em;">
+            <p style="font-size:clamp(0.7rem,1vw,0.85rem); color:#8b949e; margin-bottom:0.6em;">From ClawBio's <code style="color:#a371f7;">CLAUDE.md</code>:</p>
+            <pre style="font-size:clamp(0.55rem,0.85vw,0.72rem); line-height:1.55; white-space:pre-wrap;">
+<span class="cmd">## Skill Routing Table</span>
+
+| User Intent         | Skill              |
+|---------------------|--------------------|
+| Drug interactions,  | <span class="val">pharmgx-reporter/</span>  |
+| 23andMe, CYP2D6     |                    |
+| Genomic diversity,  | <span class="val">equity-scorer/</span>     |
+| HEIM, FST            |                    |
+| Nutrition, MTHFR,   | <span class="val">nutrigx_advisor/</span>   |
+| diet genetics        |                    |
+| Ancestry, PCA       | <span class="val">claw-ancestry-pca/</span> |
+
+<span class="cmd">## Safety Rules</span>
+- Genetic data <span class="val">never leaves this machine</span>
+- Always include disclaimer
+- Use SKILL.md methodology only —
+  <span class="val">never hallucinate</span> bioinformatics</pre>
+        </div>
+    </div>
+    <div class="notes">
+        Here's how ClawBio actually works. On the left: you ask a question in plain
+        English. CLAUDE.md has a routing table that matches your intent to the right
+        skill. The highlighted skill runs — in this case PharmGx Reporter — and
+        produces a report with figures, checksums, and a reproducibility bundle.
+        On the right: that's the actual CLAUDE.md file. It maps natural language
+        intents to skill directories. It also has safety rules — genetic data never
+        leaves your machine, and the agent is forbidden from hallucinating
+        bioinformatics decisions. It can only use what's in the SKILL.md.
+        TIMING: 2 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 13: SKILL CATALOGUE -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>🦖 Skills — 5 MVP, 7 Planned</h2>
+    <div class="content">
+        <div style="display:flex; gap:clamp(1rem,2.5vw,2.5rem); align-items:flex-start;">
+            <!-- Left: skill list -->
+            <div style="flex:1;">
+                <div class="two-col">
+                    <ul>
+                        <li><span class="green">claw-pharmgx</span> — 12 genes, 51 drugs, CPIC <span class="small">[MVP]</span></li>
+                        <li><span class="green">claw-ancestry-pca</span> — PCA vs SGDP (164 pops) <span class="small">[MVP]</span></li>
+                        <li><span class="green">claw-semantic-sim</span> — PubMedBERT disease isolation <span class="small">[MVP]</span></li>
+                        <li><span class="green">claw-orchestrator</span> — routing + reporting <span class="small">[MVP]</span></li>
+                        <li><span class="green">claw-nutrigx</span> — 40 SNPs, 16 genes, nutrition <span class="small">[MVP]</span></li>
+                        <li><span class="accent">claw-equity-scorer</span> — HEIM diversity index</li>
+                    </ul>
+                    <ul>
+                        <li><span class="accent">claw-vcf-annotator</span> — VEP + ClinVar + gnomAD</li>
+                        <li><span class="accent">claw-lit-synth</span> — PubMed + LLM summaries</li>
+                        <li><span class="accent">claw-scrna</span> — Scanpy automation</li>
+                        <li><span class="accent">claw-struct-predict</span> — AlphaFold/Boltz local</li>
+                        <li><span class="accent">claw-repro</span> — Conda/Nextflow export</li>
+                    </ul>
+                </div>
+                <p class="gap center small">Each skill = a <code>SKILL.md</code> + Python scripts. Composable. Local-first. Auditable.</p>
+            </div>
+            <!-- Right: David's contribution -->
+            <div style="flex-shrink:0; text-align:center; max-width:14em; background:#1a2332; border:1px solid #30363d; border-radius:12px; padding:1em;">
+                <img src="../img/david.jpeg" alt="Dr David de Lorenzo" style="width:clamp(80px,10vw,120px); border-radius:50%; border:2px solid #3fb950; margin-bottom:0.6em;">
+                <p style="font-size:clamp(0.7rem,1vw,0.88rem); color:#e6edf3; font-weight:600;">Dr David de Lorenzo</p>
+                <p style="font-size:clamp(0.6rem,0.85vw,0.75rem); color:#8b949e; line-height:1.4; margin-top:0.4em;">First community contribution</p>
+                <div style="margin-top:0.6em; background:#1c2d1c; border:1px solid #3fb950; border-radius:7px; padding:0.5em 0.7em;">
+                    <span style="color:#3fb950; font-weight:600; font-size:clamp(0.65rem,0.9vw,0.8rem);">NutriGx Advisor</span><br>
+                    <span style="color:#8b949e; font-size:clamp(0.55rem,0.8vw,0.7rem);">40 SNPs, 16 genes<br>personalised nutrition</span>
+                </div>
+                <p style="font-size:clamp(0.55rem,0.8vw,0.7rem); color:#d29922; margin-top:0.5em; font-style:italic;">Contributed within 24 hours<br>of ClawBio going public</p>
+            </div>
+        </div>
+    </div>
+    <div class="notes">
+        Here's the current roadmap. Five skills are at MVP — and that fifth one is
+        special. David de Lorenzo submitted the NutriGx Advisor skill within 24 hours
+        of ClawBio going public on GitHub. It covers 40 SNPs across 16 genes for
+        personalised nutrition — folate metabolism, vitamin D, caffeine, lactose,
+        omega-3. That's the power of open-source skills: a domain expert freezes
+        their knowledge into code, and the whole community benefits.
+        TIMING: 1.5 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 13b: DAVID DE LORENZO DEMO VIDEO -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>NutriGx Advisor — Demo by David de Lorenzo</h2>
+    <div class="content center">
+        <video controls style="max-width:min(85vw,900px); max-height:60vh; border-radius:10px; border:2px solid #30363d;">
+            <source src="../img/david-nutrigx-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p class="gap small" style="color:#8b949e;">First community skill — contributed within 24 hours of ClawBio going public. 40 SNPs across 16 genes for personalised nutrition.</p>
+    </div>
+    <div class="notes">
+        Play the video. David recorded this demo of the NutriGx Advisor skill he
+        contributed to ClawBio. It shows the skill running on synthetic patient data,
+        generating a personalised nutrition report from 23andMe-style genetic data.
+        Let the video speak for itself — pause or narrate over it as needed.
+        TIMING: 1-2 min (video length)
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 14: TIP 9 — LIVE DEMO INTRO (PharmGx FIRST) -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div class="tip-num">Tip 9</div>
+    <h2>Build Modular Skills</h2>
+    <h3>Live Demo: Creating a new ClawBio skill</h3>
+    <div class="content center">
+        <p>In Claude Code, I type:</p>
+        <pre class="gap" style="font-size:clamp(0.75rem, 1.2vw, 0.95rem);">
+<span class="cmd">I want to build a GWAS quality control skill for ClawBio.
+Walk me through how to create it.</span></pre>
+        <p class="gap">Claude Code reads <code style="color:#a371f7;">CLAUDE.md</code> + <code style="color:#a371f7;">CONTRIBUTING.md</code> + <code style="color:#a371f7;">SKILL-TEMPLATE.md</code></p>
+
+        <!-- Steps diagram -->
+        <div class="gap" style="display:flex; align-items:center; justify-content:center; gap:clamp(0.4rem,1vw,0.8rem); font-size:clamp(0.65rem,1vw,0.85rem); flex-wrap:nowrap;">
+            <div style="background:#1a2332; border:1px solid #58a6ff; border-radius:8px; padding:0.6em 0.8em; text-align:center;">
+                <span style="color:#58a6ff; font-weight:600;">1.</span> Copy<br>template
+            </div>
+            <span style="color:#6e7681;">→</span>
+            <div style="background:#2d1f3d; border:1px solid #a371f7; border-radius:8px; padding:0.6em 0.8em; text-align:center;">
+                <span style="color:#a371f7; font-weight:600;">2.</span> Write<br>SKILL.md
+            </div>
+            <span style="color:#6e7681;">→</span>
+            <div style="background:#1c2d1c; border:1px solid #3fb950; border-radius:8px; padding:0.6em 0.8em; text-align:center;">
+                <span style="color:#3fb950; font-weight:600;">3.</span> Add<br>Python
+            </div>
+            <span style="color:#6e7681;">→</span>
+            <div style="background:#2d2a1a; border:1px solid #d29922; border-radius:8px; padding:0.6em 0.8em; text-align:center;">
+                <span style="color:#d29922; font-weight:600;">4.</span> Test +<br>demo data
+            </div>
+            <span style="color:#6e7681;">→</span>
+            <div style="background:#2d1a1a; border:1px solid #f85149; border-radius:8px; padding:0.6em 0.8em; text-align:center;">
+                <span style="color:#f85149; font-weight:600;">5.</span> PR to<br>ClawBio
+            </div>
+        </div>
+
+        <p class="gap small">The AI already knows the conventions. It scaffolds the skill <span class="accent">for you</span>.</p>
+    </div>
+    <div class="notes">
+        "Let me show you how easy it is to build a new skill. I open Claude Code
+        in the ClawBio directory and ask: I want to build a GWAS QC skill. Claude
+        reads the CLAUDE.md, the CONTRIBUTING guide, and the skill template. It
+        walks me through five steps: copy the template, write the SKILL.md with
+        your domain methodology, add the Python implementation, create test data,
+        and submit a PR. David de Lorenzo did exactly this — he contributed the
+        NutriGx Advisor in under 24 hours. The AI scaffolds everything; the domain
+        expert provides the judgement."
+        TIMING: 2 min. Can do live in terminal if time permits.
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE: REPRODUCIBILITY IS BROKEN -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>The Reproducibility Crisis, In Practice</h2>
+    <div class="two-col content">
+        <div>
+            <h3 style="text-align:left"><span class="red">Today</span>: Checking a Paper's Code</h3>
+            <ul style="max-width:100%">
+                <li>Read paper. Want to verify Figure 3.</li>
+                <li>Go to GitHub. Clone the repo.</li>
+                <li>Wrong Python version. Fix dependencies.</li>
+                <li>Need the reference data. Where is it?</li>
+                <li>Download 2GB from Zenodo. <span class="red">Link is dead.</span></li>
+                <li>Email first author. <span class="orange">Wait 3 weeks.</span></li>
+                <li>Paths: <code>/home/jsmith/data/</code></li>
+                <li><span class="red">2 days later: still broken.</span></li>
+            </ul>
+        </div>
+        <div>
+            <h3 style="text-align:left"><span class="green">With ClawBio</span>: Same Paper</h3>
+            <ul style="max-width:100%">
+                <li>Read paper. Want to verify the drug report.</li>
+                <li><code style="color:#3fb950">git clone ClawBio && cd ClawBio</code></li>
+                <li>Ask: <span class="accent">"Run the pharmgx demo"</span></li>
+                <li>CLAUDE.md routes to the right skill.</li>
+                <li><span class="green">Report appears. Identical.</span></li>
+                <li>SHA-256 checksum: <span class="green">verified.</span></li>
+                <li>Demo data + dependencies: <span class="green">bundled.</span></li>
+                <li><span class="green" style="font-weight:700">30 seconds. Done.</span></li>
+            </ul>
+        </div>
+    </div>
+    <p class="gap center small">Every figure in your paper should be <span class="highlight">one command</span> away from reproduction.</p>
+    <div class="notes">
+        "How many of you have tried to reproduce a figure from a paper using the
+        authors' GitHub code? You clone the repo, wrong Python version, dependencies
+        broken, Zenodo link dead, paths hardcoded. Two days later: still broken.
+        Now imagine: install the skill, run one command, Figure 3 appears, checksums
+        verified. 30 seconds. That's what reproducibility should look like."
+        TIMING: 2 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 23: TIP 10 — CTA -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div class="tip-num">Tip 10</div>
+    <h2>Publish Skills, Not Just Papers</h2>
+    <div class="content center">
+        <ul>
+            <li>claw-pharmgx took <span class="accent">a few hours</span> to build. 12 genes, 51 drugs, CPIC guidelines.</li>
+            <li>claw-nutrigx was contributed by David de Lorenzo in <span class="accent">under 24 hours</span>. 40 SNPs, 16 genes.</li>
+            <li>5 MVP skills live. Every skill ships with checksums and a reproducibility bundle.</li>
+            <li>CLAUDE.md routes users to the right skill — <span class="accent">no documentation needed</span>.</li>
+        </ul>
+        <div class="gap">
+            <p style="font-size:1.3em"><strong>Skills we need from <span class="accent">you</span>:</strong></p>
+            <ul>
+                <li><span class="orange">claw-gwas</span> — PLINK/REGENIE automation</li>
+                <li><span class="orange">claw-metagenomics</span> — Kraken2/MetaPhlAn wrapper</li>
+                <li><span class="orange">claw-acmg</span> — Clinical variant classification</li>
+                <li><span class="orange">claw-pathway</span> — GO/KEGG enrichment</li>
+            </ul>
+        </div>
+    </div>
+    <div class="notes">
+        "Tip 10: publish skills, not just papers. claw-pharmgx took a few hours
+        to build. David de Lorenzo contributed claw-nutrigx in under 24 hours
+        after ClawBio went public. The template is there, Claude Code scaffolds
+        the structure, and CLAUDE.md means users can find your skill just by
+        asking a question in plain English.
+
+        Think about your own work. That GWAS pipeline you run every time? Make
+        it a skill. That metagenomics classifier? Wrap it. That clinical variant
+        interpretation workflow? A few hours of work and the whole community
+        benefits. Imagine every bioinformatics paper shipping with a ClawBio
+        skill. You read the paper, ask a question, get the exact results.
+        That's the world we're building."
+        TIMING: 2.5 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- TRANSITION: PITFALLS -->
+<!-- ============================================================ -->
+<section class="slide title-slide">
+    <h1>Some Common Pitfalls</h1>
+    <div class="subtitle">What to watch out for when AI writes your research</div>
+    <div class="notes">
+        Transition slide. "So we've covered 10 tips for using AI effectively.
+        But before we wrap up, let me flag three common pitfalls — things that
+        go wrong when you trust AI output without verification. These are
+        especially dangerous in bioinformatics."
+        TIMING: 15 sec
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- AI PITFALL 1: Numbers Sound Right But Aren't -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>AI Pitfall: Numbers That Sound Right</h2>
+    <div class="content">
+        <div class="two-col">
+            <div>
+                <p style="font-size:1.1em; margin-bottom:1rem"><span class="accent">The problem</span></p>
+                <p>LLMs generate numbers that <em>feel</em> appropriate.</p>
+                <p>They do NOT generate numbers that <em>match your data</em>.</p>
+                <div class="gap" style="background:rgba(255,255,255,0.05); padding:1rem; border-radius:8px; margin-top:1.5rem">
+                    <p style="font-size:0.85em; opacity:0.7">What goes wrong:</p>
+                    <p>"We analysed <span class="orange">847 samples</span>" — plausible, but yours was 623</p>
+                    <p>"p = <span class="orange">3.2 × 10⁻⁸</span>" — looks right, entirely invented</p>
+                    <p>"<span class="orange">73%</span> of variants were missense" — confident and wrong</p>
+                </div>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center">
+                <div style="background:rgba(255,180,0,0.1); border:2px solid var(--accent); border-radius:12px; padding:2rem; text-align:center">
+                    <p style="font-size:2.5em; margin-bottom:0.5rem">🔢</p>
+                    <p style="font-size:1.3em"><strong>Verify EVERY number</strong></p>
+                    <p style="font-size:0.9em; opacity:0.8; margin-top:0.5rem">against your source files,<br>code output, or analysis logs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notes">
+        "Here's the first AI pitfall that matters for bioinformatics: numbers.
+        LLMs are remarkably good at generating numbers that feel right. Sample sizes
+        that sound reasonable, p-values in the right ballpark, percentages that pass
+        the smell test. But they're invented. If you ask an LLM to write your results
+        section, it will confidently give you numbers that look publishable but don't
+        match your actual data. In bioinformatics, where every paper is full of
+        statistics, this is dangerous. Rule: verify every single number against
+        your source data."
+        TIMING: 1.5 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- AI PITFALL 2: Claims Expand Beyond Evidence -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>AI Pitfall: Claims That Grow</h2>
+    <div class="content">
+        <div class="two-col">
+            <div>
+                <p style="font-size:1.1em; margin-bottom:1rem"><span class="accent">The problem</span></p>
+                <p>LLMs write persuasively. They naturally reach for broader, more impressive claims.</p>
+                <div class="gap" style="margin-top:1.5rem">
+                    <p style="font-size:0.85em; opacity:0.7">What you found:</p>
+                    <p style="background:rgba(255,255,255,0.05); padding:0.8rem; border-radius:6px">"CYP2D6 poor metabolisers showed <span class="highlight">altered codeine response</span> in our cohort"</p>
+                    <p style="font-size:0.85em; opacity:0.7; margin-top:1rem">What the LLM writes:</p>
+                    <p style="background:rgba(255,80,80,0.15); padding:0.8rem; border-radius:6px; border-left:3px solid #ff5050">"This <span class="orange">proves that CYP2D6 testing should be mandatory</span> before prescribing any opioid"</p>
+                </div>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center">
+                <div style="background:rgba(255,180,0,0.1); border:2px solid var(--accent); border-radius:12px; padding:2rem; text-align:center">
+                    <p style="font-size:2.5em; margin-bottom:0.5rem">📈</p>
+                    <p style="font-size:1.3em"><strong>For each conclusion ask:</strong></p>
+                    <p style="font-size:1.1em; margin-top:0.5rem; color:var(--accent)">"Did we actually<br>measure this?"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notes">
+        "Second pitfall: claim expansion. LLMs are trained to write persuasively.
+        They naturally escalate findings. 'We observed X' becomes 'This proves Y'.
+        'Associated with' becomes 'causes'. In bioinformatics, the gap between
+        correlation and causation is everything. Your reviewers will catch this
+        and your credibility takes a hit. Simple test: for every conclusion, ask
+        yourself — did we actually measure this? If you're hedging mentally,
+        the text needs hedging too."
+        TIMING: 1.5 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- AI PITFALL 3: Methods Described ≠ Methods Used -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>AI Pitfall: "We Used X" (You Didn't)</h2>
+    <div class="content">
+        <div class="two-col">
+            <div>
+                <p style="font-size:1.1em; margin-bottom:1.5rem">You ask AI to write your Methods section.<br>It describes <span class="accent">what it thinks you did</span> — not what you <em>actually</em> did.</p>
+                <div style="display:flex; gap:1rem; margin-top:1rem">
+                    <div style="flex:1; background:rgba(255,80,80,0.1); border-left:3px solid #ff5050; padding:1rem; border-radius:0 8px 8px 0">
+                        <p style="font-size:0.8em; opacity:0.7; margin-bottom:0.5rem">AI wrote:</p>
+                        <p>"We used <span class="orange">Tool A</span> with default settings"</p>
+                    </div>
+                    <div style="flex:1; background:rgba(59,251,80,0.08); border-left:3px solid #3fb950; padding:1rem; border-radius:0 8px 8px 0">
+                        <p style="font-size:0.8em; opacity:0.7; margin-bottom:0.5rem">You actually used:</p>
+                        <p><span class="green">Tool B</span> with custom parameters</p>
+                    </div>
+                </div>
+                <p style="margin-top:1.5rem; font-size:0.95em">Nobody can reproduce your work if the<br>methods section describes <span class="red">a different workflow</span>.</p>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center">
+                <div style="background:rgba(255,180,0,0.1); border:2px solid var(--accent); border-radius:12px; padding:2rem; text-align:center">
+                    <p style="font-size:2.5em; margin-bottom:0.5rem">🔬</p>
+                    <p style="font-size:1.3em"><strong>Check every step<br>against your code</strong></p>
+                    <p style="font-size:0.9em; opacity:0.8; margin-top:1rem">ClawBio solves this:<br>skills embed the <em>actual</em><br>methodology in <span class="highlight">SKILL.md</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notes">
+        "Third pitfall: the AI writes a methods section that sounds great but
+        describes a different workflow to the one you actually ran. It guesses
+        which tools you used, assumes default parameters, invents steps. If your
+        methods section describes the wrong procedure, nobody can reproduce your
+        work. That's why in ClawBio, every skill has a SKILL.md that documents
+        the actual methodology — the AI reads that instead of guessing."
+        TIMING: 1.5 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- THE GOLDEN RULE -->
+<!-- ============================================================ -->
+<section class="slide">
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:85vh; text-align:center">
+        <h2 style="font-size:2.5em; font-weight:800; color:#ffffff; margin-bottom:2.5rem">The Golden Rule</h2>
+        <div style="background:#f5a623; color:#1a1a2e; padding:1.2rem 4rem; border-radius:16px; font-size:2.8em; font-weight:800; margin-bottom:2.5rem; box-shadow:0 0 40px rgba(245,166,35,0.3)">
+            AI drafts. You verify.
+        </div>
+        <p style="color:#4ecdc4; font-size:1.4em; margin-bottom:1.2rem">If you can't explain it, don't submit it.</p>
+        <p style="font-size:1.1em; color:#cccccc">Your name is on the work.</p>
+    </div>
+    <div class="notes">
+        "This is the golden rule of AI-assisted research. The AI drafts, you verify.
+        If you can't explain every number, every method, every conclusion in your
+        paper — don't submit it. Your name is on the work. Not ChatGPT's. Not
+        Claude's. Yours. Use AI to be more productive, but never outsource your
+        scientific judgement."
+        TIMING: 1 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 23: RECAP -->
+<!-- ============================================================ -->
+<section class="slide">
+    <h2>10 Tips Recap</h2>
+    <div class="content">
+        <div class="two-col">
+            <ul>
+                <li><span class="small">1.</span> Use AI inside your IDE, not a browser</li>
+                <li><span class="small">2.</span> Build persistent memory</li>
+                <li><span class="small">3.</span> Feed it your context</li>
+                <li><span class="small">4.</span> Use voice, not just text</li>
+                <li><span class="small">5.</span> Automate your daily intelligence</li>
+            </ul>
+            <ul>
+                <li><span class="small">6.</span> Deploy persistent AI agents</li>
+                <li><span class="small">7.</span> Let AI compound your outputs</li>
+                <li><span class="small">8.</span> Why not just use ChatGPT?</li>
+                <li><span class="small">9.</span> Build modular skills</li>
+                <li><span class="small">10.</span> Publish skills, not just papers</li>
+            </ul>
+        </div>
+        <p class="gap center"><span class="highlight" style="font-size:1.2em">The top 1% build systems. Everyone else uses tools.</span></p>
+    </div>
+    <div class="notes">
+        Quick recap. Tips 1-7: use AI effectively — IDE, prompts, memory, voice,
+        automation, agents, compounding. Tips 8-10: build with AI — open-source,
+        modular skills, shipping infrastructure. The throughline: the top 1% build
+        systems that compound. Everyone else uses tools one at a time.
+        TIMING: 1 min
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 24: THANK YOU -->
+<!-- ============================================================ -->
+<section class="slide title-slide">
+    <h1>Thank You</h1>
+    <div class="subtitle">Questions welcome — and at the pub after</div>
+    <div class="gap" style="margin-top: 2rem;">
+        <p><span class="accent">GitHub</span>: github.com/ClawBio/ClawBio</p>
+        <p><span class="accent">Tutorial</span>: <a href="../docs/tutorial-roboterri-install.md" style="color:#58a6ff;text-decoration:none">Install RoboTerri (Telegram agent)</a></p>
+        <p><span class="accent">LinkedIn</span>: linkedin.com/in/manuelcorpas</p>
+        <p><span class="accent">X</span>: @manuelcorpas</p>
+    </div>
+    <p class="gap small">🦖 Slides: github.com/ClawBio/ClawBio/slides</p>
+    <div class="notes">
+        Thank you. I'll be at the pub after — come talk to me if you want to
+        build a skill, have ideas for the library, or just want to chat about
+        AI agents in research. Questions?
+        TIMING: remainder
+    </div>
+</section>
+
+</div><!-- /deck -->
+
+<!-- ===== SLIDE LOGO ===== -->
+<img class="slide-logo" src="../img/favicon-96.png" alt="ClawBio">
+
+<!-- ===== PROGRESS BAR ===== -->
+<div class="progress" id="progress"></div>
+<div class="counter" id="counter"></div>
+
+<script>
+// ===== MINIMAL SLIDE ENGINE =====
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+const total = slides.length;
+
+function show(n) {
+    if (n < 0 || n >= total) return;
+    slides[current].classList.remove('active');
+    current = n;
+    slides[current].classList.add('active');
+    document.getElementById('progress').style.width = ((current + 1) / total * 100) + '%';
+    document.getElementById('counter').textContent = (current + 1) + ' / ' + total;
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(current + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(current - 1); }
+    if (e.key === 'Home') { e.preventDefault(); show(0); }
+    if (e.key === 'End') { e.preventDefault(); show(total - 1); }
+    // 'n' key toggles speaker notes in console
+    if (e.key === 'n') {
+        const notes = slides[current].querySelector('.notes');
+        if (notes) console.log('NOTES [' + (current+1) + ']:', notes.textContent.trim());
+    }
+});
+
+// Touch navigation (swipe)
+let touchStartX = 0;
+document.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+document.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].screenX - touchStartX;
+    if (dx < -50) show(current + 1);
+    if (dx > 50) show(current - 1);
+});
+
+// Click to advance (except on links/code)
+document.addEventListener('click', e => {
+    if (e.target.closest('a, pre, code')) return;
+    if (e.clientX > window.innerWidth / 2) show(current + 1);
+    else show(current - 1);
+});
+
+// Init
+show(0);
+</script>
+
+</body>
+</html>
