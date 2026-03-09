@@ -23,21 +23,22 @@ Meta Skills: [Anthropic Skills](https://github.com/anthropics/skills)
 | 5 | [Agent Skills Directory](https://www.skillsdirectory.org) | **309,322+** | ⭐⭐⭐☆☆ | Web |
 | 6 | [agentskill.sh](https://agentskill.sh) | **107,000+** | ⭐⭐⭐☆☆ | Web, CLI |
 | 7 | [AgentSkills](https://agentskills.to/skills) | **24,000+**  | ⭐⭐⭐☆☆ | Web |
-| 8 | [prompts.chat](https://prompts.chat) | **35+** **1,402+prompts** | ⭐⭐⭐☆☆ | Web |
-| 9 | [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | ⭐⭐⭐⭐☆ | GitHub |
+| 8 | [LobeHub](https://lobehub.com/bg/skills) | **169,900+** | ⭐⭐⭐☆☆ | Web |
+| 9 | [prompts.chat](https://prompts.chat) | **35+** **1,402+prompts** | ⭐⭐⭐☆☆ | Web |
+| 10 | [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | ⭐⭐⭐⭐☆ | GitHub |
 
 <details>
 <summary>Show more skills source</summary>
 
 | Rank | Name & URL | Approx. # Skills | Review Stars | Skill Discovery Access|
 | --- | --- | --- | --- | --- |
-| 10 | [MCP Market](https://mcpmarket.com/tools/skills) | **59,272+** | ⭐⭐☆☆☆ | Web |
-| 11 | [agent-skills.cc](https://agent-skills.cc/) | **63,000+** | ⭐⭐☆☆☆ | Web |
-| 12 | [AwesomeSkill.ai](https://awesomeskill.ai) | **50,000+** | ⭐⭐☆☆☆ | Web |
-| 13 | [awesomeskills.dev](https://awesomeskills.dev) | **2,287+** | ⭐⭐☆☆☆ | Web |
-| 14 | [AgentSkillsHub](https://agentskillshub.dev/) | **458+** | ⭐☆☆☆☆ | Web |
-| 15 | [Awesome Claude Skills](https://awesome-skills.com) | **122+** | ⭐☆☆☆☆ | Web |
-| 16 | [Skill Registry](https://skillregistry.io/) | **61+** | ⭐☆☆☆☆ | Web |
+| 11 | [MCP Market](https://mcpmarket.com/tools/skills) | **59,272+** | ⭐⭐☆☆☆ | Web |
+| 12 | [agent-skills.cc](https://agent-skills.cc/) | **63,000+** | ⭐⭐☆☆☆ | Web |
+| 13 | [AwesomeSkill.ai](https://awesomeskill.ai) | **50,000+** | ⭐⭐☆☆☆ | Web |
+| 14 | [awesomeskills.dev](https://awesomeskills.dev) | **2,287+** | ⭐⭐☆☆☆ | Web |
+| 15 | [AgentSkillsHub](https://agentskillshub.dev/) | **458+** | ⭐☆☆☆☆ | Web |
+| 16 | [Awesome Claude Skills](https://awesome-skills.com) | **122+** | ⭐☆☆☆☆ | Web |
+| 17 | [Skill Registry](https://skillregistry.io/) | **61+** | ⭐☆☆☆☆ | Web |
 
 </details>
 
@@ -52,14 +53,15 @@ Path: `skills/<function-department>/`
 | --- | --- | --- | --- |
 | `find-skills` | `skills.sh` | [github.com/vercel-labs](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) | ✅ |
 | `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) | ✅ |
-| `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) | ❓ |
-| `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) | ❓ |
+| `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) | ✅ |
+| `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) | ✅ |
 
 ### Skill for Skill-Safe
 
 | Skill | Platform Support | Source | Verified |
 | --- | --- | --- | --- |
-| `skill-scanner` | `Clawdbot, MCP` | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) | ❓ |
+| `skill-scanner` | `Clawdbot, MCP` | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) | ✅ |
+| `skill-review` | `Clawdbot, MCP` | [OpenSkillReview](skills/Skill-Safe/skill-review) | ✅ |
 
 ### Skill for Finance
 
