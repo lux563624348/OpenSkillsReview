@@ -1,4 +1,4 @@
-# Open Skills Review (Find Skill You can Trust)
+# Open Skills Review (Find Skill You Can Trust)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 [![Skills](https://img.shields.io/badge/Skills-100-brightgreen.svg)](#whats-included)
 [![Databases](https://img.shields.io/badge/Databases-10%2B-orange.svg)](#whats-included)
@@ -8,9 +8,7 @@
 
 <img src="images/header.png" alt="OpenSkillsReview Header" width="80%">
 
-Create Your Own Skill: 
-Meta Skills: [Anthropic Skills](https://github.com/anthropics/skills)  <br>
-[OpenAI Skills](https://github.com/openai/skills)
+Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) & [OpenAI Skills](https://github.com/openai/skills)
 ## Review Table for Skills-Source 
 
 | Rank | Name & URL | Approx. # Skills | Review Stars | Access Methods|

@@ -4,44 +4,28 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 SKILL_REPO_PATHS=(
-  "Skills_Hub/claude-scientific-skills"
-  "Skills_Hub/Awesome-finance-skills"
-  "Skills_Hub/OpenFinTech"
-  "Skills_Hub/binance-skills-hub"
+  "Skills_Hub/Skill-Science/claude-scientific-skills"
+  "Skills_Hub/Skill-Science/ClawBio"
+  "Skills_Hub/Skill-Finance/Awesome-finance-skills"
+  "Skills_Hub/Skill-Finance/OpenFinTech"
+  "Skills_Hub/Skill-Finance/binance-skills-hub"
 )
 
 for rel_repo_path in "${SKILL_REPO_PATHS[@]}"; do
   upstream_repo_dir="$REPO_ROOT/$rel_repo_path"
-  repo_name="$(basename "$upstream_repo_dir")"
+  source_dir="$upstream_repo_dir"
+  rel_dest_path="${rel_repo_path#Skills_Hub/}"
+  dest_dir="$REPO_ROOT/skills/$rel_dest_path"
 
   if [[ ! -d "$upstream_repo_dir/.git" ]]; then
     echo "Error: source repo not found at $upstream_repo_dir"
     exit 1
   fi
 
-  # Source auto-detection:
-  # 1) scientific-skills folder
-  # 2) skills folder
-  # 3) repo root
-  if [[ -d "$upstream_repo_dir/scientific-skills" ]]; then
-    source_dir="$upstream_repo_dir/scientific-skills"
-  elif [[ -d "$upstream_repo_dir/skills" ]]; then
-    source_dir="$upstream_repo_dir/skills"
-  else
-    source_dir="$upstream_repo_dir"
+  if [[ "$rel_dest_path" == "$rel_repo_path" ]]; then
+    echo "Error: expected path under Skills_Hub/, got: $rel_repo_path"
+    exit 1
   fi
-
-  # Category auto-routing:
-  # - repos containing "scientific" go to Skill-Science
-  # - everything else defaults to Skill-Finance
-  repo_name_lc="$(printf '%s' "$repo_name" | tr '[:upper:]' '[:lower:]')"
-  if [[ "$repo_name_lc" == *scientific* ]]; then
-    skill_category="Skill-Science"
-  else
-    skill_category="Skill-Finance"
-  fi
-
-  dest_dir="$REPO_ROOT/skills/$skill_category/$repo_name"
 
   echo "Running git pull in: $upstream_repo_dir"
   git -C "$upstream_repo_dir" pull
