@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-03-15T13:19:41.379121",
+  "entries": [
+    {
+      "name": "SkillsMP (Agent Skills Marketplace)",
+      "url": "https://skillsmp.com",
+      "context": "SkillsMP reports a global \u201cTotal Skills\u201d value on the timeline/search page.",
+      "count": null,
+      "raw_match": null
+    },
+    {
+      "name": "clawhub.ai/skills",
+      "url": "https://clawhub.ai/skills",
+      "context": "The skills directory page highlights the total number of published skills.",
+      "count": null,
+      "raw_match": null
+    },
+    {
+      "name": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "context": "Repository docs and metadata may reference the total number of bundled skills.",
+      "count": null,
+      "raw_match": null
+    },
+    {
+      "name": "Agent Skills Directory",
+      "url": "https://www.skillsdirectory.org",
+      "context": "The landing page highlights unique skills vs. indexed files.",
+      "count": "961406",
+      "raw_match": "961,406"
+    },
+    {
+      "name": "agentskill.sh",
+      "url": "https://agentskill.sh",
+      "context": "The homepage callout is the primary counter.",
+      "count": "110000",
+      "raw_match": "110,000"
+    },
+    {
+      "name": "skills.sh",
+      "url": "https://skills.sh",
+      "context": "Leaderboard stats include the \u201cAll Time\u201d total.",
+      "count": null,
+      "raw_match": null
+    },
+    {
+      "name": "MCP Market \u2013 Skills",
+      "url": "https://mcpmarket.com/tools/skills",
+      "context": "The Tools / Skills section exposes a tally near the top.",
+      "count": null,
+      "raw_match": null
+    },
+    {
+      "name": "AwesomeSkill.ai",
+      "url": "https://awesomeskill.ai",
+      "context": "Header copy promises a 50,000+ skill catalogue.",
+      "count": "50000",
+      "raw_match": "50,000"
+    },
+    {
+      "name": "AgentSkills Directory",
+      "url": "https://agentskills.to/skills",
+      "context": "Category headline and hero callouts show the count.",
+      "count": null,
+      "raw_match": null
+    },
+    {
+      "name": "LobeHub",
+      "url": "https://lobehub.com/bg/skills",
+      "context": "The skills catalog view typically surfaces a total listing count.",
+      "count": "211910",
+      "raw_match": "211,910"
+    },
+    {
+      "name": "prompts.chat",
+      "url": "https://prompts.chat",
+      "context": "Separate counters for skills and prompts appear on the site.",
+      "count": null,
+      "raw_match": null
+    },
+    {
+      "name": "K-Dense-AI/scientific-skills",
+      "url": "https://github.com/K-Dense-AI/claude-scientific-skills",
+      "context": "Repository docs may advertise the number of scientific skills included.",
+      "count": "170",
+      "raw_match": "170"
+    },
+    {
+      "name": "agent-skills.cc",
+      "url": "https://agent-skills.cc/",
+      "context": "Homepage hero text includes an aggregate skill counter.",
+      "count": "",
+      "raw_match": ","
+    },
+    {
+      "name": "awesomeskills.dev (curated)",
+      "url": "https://awesomeskills.dev",
+      "context": "Curated list links to the total number of verified skills.",
+      "count": null,
+      "raw_match": null
+    },
+    {
+      "name": "AgentSkillsHub",
+      "url": "https://agentskillshub.dev/",
+      "context": "Landing page text may expose a curated skill total.",
+      "count": "460",
+      "raw_match": "460"
+    },
+    {
+      "name": "Awesome Claude Skills",
+      "url": "https://awesome-skills.com",
+      "context": "Metadata includes a \u201c122+\u201d curated skill count.",
+      "count": "125",
+      "raw_match": "125"
+    },
+    {
+      "name": "Skill Registry",
+      "url": "https://skillregistry.io/",
+      "context": "Directory summary or hero stats may display a total registered-skill count.",
+      "count": null,
+      "raw_match": null
+    }
+  ]
+}

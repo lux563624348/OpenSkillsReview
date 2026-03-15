@@ -35,6 +35,24 @@ MARKETPLACES: Iterable[Marketplace] = [
         context="SkillsMP reports a global “Total Skills” value on the timeline/search page.",
     ),
     Marketplace(
+        name="clawhub.ai/skills",
+        url="https://clawhub.ai/skills",
+        patterns=[
+            r"([0-9,]+)\+?\s+skills",
+            r"Skills\s*\(?([0-9,]+)\)?",
+        ],
+        context="The skills directory page highlights the total number of published skills.",
+    ),
+    Marketplace(
+        name="anthropics/skills",
+        url="https://github.com/anthropics/skills",
+        patterns=[
+            r"([0-9,]+)\+?\s+skills",
+            r"([\d,]+)\s+skill[s]?\s+for\s+Claude",
+        ],
+        context="Repository docs and metadata may reference the total number of bundled skills.",
+    ),
+    Marketplace(
         name="Agent Skills Directory",
         url="https://www.skillsdirectory.org",
         patterns=[
@@ -90,6 +108,15 @@ MARKETPLACES: Iterable[Marketplace] = [
         context="Category headline and hero callouts show the count.",
     ),
     Marketplace(
+        name="LobeHub",
+        url="https://lobehub.com/bg/skills",
+        patterns=[
+            r"([0-9,]+)\+?\s+skills",
+            r"([\d,]+)\s+Skills",
+        ],
+        context="The skills catalog view typically surfaces a total listing count.",
+    ),
+    Marketplace(
         name="prompts.chat",
         url="https://prompts.chat",
         patterns=[
@@ -97,6 +124,24 @@ MARKETPLACES: Iterable[Marketplace] = [
             r"([\d,]+)\s+found\s+Prompts",
         ],
         context="Separate counters for skills and prompts appear on the site.",
+    ),
+    Marketplace(
+        name="K-Dense-AI/scientific-skills",
+        url="https://github.com/K-Dense-AI/claude-scientific-skills",
+        patterns=[
+            r"([0-9,]+)\+?\s+skills",
+            r"([\d,]+)\s+scientific\s+skills",
+        ],
+        context="Repository docs may advertise the number of scientific skills included.",
+    ),
+    Marketplace(
+        name="agent-skills.cc",
+        url="https://agent-skills.cc/",
+        patterns=[
+            r"([0-9,]+)\+?\s+skills",
+            r"([\d,]+)\s+AI\s+skills",
+        ],
+        context="Homepage hero text includes an aggregate skill counter.",
     ),
     Marketplace(
         name="awesomeskills.dev (curated)",
@@ -108,12 +153,30 @@ MARKETPLACES: Iterable[Marketplace] = [
         context="Curated list links to the total number of verified skills.",
     ),
     Marketplace(
+        name="AgentSkillsHub",
+        url="https://agentskillshub.dev/",
+        patterns=[
+            r"([0-9,]+)\+?\s+skills",
+            r"([\d,]+)\s+verified\s+skills",
+        ],
+        context="Landing page text may expose a curated skill total.",
+    ),
+    Marketplace(
         name="Awesome Claude Skills",
         url="https://awesome-skills.com",
         patterns=[
             r"Discover\s+([0-9,]+)\+",
         ],
         context="Metadata includes a “122+” curated skill count.",
+    ),
+    Marketplace(
+        name="Skill Registry",
+        url="https://skillregistry.io/",
+        patterns=[
+            r"([0-9,]+)\+?\s+skills",
+            r"([\d,]+)\s+registered\s+skills",
+        ],
+        context="Directory summary or hero stats may display a total registered-skill count.",
     ),
 ]
 

@@ -13,12 +13,12 @@ Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) 
 
 | Rank | Name & URL | Approx. # Skills | Review Stars | Access Methods|
 | --- | --- | --- | --- | --- |
-| 🥇 | [skills.sh](https://skills.sh) | **86,630+** | ⭐⭐⭐⭐☆ | Web, CLI |
-| 🥈 | [SkillsMP](https://skillsmp.com) | **400,856+** | ⭐⭐⭐☆☆ | Web |
+| 🥇 | [skills.sh](https://skills.sh) | **88,600+** | ⭐⭐⭐⭐☆ | Web, CLI |
+| 🥈 | [SkillsMP](https://skillsmp.com) | **508,758+** | ⭐⭐⭐☆☆ | Web |
 | 🥉 | [clawhub.ai/skills](https://clawhub.ai/skills) | **17,852+** | ⭐⭐⭐☆☆ | Web |
 | 4 | [anthropics/skills](https://github.com/anthropics/skills) | **17+** | ⭐⭐⭐⭐☆ | GitHub |
-| 5 | [Agent Skills Directory](https://www.skillsdirectory.org) | **309,322+** | ⭐⭐⭐☆☆ | Web |
-| 6 | [agentskill.sh](https://agentskill.sh) | **107,000+** | ⭐⭐⭐☆☆ | Web, CLI |
+| 5 | [Agent Skills Directory](https://www.skillsdirectory.org) | **960,097+** | ⭐⭐⭐☆☆ | Web |
+| 6 | [agentskill.sh](https://agentskill.sh) | **110,000+** | ⭐⭐⭐☆☆ | Web, CLI |
 | 7 | [AgentSkills](https://agentskills.to/skills) | **24,000+**  | ⭐⭐⭐☆☆ | Web |
 | 8 | [LobeHub](https://lobehub.com/bg/skills) | **169,900+** | ⭐⭐⭐☆☆ | Web |
 | 9 | [prompts.chat](https://prompts.chat) | **35+** **1,402+prompts** | ⭐⭐⭐☆☆ | Web |
@@ -29,12 +29,12 @@ Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) 
 
 | Rank | Name & URL | Approx. # Skills | Review Stars | Skill Discovery Access|
 | --- | --- | --- | --- | --- |
-| 11 | [MCP Market](https://mcpmarket.com/tools/skills) | **59,272+** | ⭐⭐☆☆☆ | Web |
+| 11 | [MCP Market](https://mcpmarket.com/tools/skills) | **62,236+** | ⭐⭐☆☆☆ | Web |
 | 12 | [agent-skills.cc](https://agent-skills.cc/) | **63,000+** | ⭐⭐☆☆☆ | Web |
 | 13 | [AwesomeSkill.ai](https://awesomeskill.ai) | **50,000+** | ⭐⭐☆☆☆ | Web |
 | 14 | [awesomeskills.dev](https://awesomeskills.dev) | **2,287+** | ⭐⭐☆☆☆ | Web |
 | 15 | [AgentSkillsHub](https://agentskillshub.dev/) | **458+** | ⭐☆☆☆☆ | Web |
-| 16 | [Awesome Claude Skills](https://awesome-skills.com) | **122+** | ⭐☆☆☆☆ | Web |
+| 16 | [Awesome Claude Skills](https://awesome-skills.com) | **125+** | ⭐☆☆☆☆ | Web |
 | 17 | [Skill Registry](https://skillregistry.io/) | **61+** | ⭐☆☆☆☆ | Web |
 
 </details>
