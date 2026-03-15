@@ -44,6 +44,14 @@ Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) 
 We also provide a collection of human-verified skills.
 Path: `skills/<function-department>/`
 
+### Skill for Skill-Creation
+
+| Skill | Platform Support | Source | Verified(❓) |
+| --- | --- | --- | --- |
+| `skill-creator-claude` | `Claude Code` | [OpenSkillsReview](skills/Skill-Creator/skill-creator-claude) | ✅ |
+
+`skills/Skill-Creator/skill-creator-claude` is a good practice reference for skill creation and works best when combined with Claude Code.
+
 ### Skill for Skill-Search
 
 | Skill | Platform Support | Source | Verified(❓) |
@@ -52,6 +60,7 @@ Path: `skills/<function-department>/`
 | `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) | ✅ |
 | `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) | ✅ |
 | `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) | ✅ |
+| `github-search-1.0.0` | `GitHub` | [OpenSkillsReview](skills/Skill-Search/github-search-1.0.0) | ✅ |
 
 ### Skill for Skill-Safe
 
