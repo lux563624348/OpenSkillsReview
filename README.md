@@ -57,10 +57,18 @@ Path: `skills/<function-department>/`
 | Skill | Platform Support | Source | Verified(❓) |
 | --- | --- | --- | --- |
 | `find-skills` | `skills.sh` | [github.com/vercel-labs](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) | ✅ |
-| `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) | ✅ |
-| `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) | ✅ |
-| `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) | ✅ |
+| `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) | ❓ |
+| `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) | ❓ |
+
+<details>
+<summary>Show more</summary>
+
+| Skill | Platform Support | Source | Verified(❓) |
+| --- | --- | --- | --- |
+| `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) | ❓ |
 | `github-search-1.0.0` | `GitHub` | [OpenSkillsReview](skills/Skill-Search/github-search-1.0.0) | ✅ |
+
+</details>
 
 ### Skill for Skill-Safe
 
@@ -80,50 +88,11 @@ Path: `skills/<function-department>/`
 
 ### Skill for Science
 
-<details>
-<summary><strong>🧪 [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills)</strong></summary>
-
-<details>
-<summary>&nbsp;&nbsp;↳ 🧬 Life & Biomedical Sciences</summary>
-
-- 🧬 Bioinformatics & Multi-omics
-- 🧬 Protein Engineering & Design
-- 🔬 Proteomics & Mass Spectrometry
-- 🧪 Cheminformatics & Drug Discovery
-- 🏥 Clinical Research & Precision Medicine
-
-</details>
-
-<details>
-<summary>&nbsp;&nbsp;↳ 🧠 AI, ML & Data</summary>
-
-- 🧠 Healthcare AI & Clinical ML
-- 🤖 Machine Learning & AI
-- 🖼️ Medical Imaging & Digital Pathology
-- 📊 Data Analysis & Visualization
-
-</details>
-
-<details>
-<summary>&nbsp;&nbsp;↳ ⚙️ Physical, Spatial & Engineering Sciences</summary>
-
-- 🔮 Materials Science & Chemistry
-- 🌌 Physics & Astronomy
-- ⚙️ Engineering & Simulation
-- 🌍 Geospatial Science & Remote Sensing
-
-</details>
-
-<details>
-<summary>&nbsp;&nbsp;↳ 📚 Research Operations & Communication</summary>
-
-- 🧪 Laboratory Automation
-- 📚 Scientific Communication
-- 🎓 Research Methodology
-
-</details>
-
-</details>
+| Skill | Platform Support | Source | Verified(❓) |
+| --- | --- | --- | --- |
+| `scientific-skills` | `GitHub` | [github.com/K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
+| `OpenClaw-Medical-Skills` | `GitHub` | [OpenSkillsReview](Skills_Hub/Skill-Science/OpenClaw-Medical-Skills) | ❓ |
+| `ClawBio` | `GitHub` | [OpenSkillsReview](Skills_Hub/Skill-Science/ClawBio) | ❓ |
 
 
 ## Goals
