@@ -57,8 +57,8 @@ Path: `skills/<function-department>/`
 | Skill | Platform Support | Source | Verified(❓) |
 | --- | --- | --- | --- |
 | `find-skills` | `skills.sh` | [github.com/vercel-labs](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) | ✅ |
-| `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) | ❓ |
 | `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) | ❓ |
+| `github-search-1.0.0` | `GitHub` | [OpenSkillsReview](skills/Skill-Search/github-search-1.0.0) | ✅ |
 
 <details>
 <summary>Show more</summary>
@@ -66,7 +66,7 @@ Path: `skills/<function-department>/`
 | Skill | Platform Support | Source | Verified(❓) |
 | --- | --- | --- | --- |
 | `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) | ❓ |
-| `github-search-1.0.0` | `GitHub` | [OpenSkillsReview](skills/Skill-Search/github-search-1.0.0) | ✅ |
+| `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) | ❓ |
 
 </details>
 
@@ -77,6 +77,23 @@ Path: `skills/<function-department>/`
 | `skill-scanner` | `Clawdbot, MCP` | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) | ✅ |
 | `skill-review` | `Clawdbot, MCP` | [OpenSkillReview](skills/Skill-Safe/skill-review) | ✅ |
 
+### Skill for Science
+
+| Skill | Platform Support | Source | Verified(❓) |
+| --- | --- | --- | --- |
+| `scientific-skills` | `GitHub` | [github.com/K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
+| `academic-research-skills` | `GitHub` | [Imbad0202](https://github.com/Imbad0202/academic-research-skills) | ✅ |
+| `ClawBio` | `GitHub` | [ClawBio](https://github.com/ClawBio/ClawBio) | ❓ |
+
+<details>
+<summary>Show more</summary>
+
+| Skill | Platform Support | Source | Verified(❓) |
+| --- | --- | --- | --- |
+| `OpenClaw-Medical-Skills` | `GitHub` | [OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | ❓ |
+
+</details>
+
 ### Skill for Finance
 
 | Skill | Platform Support | Source | Verified(❓) |
@@ -86,14 +103,7 @@ Path: `skills/<function-department>/`
 | `open-fintech` | `GitHub` | [github.com/ly229/OpenFinTech](https://github.com/ly229/OpenFinTech) | ❓ |
 
 
-### Skill for Science
 
-| Skill | Platform Support | Source | Verified(❓) |
-| --- | --- | --- | --- |
-| `scientific-skills` | `GitHub` | [github.com/K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
-| `OpenClaw-Medical-Skills` | `GitHub` | [OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | ❓ |
-| `ClawBio` | `GitHub` | [ClawBio](https://github.com/ClawBio/ClawBio) | ❓ |
-| `academic-research-skills` | `OpenSkillsReview` | [OpenSkillsReview](skills/Skill-Science/academic-research-skills) | ✅ |
 
 
 ## Goals
