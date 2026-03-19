@@ -90,9 +90,10 @@ Path: `skills/<function-department>/`
 
 | Skill | Platform Support | Source | Verified(❓) |
 | --- | --- | --- | --- |
-| `claude-scientific-skills` | `GitHub` | [github.com/K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
+| `scientific-skills` | `GitHub` | [github.com/K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
 | `OpenClaw-Medical-Skills` | `GitHub` | [OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | ❓ |
 | `ClawBio` | `GitHub` | [ClawBio](https://github.com/ClawBio/ClawBio) | ❓ |
+| `academic-research-skills` | `OpenSkillsReview` | [OpenSkillsReview](skills/Skill-Science/academic-research-skills) | ✅ |
 
 
 ## Goals
