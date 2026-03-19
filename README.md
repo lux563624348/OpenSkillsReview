@@ -16,8 +16,7 @@ Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) 
 | 🥇 | [skills.sh](https://skills.sh) | **89,200+** | ⭐⭐⭐⭐☆ | Web, CLI |
 | 🥈 | [SkillsMP](https://skillsmp.com) | **530,778+** | ⭐⭐⭐☆☆ | Web |
 | 🥉 | [clawhub.ai/skills](https://clawhub.ai/skills) | **28,304+** | ⭐⭐⭐☆☆ | Web |
-| 4 | [anthropics/skills](https://github.com/anthropics/skills) | **17+** | ⭐⭐⭐⭐☆ | GitHub |
-| 5 | [Agent Skills Directory](https://www.skillsdirectory.org) | **1,036,455+** | ⭐⭐⭐☆☆ | Web |
+| 4 | [Agent Skills Directory](https://www.skillsdirectory.org) | **1,036,455+** | ⭐⭐⭐☆☆ | Web |
 ...
 | 10 | [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | ⭐⭐⭐⭐☆ | GitHub |
 
