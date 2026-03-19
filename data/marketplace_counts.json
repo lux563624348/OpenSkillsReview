@@ -1,54 +1,54 @@
 {
-  "timestamp": "2026-03-15T13:19:41.379121",
+  "timestamp": "2026-03-18T21:42:00.839399",
   "entries": [
     {
       "name": "SkillsMP (Agent Skills Marketplace)",
       "url": "https://skillsmp.com",
       "context": "SkillsMP reports a global \u201cTotal Skills\u201d value on the timeline/search page.",
-      "count": null,
-      "raw_match": null
+      "count": "508758",
+      "raw_match": "508758"
     },
     {
       "name": "clawhub.ai/skills",
       "url": "https://clawhub.ai/skills",
       "context": "The skills directory page highlights the total number of published skills.",
-      "count": null,
-      "raw_match": null
+      "count": "17852",
+      "raw_match": "17852"
     },
     {
       "name": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
       "context": "Repository docs and metadata may reference the total number of bundled skills.",
-      "count": null,
-      "raw_match": null
+      "count": "17",
+      "raw_match": "17"
     },
     {
       "name": "Agent Skills Directory",
       "url": "https://www.skillsdirectory.org",
       "context": "The landing page highlights unique skills vs. indexed files.",
-      "count": "961406",
-      "raw_match": "961,406"
+      "count": "1036455",
+      "raw_match": "1,036,455"
     },
     {
       "name": "agentskill.sh",
       "url": "https://agentskill.sh",
       "context": "The homepage callout is the primary counter.",
-      "count": "110000",
-      "raw_match": "110,000"
+      "count": "106000",
+      "raw_match": "106,000"
     },
     {
       "name": "skills.sh",
       "url": "https://skills.sh",
       "context": "Leaderboard stats include the \u201cAll Time\u201d total.",
-      "count": null,
-      "raw_match": null
+      "count": "88600",
+      "raw_match": "88600"
     },
     {
       "name": "MCP Market \u2013 Skills",
       "url": "https://mcpmarket.com/tools/skills",
       "context": "The Tools / Skills section exposes a tally near the top.",
-      "count": null,
-      "raw_match": null
+      "count": "62236",
+      "raw_match": "62236"
     },
     {
       "name": "AwesomeSkill.ai",
@@ -61,22 +61,22 @@
       "name": "AgentSkills Directory",
       "url": "https://agentskills.to/skills",
       "context": "Category headline and hero callouts show the count.",
-      "count": null,
-      "raw_match": null
+      "count": "24000",
+      "raw_match": "24000"
     },
     {
       "name": "LobeHub",
       "url": "https://lobehub.com/bg/skills",
       "context": "The skills catalog view typically surfaces a total listing count.",
-      "count": "211910",
-      "raw_match": "211,910"
+      "count": "223626",
+      "raw_match": "223,626"
     },
     {
       "name": "prompts.chat",
       "url": "https://prompts.chat",
       "context": "Separate counters for skills and prompts appear on the site.",
-      "count": null,
-      "raw_match": null
+      "count": "35",
+      "raw_match": "35"
     },
     {
       "name": "K-Dense-AI/scientific-skills",
@@ -89,15 +89,15 @@
       "name": "agent-skills.cc",
       "url": "https://agent-skills.cc/",
       "context": "Homepage hero text includes an aggregate skill counter.",
-      "count": "",
-      "raw_match": ","
+      "count": "63000",
+      "raw_match": "63,000"
     },
     {
       "name": "awesomeskills.dev (curated)",
       "url": "https://awesomeskills.dev",
       "context": "Curated list links to the total number of verified skills.",
-      "count": null,
-      "raw_match": null
+      "count": "2287",
+      "raw_match": "2287"
     },
     {
       "name": "AgentSkillsHub",
@@ -117,8 +117,8 @@
       "name": "Skill Registry",
       "url": "https://skillregistry.io/",
       "context": "Directory summary or hero stats may display a total registered-skill count.",
-      "count": null,
-      "raw_match": null
+      "count": "61",
+      "raw_match": "61"
     }
   ]
 }

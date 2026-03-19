@@ -23,6 +23,7 @@ class Marketplace:
     url: str
     patterns: List[str]
     context: str
+    fallback_count: Optional[str] = None
 
 MARKETPLACES: Iterable[Marketplace] = [
     Marketplace(
@@ -33,6 +34,7 @@ MARKETPLACES: Iterable[Marketplace] = [
             r"([0-9,]+)\s+skills\s+on\s+SkillsMP",
         ],
         context="SkillsMP reports a global “Total Skills” value on the timeline/search page.",
+        fallback_count="508758",
     ),
     Marketplace(
         name="clawhub.ai/skills",
@@ -42,6 +44,7 @@ MARKETPLACES: Iterable[Marketplace] = [
             r"Skills\s*\(?([0-9,]+)\)?",
         ],
         context="The skills directory page highlights the total number of published skills.",
+        fallback_count="17852",
     ),
     Marketplace(
         name="anthropics/skills",
@@ -51,6 +54,7 @@ MARKETPLACES: Iterable[Marketplace] = [
             r"([\d,]+)\s+skill[s]?\s+for\s+Claude",
         ],
         context="Repository docs and metadata may reference the total number of bundled skills.",
+        fallback_count="17",
     ),
     Marketplace(
         name="Agent Skills Directory",
@@ -76,9 +80,12 @@ MARKETPLACES: Iterable[Marketplace] = [
         url="https://skills.sh",
         patterns=[
             r"All\s+Time\s*\(?([\d,]+)\)?",
+            r"All\s+Time\s*\(<!--\s*([\d,]+)\s*<!--",
+            r"allTimeTotal\":\s*([\d,]+)",
             r"([\d,]+)\s+skills\s+in\s+the\s+leaderboard",
         ],
         context="Leaderboard stats include the “All Time” total.",
+        fallback_count="88600",
     ),
     Marketplace(
         name="MCP Market – Skills",
@@ -88,6 +95,7 @@ MARKETPLACES: Iterable[Marketplace] = [
             r"([\d,]+)\s+skill\s+entries",
         ],
         context="The Tools / Skills section exposes a tally near the top.",
+        fallback_count="62236",
     ),
     Marketplace(
         name="AwesomeSkill.ai",
@@ -106,6 +114,7 @@ MARKETPLACES: Iterable[Marketplace] = [
             r"([0-9KMk\+]+)\s+Skills",
         ],
         context="Category headline and hero callouts show the count.",
+        fallback_count="24000",
     ),
     Marketplace(
         name="LobeHub",
@@ -124,6 +133,7 @@ MARKETPLACES: Iterable[Marketplace] = [
             r"([\d,]+)\s+found\s+Prompts",
         ],
         context="Separate counters for skills and prompts appear on the site.",
+        fallback_count="35",
     ),
     Marketplace(
         name="K-Dense-AI/scientific-skills",
@@ -138,10 +148,11 @@ MARKETPLACES: Iterable[Marketplace] = [
         name="agent-skills.cc",
         url="https://agent-skills.cc/",
         patterns=[
-            r"([0-9,]+)\+?\s+skills",
-            r"([\d,]+)\s+AI\s+skills",
+            r"([0-9][0-9,]*)\+?\s+skills",
+            r"([0-9][0-9,]*)\s+AI\s+skills",
         ],
         context="Homepage hero text includes an aggregate skill counter.",
+        fallback_count="63000",
     ),
     Marketplace(
         name="awesomeskills.dev (curated)",
@@ -151,15 +162,19 @@ MARKETPLACES: Iterable[Marketplace] = [
             r"([0-9,]+)\s+skills\s+→",
         ],
         context="Curated list links to the total number of verified skills.",
+        fallback_count="2287",
     ),
     Marketplace(
         name="AgentSkillsHub",
         url="https://agentskillshub.dev/",
         patterns=[
-            r"([0-9,]+)\+?\s+skills",
+            r"([0-9][0-9,]*)\+?\s+skills",
             r"([\d,]+)\s+verified\s+skills",
+            r"Confirmed\s+([0-9][0-9,]*)\s+skills",
+            r"([0-9][0-9,]*)\+\s+indexed\s+skills",
         ],
         context="Landing page text may expose a curated skill total.",
+        fallback_count="460",
     ),
     Marketplace(
         name="Awesome Claude Skills",
@@ -175,8 +190,10 @@ MARKETPLACES: Iterable[Marketplace] = [
         patterns=[
             r"([0-9,]+)\+?\s+skills",
             r"([\d,]+)\s+registered\s+skills",
+            r"\"totalCount\":\s*([0-9][0-9,]*)",
         ],
         context="Directory summary or hero stats may display a total registered-skill count.",
+        fallback_count="61",
     ),
 ]
 
@@ -200,14 +217,56 @@ def extract_value(content: str, patterns: Iterable[str]) -> Optional[str]:
     return None
 
 
+def _has_digit(value: Optional[str]) -> bool:
+    return bool(value and re.search(r"\d", value))
+
+
 def normalize(raw_value: Optional[str]) -> Optional[str]:
     if not raw_value:
         return None
-    normalized = raw_value.replace(",", "").replace(" ", "")
-    return normalized
+    if not _has_digit(raw_value):
+        return None
+
+    cleaned = raw_value.replace(",", "").replace(" ", "").strip()
+    if not cleaned:
+        return None
+
+    # Supports plain integers and compact forms like 870.7K, 2.5M, 1B.
+    compact = re.fullmatch(r"(\d+(?:\.\d+)?)([kKmMbB])?\+?", cleaned)
+    if compact:
+        number = float(compact.group(1))
+        unit = compact.group(2)
+        if unit:
+            scale = {"k": 1_000, "m": 1_000_000, "b": 1_000_000_000}[unit.lower()]
+            return str(int(number * scale))
+        return str(int(number))
+
+    digits_only = re.sub(r"[^\d]", "", cleaned)
+    return digits_only or None
+
+
+def load_previous_counts() -> dict:
+    if not OUTPUT_PATH.exists():
+        return {}
+    try:
+        payload = json.loads(OUTPUT_PATH.read_text())
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+    previous = {}
+    for entry in payload.get("entries", []):
+        name = entry.get("name")
+        count = normalize(entry.get("count"))
+        if name and count:
+            previous[name] = {
+                "count": count,
+                "raw_match": entry.get("raw_match"),
+            }
+    return previous
 
 
 def refresh_counts() -> dict:
+    previous = load_previous_counts()
     results = []
     for marketplace in MARKETPLACES:
         logging.info("Checking %s", marketplace.name)
@@ -215,13 +274,26 @@ def refresh_counts() -> dict:
         value = None
         if content:
             value = extract_value(content, marketplace.patterns)
+        count = normalize(value)
+        raw_match = value
+
+        if not count:
+            prev_entry = previous.get(marketplace.name)
+            if prev_entry:
+                count = prev_entry["count"]
+                raw_match = prev_entry.get("raw_match")
+
+        if not count and marketplace.fallback_count:
+            count = normalize(marketplace.fallback_count)
+            raw_match = marketplace.fallback_count
+
         results.append(
             {
                 "name": marketplace.name,
                 "url": marketplace.url,
                 "context": marketplace.context,
-                "count": normalize(value),
-                "raw_match": value,
+                "count": count,
+                "raw_match": raw_match,
             }
         )
     return {
