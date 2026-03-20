@@ -1,110 +1,115 @@
 ---
 name: polymarket-market-data
-description: Polymarket read-only integration focused on information collection with no authentication required. Covers market discovery (Gamma API), read-only pricing data (CLOB public endpoints), and real-time public streams (market and sports WebSocket channels). Use when building dashboards, analytics agents, scanners, alerts, and research tools that do not place orders or execute transactions.
-compatibility: Requires network access to Polymarket public APIs (gamma-api.polymarket.com, clob.polymarket.com, ws-subscriptions-clob.polymarket.com, sports-api.polymarket.com)
+description: Download live Polymarket events from Gamma API and summarize/filter them in a compact table format. Read-only, no authentication required.
+compatibility: Requires network access to gamma-api.polymarket.com
 version: 03/20/2026
 Author: Xiang OpenSkillsReview
 ---
 
-# Polymarket Market Data Skill
+# Polymarket Live Events Summary Skill
 
 ## When to use this skill
 
-Use this skill when the user asks about or needs to build:
-- Market data fetching from Polymarket APIs
-- Event and market discovery by slug, tag, series, or pagination
-- Trending or top Polymarket event discovery
-- Read-only pricing queries
-- Real-time market feed subscriptions over public WebSocket channels
-- Sports feed consumption from Polymarket sports WebSocket
+Use this skill when the user asks to:
+- Pull live Polymarket events from Gamma API
+- Filter events by keyword, tag/category, or 24h volume
+- Summarize events into a compact table view
+- Get top active events ranked by 24h volume
 
 Do not use this skill for:
-- Authentication flows or API key management
-- Order placement, order cancellation, or account-level trading workflows
-- Bridge, relayer, gasless, or onchain transaction execution
+- Placing or managing orders
+- Wallet/account authentication flows
+- Onchain execution or transaction automation
 
-## API Configuration
+## Live API Source
 
-| API | Base URL | Auth | Purpose |
-|-----|----------|------|---------|
-| Gamma API | `https://gamma-api.polymarket.com` | None | Events, markets, tags, sports metadata |
-| CLOB (read endpoints) | `https://clob.polymarket.com` | None | Public price, midpoint, spread, history |
-| WebSocket (Market) | `wss://ws-subscriptions-clob.polymarket.com/ws/market` | None | Real-time market updates |
-| WebSocket (Sports) | `wss://sports-api.polymarket.com/ws` | None | Live sports updates |
-
-## Recommended Workflow
-
-Use the bundled script for repeatable event discovery:
-
-```bash
-# Fetch all active events
-python3 scripts/fetch_events.py --active true --closed false --paginate-all --no-pretty 
-
-# Fetch trending events (top open events by 24h volume)
-python3 scripts/fetch_events.py --active true --closed false --order volume24hr --ascending false --limit 20 --no-pretty
-```
-
-Output format (strict):
+Use this endpoint for live active events sorted by 24h volume:
 
 ```text
-<Question Title> | Predicted: <Yes/No> (<Probability%>) | 24h: <$Volume>
-Will Bitcoin reach $150,000 in March? | Predicted: No (99.8%) | 24h: $732.93K
-Will ETH outperform BTC this week? | Predicted: Yes (62.4%) | 24h: $1.00M
+https://gamma-api.polymarket.com/events?active=true&closed=false&order=volume24hr&ascending=false
 ```
 
-## Core Pattern: Fetch Active Events
+## Script
+
+Use:
+
+- `scripts/live_events_summary.py`
+
+This script:
+- Downloads live events directly from the URL above (or reads from a local JSON file)
+- Applies filters (`--contains`, `--tag`, `--min-volume24h`, `--top`)
+- Outputs rows in this strict format:
+
+```text
+<Question Title> | <Strike Label>: Yes: <Yes%> No: <No%> | 24h: <$Volume>
+What price will Bitcoin hit in 2026? | $100K: Yes: 40.5% No: 59.5% | 24h: $1.06M
+```
+
+If the user asks about any specific Polymarket event, this next flow is mandatory before answering.
+
+## Mandatory: Download JSON First, Then Process (Specific Event Queries)
+
+Use this base URL:
+
+```text
+https://gamma-api.polymarket.com/events?active=true&closed=false
+```
+
+Routing logic:
+- If the user asks a general topic query, you must choose exactly one Tag from `skills/Skill-Information/polymarket-market-data/slug.md` (for example: Crypto, Politics, Finance, Geopolitics, Tech, Economy, Weather), then use that Tag to set `tagSlug`.
+- General-topic request format: `base_url&tagSlug=<tag-from-slug.md>`
+- If the user asks a specific event query, call: `base_url&slug=<event-slug>`
+- Always download JSON first, then run local processing on the downloaded file.
+
+Example mapping for Bitcoin queries:
+
+```text
+User intent: bitcoin
+Specific event slug: what-price-will-bitcoin-hit-before-2027
+Use in request: base_url&slug=what-price-will-bitcoin-hit-before-2027
+
+Output example:
+bitcoin reach 100,000 by 12-31-2026, Yes: 40.5%, No: 59.5%
+```
 
 ```bash
-python3 scripts/fetch_events.py --active true --closed false --limit 100
+# Specific event query
+curl -s "https://gamma-api.polymarket.com/events?active=true&closed=false&slug=what-price-will-bitcoin-hit-before-2027" > /tmp/live_events_<slug>.json
+
+
+# General topic query (must use one Tag from slug.md)
+curl -s "https://gamma-api.polymarket.com/events?active=true&closed=false&tagSlug=crypto" > /tmp/live_events_<tagSlug>.json
+
+# Process downloaded JSON
+python3 scripts/live_events_summary.py --input-file /tmp/live_events.json --top 10
 ```
 
-## Core Pattern: Fetch Trending Events
-
-Treat "trending events" as the highest-volume currently active events unless the user specifies a different definition.
+## Recommended Workflow for general search
 
 ```bash
-# Top trending events across Polymarket
-python3 scripts/fetch_events.py --active true --closed false --order volume24hr --ascending false --limit 20
+# 1) Quick live summary (top 20 by volume24h)
+python3 scripts/live_events_summary.py
 
-# Trending events within a category
-python3 scripts/fetch_events.py --category sports --active true --closed false --order volume24hr --ascending false --limit 20
-python3 scripts/fetch_events.py --category crypto --active true --closed false --order volume24hr --ascending false --limit 20
+# 2) Filter by keyword
+python3 scripts/live_events_summary.py --contains bitcoin --top 10
+
+# 3) Filter by tag/category
+python3 scripts/live_events_summary.py --tag politics --top 15
+
+# 4) Filter by minimum 24h volume (USD)
+python3 scripts/live_events_summary.py --min-volume24h 1000000 --top 25
 ```
 
-## Core Pattern: Fetch Events by Category
+## Output Contract
 
-```bash
-# List available categories
-python3 scripts/fetch_events.py --list-categories
+Always keep this output structure:
 
-# Filter by category name
-python3 scripts/fetch_events.py --category sports --active true --closed false
-python3 scripts/fetch_events.py --category crypto --active true --closed false
-python3 scripts/fetch_events.py --category politics --active true --closed false
+```text
+<Question Title> | <Strike Label>: Yes: <Yes%> No: <No%> | 24h: <$Volume>
 ```
 
-## Core Pattern: Read Price
+## Reference Files
 
-```bash
-curl "https://clob.polymarket.com/price?token_id=TOKEN_ID&side=BUY"
-```
-
-## Core Pattern: Public WebSocket Subscribe
-
-```json
-{
-  "type": "market",
-  "assets_ids": ["TOKEN_ID"],
-  "custom_feature_enabled": true
-}
-```
-
-Send `PING` every 10 seconds; ignore `PONG`.
-
-## Reference files (load on demand)
-
-Only read these when the task requires deeper detail:
-
-- **Market data** (Gamma API + CLOB read endpoints): [market-data.md](market-data.md)
-- **WebSocket** (public market + sports channels): [websocket.md](websocket.md)
-- **Scripts** (fetch/paginate active events): `scripts/fetch_events.py`
+Load only as needed:
+- [market-data.md](market-data.md)
+- [README.md](README.md)
