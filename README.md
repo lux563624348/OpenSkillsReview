@@ -82,7 +82,7 @@ Path: `skills/<function-department>/`
 | Skill | Platform Support | Source | Verified(❓) |
 | --- | --- | --- | --- |
 | `scientific-skills` | `GitHub` | [github.com/K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
-| `academic-research-skills` | `GitHub` | [Imbad0202](https://github.com/Imbad0202/academic-research-skills) | ✅ |
+| `academic-research` | `GitHub` | [Imbad0202](https://github.com/Imbad0202/academic-research-skills) | ✅ |
 | `ClawBio` | `GitHub` | [ClawBio](https://github.com/ClawBio/ClawBio) | ❓ |
 
 <details>
