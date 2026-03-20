@@ -14,9 +14,8 @@ Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) 
 | Rank | Name & URL | Approx. # Skills | Review Stars | Access Methods|
 | --- | --- | --- | --- | --- |
 | 🥇 | [skills.sh](https://skills.sh) | **89,200+** | ⭐⭐⭐⭐☆ | Web, CLI |
-| 🥈 | [SkillsMP](https://skillsmp.com) | **530,778+** | ⭐⭐⭐☆☆ | Web |
-| 🥉 | [clawhub.ai/skills](https://clawhub.ai/skills) | **28,304+** | ⭐⭐⭐☆☆ | Web |
-| 4 | [Agent Skills Directory](https://www.skillsdirectory.org) | **1,036,455+** | ⭐⭐⭐☆☆ | Web |
+| 🥈 | [clawhub.ai/skills](https://clawhub.ai/skills) | **28,304+** | ⭐⭐⭐☆☆ | Web |
+| 🥉 | [Agent Skills Directory](https://www.skillsdirectory.org) | **1,036,455+** | ⭐⭐⭐☆☆ | Web |
 ...
 | 10 | [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **170+** | ⭐⭐⭐⭐☆ | GitHub |
 
@@ -25,6 +24,7 @@ Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) 
 
 | Rank | Name & URL | Approx. # Skills | Review Stars | Skill Discovery Access|
 | --- | --- | --- | --- | --- |
+| 4 | [SkillsMP](https://skillsmp.com) | **530,778+** | ⭐⭐⭐☆☆ | Web |
 | 6 | [agentskill.sh](https://agentskill.sh) | **106,000+** | ⭐⭐⭐☆☆ | Web, CLI |
 | 7 | [AgentSkills](https://agentskills.to/skills) | **24,000+**  | ⭐⭐⭐☆☆ | Web |
 | 8 | [LobeHub](https://lobehub.com/bg/skills) | **223,626+** | ⭐⭐⭐☆☆ | Web |
@@ -101,6 +101,7 @@ Path: `skills/<function-department>/`
 | `binance-skills-hub` | `GitHub` | [github.com/binance/binance-skills-hub](https://github.com/binance/binance-skills-hub) | ✅ |
 | `awesome-finance-skills` | `GitHub` | [github.com/RKiding/Awesome-finance-skills](https://github.com/RKiding/Awesome-finance-skills) | ❓ |
 | `open-fintech` | `GitHub` | [github.com/ly229/OpenFinTech](https://github.com/ly229/OpenFinTech) | ❓ |
+| `polymarket-market-info-skill` | `OpenSkillsReview` | [Verified light version (no auth, info-only)](skills/Skill-Finance/polymarket-market-info-skill) | ✅ |
 
 
 
