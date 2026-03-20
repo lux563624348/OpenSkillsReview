@@ -1,7 +1,7 @@
 ---
 name: github-research
 description: GitHub repository deep search & analysis. Multi-dimensional filtering by keywords, language, stars, update time. Identifies emerging trends and popular projects in specific domains.
-metadata: {"openclaw":{"emoji":"🐙","category":"research","tags":["github","opensource","research","repository"]}, "author": {lux563624348 & Claude}}
+metadata: {"openclaw":{"emoji":"🐙","category":"research","tags":["github","opensource","research","repository"]}, "author": {xiang & Claude}}
 ---
 
 # GitHub Research 🐙

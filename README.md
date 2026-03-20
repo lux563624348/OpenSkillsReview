@@ -46,7 +46,7 @@ Path: `skills/<function-department>/`
 
 ### Skill for Skill-Creation
 
-| Skill | Platform Support | Source | Verified(❓) |
+| Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
 | `skill-creator-claude` | `Claude Code` | [OpenSkillsReview](skills/Skill-Creator/skill-creator-claude) | ✅ |
 
@@ -54,16 +54,16 @@ Path: `skills/<function-department>/`
 
 ### Skill for Skill-Search
 
-| Skill | Platform Support | Source | Verified(❓) |
+| Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
 | `find-skills` | `skills.sh` | [github.com/vercel-labs](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md) | ✅ |
 | `skill-finder` | `clawhub` | [clawhub.ai/ivangdavila](https://clawhub.ai/ivangdavila/skill-finder) | ❓ |
-| `github-search-1.0.0` | `GitHub` | [OpenSkillsReview](skills/Skill-Search/github-search-1.0.0) | ✅ |
+| `github-search-1.0.0` | `all` | [OpenSkillsReview](skills/Skill-Search/github-search-1.0.0) | ✅ |
 
 <details>
 <summary>Show more</summary>
 
-| Skill | Platform Support | Source | Verified(❓) |
+| Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
 | `skills-search` | `skills.sh` | [clawhub/Skills.sh Search](https://clawhub.ai/TheSethRose/skills-search) | ❓ |
 | `skill-lookup` | `prompts.chat` | [github.com/f/prompts.chat](https://github.com/f/prompts.chat/tree/main/plugins/claude/prompts.chat/skills/skill-lookup) | ❓ |
@@ -72,41 +72,41 @@ Path: `skills/<function-department>/`
 
 ### Skill for Skill-Safe
 
-| Skill | Platform Support | Source | Verified |
+| Skill | Platform | Source | Verified |
 | --- | --- | --- | --- |
-| `skill-scanner` | `Clawdbot, MCP` | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) | ✅ |
-| `skill-review` | `Clawdbot, MCP` | [OpenSkillReview](skills/Skill-Safe/skill-review) | ✅ |
+| `skill-scanner` | `openclaw, MCP` | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) | ✅ |
+| `skill-review` | `openclaw, MCP` | [OpenSkillReview](skills/Skill-Safe/skill-review) | ✅ |
 
 ### Skill for Information
 
-| Skill | Platform Support | Source | Verified(❓) |
+| Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
-| `polymarket-market-data` | `OpenSkillsReview` | [Verified light version (no auth, info-only)](skills/Skill-Information/polymarket-market-data) | ✅ |
+| `polymarket-market-data` | `OpenSkillsReview` | [github.com/OpenSkillsReview](skills/Skill-Information/polymarket-market-data) | ✅ |
 
 ### Skill for Science
 
-| Skill | Platform Support | Source | Verified(❓) |
+| Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
-| `scientific-skills` | `GitHub` | [github.com/K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
-| `academic-research` | `GitHub` | [Imbad0202](https://github.com/Imbad0202/academic-research-skills) | ✅ |
-| `ClawBio` | `GitHub` | [ClawBio](https://github.com/ClawBio/ClawBio) | ❓ |
+| `scientific-skills` | `claude` | [github.com/K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
+| `academic-research` | `all` | [Imbad0202](https://github.com/Imbad0202/academic-research-skills) | ✅ |
+| `ClawBio` | `openclaw` | [ClawBio](https://github.com/ClawBio/ClawBio) | ❓ |
 
 <details>
 <summary>Show more</summary>
 
-| Skill | Platform Support | Source | Verified(❓) |
+| Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
-| `OpenClaw-Medical-Skills` | `GitHub` | [OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | ❓ |
+| `OpenClaw-Medical-Skills` | `all` | [OpenClaw-Medical-Skills](https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills) | ❓ |
 
 </details>
 
 ### Skill for Finance
 
-| Skill | Platform Support | Source | Verified(❓) |
+| Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
-| `binance-skills-hub` | `GitHub` | [github.com/binance/binance-skills-hub](https://github.com/binance/binance-skills-hub) | ✅ |
-| `awesome-finance-skills` | `GitHub` | [github.com/RKiding/Awesome-finance-skills](https://github.com/RKiding/Awesome-finance-skills) | ❓ |
-| `open-fintech` | `GitHub` | [github.com/ly229/OpenFinTech](https://github.com/ly229/OpenFinTech) | ❓ |
+| `binance-skills-hub` | `all` | [github.com/binance/binance-skills-hub](https://github.com/binance/binance-skills-hub) | ✅ |
+| `awesome-finance-skills` | `all` | [github.com/RKiding/Awesome-finance-skills](https://github.com/RKiding/Awesome-finance-skills) | ❓ |
+| `open-fintech` | `all` | [github.com/ly229/OpenFinTech](https://github.com/ly229/OpenFinTech) | ❓ |
 
 
 
