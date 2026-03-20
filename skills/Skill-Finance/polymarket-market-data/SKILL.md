@@ -3,7 +3,7 @@ name: polymarket-market-data
 description: Polymarket read-only integration focused on information collection with no authentication required. Covers market discovery (Gamma API), read-only pricing data (CLOB public endpoints), and real-time public streams (market and sports WebSocket channels). Use when building dashboards, analytics agents, scanners, alerts, and research tools that do not place orders or execute transactions.
 compatibility: Requires network access to Polymarket public APIs (gamma-api.polymarket.com, clob.polymarket.com, ws-subscriptions-clob.polymarket.com, sports-api.polymarket.com)
 version: 03/20/2026
-Author: Xiang
+Author: Xiang OpenSkillsReview
 ---
 
 # Polymarket Market Data Skill

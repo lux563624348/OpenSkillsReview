@@ -99,12 +99,9 @@ Path: `skills/<function-department>/`
 | Skill | Platform Support | Source | Verified(❓) |
 | --- | --- | --- | --- |
 | `binance-skills-hub` | `GitHub` | [github.com/binance/binance-skills-hub](https://github.com/binance/binance-skills-hub) | ✅ |
+| `polymarket-market-data` | `OpenSkillsReview` | [Verified light version (no auth, info-only)](skills/Skill-Finance/polymarket-market-data) | ✅ |
 | `awesome-finance-skills` | `GitHub` | [github.com/RKiding/Awesome-finance-skills](https://github.com/RKiding/Awesome-finance-skills) | ❓ |
 | `open-fintech` | `GitHub` | [github.com/ly229/OpenFinTech](https://github.com/ly229/OpenFinTech) | ❓ |
-| `polymarket-market-info-skill` | `OpenSkillsReview` | [Verified light version (no auth, info-only)](skills/Skill-Finance/polymarket-market-info-skill) | ✅ |
-
-
-
 
 
 ## Goals

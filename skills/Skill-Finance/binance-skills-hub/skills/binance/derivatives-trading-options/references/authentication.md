@@ -6,20 +6,20 @@ All trading endpoints require HMAC SHA256 signed requests.
 
 | Environment | URL |
 |-------------|-----|
-| Mainnet | https://api.binance.com |
-| Testnet | https://testnet.binance.vision |
+| Mainnet | https://eapi.binance.com |
+| Testnet | https://testnet.binancefuture.com |
 
 ## Required Headers
 
 * `X-MBX-APIKEY`: your_api_key
-* `User-Agent`: binance-spot/1.0.2 (Skill)
+* `User-Agent`: binance-derivatives-trading-options/1.0.0 (Skill)
 
 ## Signing Process
 
 ### Step 1: Build Query String
 
 Include all parameters plus `timestamp` (current Unix time in milliseconds):
-`symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=1234567890123`
+`symbol=BTC-260327-120000-C&side=BUY&type=LIMIT&quantity=1&price=5&timestamp=1234567890123`
 
 **Optional:** Add `recvWindow` (default 5000ms) for timestamp tolerance.
 
@@ -47,7 +47,7 @@ Create HMAC SHA256 signature of the query string using your secret key:
 
 ```bash
 # Example using openssl
-echo -n "symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=1234567890123" | \
+echo -n "symbol=BTC-260327-120000-C&side=BUY&type=LIMIT&quantity=1&price=5&timestamp=1234567890123" | \
   openssl dgst -sha256 -hmac "your_secret_key"
 ```
 
@@ -57,7 +57,7 @@ Create RSA signature of the query string using your private key:
 
 ```bash
 # Example using openssl
-echo -n "symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=1234567890123" | \
+echo -n "symbol=BTC-260327-120000-C&side=BUY&type=LIMIT&quantity=1&price=5&timestamp=1234567890123" | \
   openssl dgst -sha256 -sign private_key.pem | base64
 ```
 
@@ -67,7 +67,7 @@ Create Ed25519 signature of the query string using your private key:
 
 ```bash
 # Example using openssl
-echo -n "symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=1234567890123" | \
+echo -n "symbol=BTC-260327-120000-C&side=BUY&type=LIMIT&quantity=1&price=5&timestamp=1234567890123" | \
   openssl pkeyut -pubout -in private_key.pem -outform DER | \
   openssl dgst -sha256 -sign private_key.pem | base64
 ```
@@ -75,46 +75,46 @@ echo -n "symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=1234567890
 ### Step 4: Append Signature
 
 Add signature parameter to the query string:
-`symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=1234567890123&signature=abc123...`
+`symbol=BTC-260327-120000-C&side=BUY&type=LIMIT&quantity=1&price=5&timestamp=1234567890123&signature=abc123...`
 
 ### Step 5: Add Product User Agent Header
 
-Include `User-Agent` header with the following string: `binance-spot/1.0.2 (Skill)`
+Include `User-Agent` header with the following string: `binance-derivatives-trading-options/1.0.0 (Skill)`
 
 #### Complete Example
 
 Request:
 ```bash
-curl -X POST "https://api.binance.com/api/v3/order" \
-  -H "X-MBX-APIKEY: your_api_key" \
-  -H "User-Agent: binance-spot/1.0.2 (Skill)" \
-  -d "symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=1234567890123&signature=..."
+curl --request POST \
+  --url 'https://eapi.binance.com/eapi/v1/order?symbol=BTC-260327-120000-C&side=BUY&type=LIMIT&quantity=1&price=5&timeInForce=GTC&newOrderRespType=RESULT&recvWindow=999999999&timestamp=1772667645754&signature=...&selfProtectionMode=EXPIRE_BOTH' \
+  -H "X-MBX-APIKEY: ${API_KEY}" \
+  -H "User-Agent: binance-derivatives-trading-options/1.0.0 (Skill)"
 ```
 
 ```bash
 #!/bin/bash
 API_KEY="your_api_key"
 SECRET_KEY="your_secret_key"
-BASE_URL="https://api.binance.com"  # or https://testnet.binance.vision
+BASE_URL="https://eapi.binance.com"  # or https://testnet.binancefuture.com
 
 # Get current timestamp
 TIMESTAMP=$(date +%s000)
 
 # Build query string (without signature)
-QUERY="symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=${TIMESTAMP}"
+QUERY="symbol=BTC-260327-120000-C&side=BUY&type=LIMIT&quantity=1&price=5&timestamp=${TIMESTAMP}"
 
 # Generate signature
 SIGNATURE=$(echo -n "$QUERY" | openssl dgst -sha256 -hmac "$SECRET_KEY" | cut -d' ' -f2)
 
 # Make request
-curl -X POST "${BASE_URL}/api/v3/order?${QUERY}&signature=${SIGNATURE}" \
+curl -X POST "${BASE_URL}/eapi/v1/order?${QUERY}&signature=${SIGNATURE}" \
   -H "X-MBX-APIKEY: ${API_KEY}"\
-  -H "User-Agent: binance-spot/1.0.2 (Skill)"
+  -H "User-Agent: binance-derivatives-trading-options/1.0.0 (Skill)"
 ```
 
 If you get -1021 Timestamp outside recvWindow:
 
-1. Check server time: GET /api/v3/time
+1. Check server time: GET /eapi/v1/time
 2. Sync your clock or adjust timestamp
 3. Increase recvWindow (max 60000ms)
 
@@ -123,5 +123,5 @@ If you get -1021 Timestamp outside recvWindow:
 * Never share your secret key
 * Use IP whitelist in Binance API settings
 * Enable only required permissions (spot trading, no withdrawals)
-* Use testnet for development: https://testnet.binance.vision
+* Use testnet for development: https://testnet.binancefuture.com
 * Testnet credentials are separate from mainnet

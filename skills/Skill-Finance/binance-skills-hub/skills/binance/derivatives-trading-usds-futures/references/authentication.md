@@ -6,13 +6,13 @@ All trading endpoints require HMAC SHA256 signed requests.
 
 | Environment | URL |
 |-------------|-----|
-| Mainnet | https://api.binance.com |
-| Testnet | https://testnet.binance.vision |
+| Mainnet | https://fapi.binance.com |
+| Testnet | https://demo-fapi.binance.com |
 
 ## Required Headers
 
 * `X-MBX-APIKEY`: your_api_key
-* `User-Agent`: binance-spot/1.0.2 (Skill)
+* `User-Agent`: binance-derivatives-trading-usds-futures/1.0.0 (Skill)
 
 ## Signing Process
 
@@ -79,15 +79,15 @@ Add signature parameter to the query string:
 
 ### Step 5: Add Product User Agent Header
 
-Include `User-Agent` header with the following string: `binance-spot/1.0.2 (Skill)`
+Include `User-Agent` header with the following string: `binance-derivatives-trading-usds-futures/1.0.0 (Skill)`
 
 #### Complete Example
 
 Request:
 ```bash
-curl -X POST "https://api.binance.com/api/v3/order" \
+curl -X POST "https://fapi.binance.com/fapi/v1/order" \
   -H "X-MBX-APIKEY: your_api_key" \
-  -H "User-Agent: binance-spot/1.0.2 (Skill)" \
+  -H "User-Agent: binance-derivatives-trading-usds-futures/1.0.0 (Skill)" \
   -d "symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=1234567890123&signature=..."
 ```
 
@@ -95,7 +95,7 @@ curl -X POST "https://api.binance.com/api/v3/order" \
 #!/bin/bash
 API_KEY="your_api_key"
 SECRET_KEY="your_secret_key"
-BASE_URL="https://api.binance.com"  # or https://testnet.binance.vision
+BASE_URL="https://fapi.binance.com"  # or https://demo-fapi.binance.com
 
 # Get current timestamp
 TIMESTAMP=$(date +%s000)
@@ -107,14 +107,14 @@ QUERY="symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=${TIMESTAMP}
 SIGNATURE=$(echo -n "$QUERY" | openssl dgst -sha256 -hmac "$SECRET_KEY" | cut -d' ' -f2)
 
 # Make request
-curl -X POST "${BASE_URL}/api/v3/order?${QUERY}&signature=${SIGNATURE}" \
+curl -X POST "${BASE_URL}/fapi/v1/order?${QUERY}&signature=${SIGNATURE}" \
   -H "X-MBX-APIKEY: ${API_KEY}"\
-  -H "User-Agent: binance-spot/1.0.2 (Skill)"
+  -H "User-Agent: binance-derivatives-trading-usds-futures/1.0.0 (Skill)"
 ```
 
 If you get -1021 Timestamp outside recvWindow:
 
-1. Check server time: GET /api/v3/time
+1. Check server time: GET /fapi/v1/time
 2. Sync your clock or adjust timestamp
 3. Increase recvWindow (max 60000ms)
 
@@ -123,5 +123,5 @@ If you get -1021 Timestamp outside recvWindow:
 * Never share your secret key
 * Use IP whitelist in Binance API settings
 * Enable only required permissions (spot trading, no withdrawals)
-* Use testnet for development: https://testnet.binance.vision
+* Use testnet for development: https://demo-fapi.binance.com
 * Testnet credentials are separate from mainnet

@@ -1,8 +1,8 @@
 ---
 name: spot
-description: Binance Spot request using the Binance API. Authentication requires API key and secret key. Supports testnet and mainnet.
+description: Binance Spot request using the Binance API. Authentication requires API key and secret key. Supports testnet, mainnet, and demo.
 metadata:
-  version: 1.0.1
+  version: 1.0.2
   author: Binance
 license: MIT
 ---
@@ -236,6 +236,12 @@ abc123...xyz
 secret123...key
 ```
 
+### Never Disclose API Key and Secret
+
+Never disclose the location of the API key and secret file.
+
+Never send the API key and secret to any website other than Mainnet and Testnet.
+
 ### Never Display Full Secrets
 
 When showing credentials to users:
@@ -316,15 +322,24 @@ When user provides new credentials:
 
 ## Signing Requests
 
-All trading endpoints require HMAC SHA256 signature:
+For trading endpoints that require a signature:
 
-1. Build query string with all params + timestamp (Unix ms)
-2. Sign query string with secretKey using HMAC SHA256, RSA, or Ed25519 (depending on account config)
-3. Append signature to query string
-4. Include `X-MBX-APIKEY` header
+1. Build query string with all parameters, including the timestamp (Unix ms).
+2. Percent-encode the parameters using UTF-8 according to RFC 3986.
+3. Sign query string with secretKey using HMAC SHA256, RSA, or Ed25519 (depending on the account configuration).
+4. Append signature to query string.
+5. Include `X-MBX-APIKEY` header.
+
+Otherwise, do not perform steps 3–5.
+
+## New Client Order ID 
+
+For endpoints that include the `newClientOrderId` parameter, the value must always start with `agent-`. If the parameter is not provided, `agent-` followed by 18 random alphanumeric characters will be generated automatically. If a value is provided, it will be prefixed with `agent-`
+
+Example: `agent-1a2b3c4d5e6f7g8h9i`
 
 ## User Agent Header
 
-Include `User-Agent` header with the following string: `binance-spot/1.0.1 (Skill)`
+Include `User-Agent` header with the following string: `binance-spot/1.0.2 (Skill)`
 
 See [`references/authentication.md`](./references/authentication.md) for implementation details.
