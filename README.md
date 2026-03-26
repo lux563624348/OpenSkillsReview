@@ -6,8 +6,9 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-LUFFING--FUTURE_LLC.-0A66C2?logo=linkedin)](https://www.linkedin.com/in/xiangli-lucky-guy/)
 
 <img src="images/header.png" alt="OpenSkillsReview Header" width="80%">
-[![Skills Verified](https://img.shields.io/badge/Verified_Skills-1200-brightgreen.svg)](#human-verified-skills)
-[![Skills To Be Verified](https://img.shields.io/badge/Skills_To_Verify-1533-lightgrey.svg)](#human-verified-skills)
+
+[![Skills Verified](https://img.shields.io/badge/Skills%20Verified-1200-brightgreen.svg)](#human-verified-skills)
+[![Skills To Be Verified](https://img.shields.io/badge/Skills%20To%20Be%20Verified-1533-lightgrey.svg)](#human-verified-skills)
 
 
 Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) & [OpenAI Skills](https://github.com/openai/skills)
