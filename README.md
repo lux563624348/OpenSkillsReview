@@ -7,7 +7,7 @@
 
 <img src="images/header.png" alt="OpenSkillsReview Header" width="80%">
 
-[![Skills Verified](https://img.shields.io/badge/Skills%20Verified-1200-brightgreen.svg)](#human-verified-skills)
+[![Skills Verified](https://img.shields.io/badge/Skills%20Verified-1208-brightgreen.svg)](#human-verified-skills)
 [![Skills To Be Verified](https://img.shields.io/badge/Skills%20To%20Be%20Verified-1533-lightgrey.svg)](#human-verified-skills)
 
 
@@ -119,10 +119,9 @@ Intro article: https://mp.weixin.qq.com/s/i8Mm147XfD0DR41K_nQCnw
 | Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
 | `binance-skills-hub` | `all` | [github.com/binance/binance-skills-hub](https://github.com/binance/binance-skills-hub) | ✅ |
+| `mxClaw-skills` | `mxClaw` | [mxClaw](skills/Skill-Finance/mxClaw_skills) | ✅ |
 | `awesome-finance-skills` | `all` | [github.com/RKiding/Awesome-finance-skills](https://github.com/RKiding/Awesome-finance-skills) | ❓ |
 | `open-fintech` | `all` | [github.com/ly229/OpenFinTech](https://github.com/ly229/OpenFinTech) | ❓ |
-
-
 
 
 ## Goals
