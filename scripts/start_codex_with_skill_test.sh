@@ -44,6 +44,38 @@ for filename in config.toml auth.json; do
   fi
 done
 
+# Force the skill-test launcher to use the requested default model.
+cat > "$LAUNCH_CODEX_HOME/config.toml" <<'EOF'
+model = "gpt-5.4-mini"
+model_reasoning_effort = "medium"
+personality = "pragmatic"
+
+[projects."/home/xli/github/LLC/deep_agent"]
+trust_level = "trusted"
+
+[projects."/home/xli/github/LLC/yubihana.github.io"]
+trust_level = "trusted"
+
+[projects."/home/xli/github/LLC"]
+trust_level = "trusted"
+
+[projects."/home/xli"]
+trust_level = "trusted"
+
+[projects."/home/xli/github/PSC/OpenSkillsReview"]
+trust_level = "trusted"
+
+[projects."/home/xli/github/PSC/OpenSkillsReview/Skills_Hub/Skill-Finance/polymarket-agent-skills"]
+trust_level = "trusted"
+
+[notice.model_migrations]
+"gpt-5.2-codex" = "gpt-5.4"
+"gpt-5.3-codex" = "gpt-5.4"
+
+[features]
+multi_agent = true
+EOF
+
 rm -rf "$LAUNCH_CODEX_HOME/skills"
 ln -s "$SKILL_SOURCE_DIR" "$LAUNCH_CODEX_HOME/skills"
 

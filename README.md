@@ -9,6 +9,13 @@
 <img src="images/header.png" alt="OpenSkillsReview Header" width="80%">
 
 Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) & [OpenAI Skills](https://github.com/openai/skills)
+
+## miniMax-AI Skill Intro
+
+`miniMax-AI` develops skill packages specifically designed for AI coding assistants. You can install them directly into Claude Code, Cursor, Windsurf, and OpenCode.
+- MiniMax-AI/skills: https://github.com/MiniMax-AI/skills
+- 微信介绍：https://mp.weixin.qq.com/s/i8Mm147XfD0DR41K_nQCnw
+
 ## Review Table for Skills-Source 
 
 | Rank | Name & URL | Approx. # Skills | Review Stars | Access Methods|
