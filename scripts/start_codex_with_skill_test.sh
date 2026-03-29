@@ -83,4 +83,12 @@ if ! find "$SKILL_SOURCE_DIR" -name "SKILL.md" -type f | grep -q .; then
   echo "Warning: no SKILL.md files found under $SKILL_SOURCE_DIR" >&2
 fi
 
+if [[ -f "$REPO_ROOT/.env" ]]; then
+  set -a
+  # Load repo-local environment variables into the Codex launch environment.
+  # shellcheck disable=SC1090
+  source "$REPO_ROOT/.env"
+  set +a
+fi
+
 exec env CODEX_HOME="$LAUNCH_CODEX_HOME" codex "$@"
