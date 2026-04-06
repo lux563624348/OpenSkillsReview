@@ -11,6 +11,7 @@ import logging
 import re
 import sys
 from typing import Iterable, List, Optional
+from urllib.parse import urljoin
 
 import requests
 
@@ -24,6 +25,7 @@ class Marketplace:
     patterns: List[str]
     context: str
     fallback_count: Optional[str] = None
+    convex_query_path: Optional[str] = None
 
 MARKETPLACES: Iterable[Marketplace] = [
     Marketplace(
@@ -45,6 +47,7 @@ MARKETPLACES: Iterable[Marketplace] = [
         ],
         context="The skills directory page highlights the total number of published skills.",
         fallback_count="17852",
+        convex_query_path="skills:countPublicSkills",
     ),
     Marketplace(
         name="anthropics/skills",
@@ -79,9 +82,10 @@ MARKETPLACES: Iterable[Marketplace] = [
         name="skills.sh",
         url="https://skills.sh",
         patterns=[
+            r"allTimeTotal\\\":\s*(\d{1,3}(?:,\d{3})+|\d+)",
+            r"totalSkills\\\":\s*(\d{1,3}(?:,\d{3})+|\d+)",
             r"All\s+Time\s*\(?([\d,]+)\)?",
             r"All\s+Time\s*\(<!--\s*([\d,]+)\s*<!--",
-            r"allTimeTotal\":\s*([\d,]+)",
             r"([\d,]+)\s+skills\s+in\s+the\s+leaderboard",
         ],
         context="Leaderboard stats include the “All Time” total.",
@@ -208,6 +212,45 @@ def fetch_page(url: str) -> Optional[str]:
         return None
 
 
+def extract_convex_url(page_url: str, content: str) -> Optional[str]:
+    match = re.search(r'(/assets/runtimeEnv-[^"]+\.js)', content)
+    if not match:
+        return None
+
+    runtime_env_url = urljoin(page_url, match.group(1))
+    runtime_env = fetch_page(runtime_env_url)
+    if not runtime_env:
+        return None
+
+    convex_match = re.search(r'VITE_CONVEX_URL:`([^`]+)`', runtime_env)
+    if convex_match:
+        return convex_match.group(1).strip()
+    return None
+
+
+def fetch_convex_query(convex_url: str, path: str) -> Optional[str]:
+    try:
+        response = requests.post(
+            f"{convex_url}/api/query",
+            json={"path": path, "args": {}, "format": "json"},
+            headers={
+                "User-Agent": "OpenSkillsReview/1.0",
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            },
+            timeout=REQUEST_TIMEOUT,
+        )
+        response.raise_for_status()
+        payload = response.json()
+        if payload.get("status") == "success":
+            value = payload.get("value")
+            return normalize(str(value)) or str(value)
+        logging.warning("Convex query %s returned unexpected payload: %s", path, payload)
+    except (requests.RequestException, ValueError) as err:
+        logging.warning("Failed to fetch Convex query %s from %s: %s", path, convex_url, err)
+    return None
+
+
 def extract_value(content: str, patterns: Iterable[str]) -> Optional[str]:
     for pattern in patterns:
         match = re.search(pattern, content, re.IGNORECASE | re.DOTALL)
@@ -273,7 +316,12 @@ def refresh_counts() -> dict:
         content = fetch_page(marketplace.url)
         value = None
         if content:
-            value = extract_value(content, marketplace.patterns)
+            if marketplace.convex_query_path:
+                convex_url = extract_convex_url(marketplace.url, content)
+                if convex_url:
+                    value = fetch_convex_query(convex_url, marketplace.convex_query_path)
+            if not value:
+                value = extract_value(content, marketplace.patterns)
         count = normalize(value)
         raw_match = value
 

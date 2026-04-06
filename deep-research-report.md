@@ -58,7 +58,7 @@ Finally, “skills” are not necessarily safe to run blindly. Some ecosystems e
 To lower the manual effort of revisiting each marketplace, run the refresh helper:
 
 ```
-python scripts/refresh_marketplace_counts.py
+uv run python scripts/refresh_marketplace_counts.py
 ```
 
 It will pull the primary landing pages, try to extract the headline counters with simple regex patterns, and write the last-two-digit counts plus the fetch timestamp into `data/marketplace_counts.json`. After running it, inspect the array entry that corresponds to the marketplace you care about, verify the scraped value makes sense, and copy the updated number back into this report (along with any new context or updated URL). The script is deliberately conservative: the regex patterns can be tuned further, and missing matches are logged so you can capture new phrasing before publishing the next snapshot.

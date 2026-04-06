@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-18T21:42:00.839399",
+  "timestamp": "2026-04-05T21:40:16.843027",
   "entries": [
     {
       "name": "SkillsMP (Agent Skills Marketplace)",
@@ -12,8 +12,8 @@
       "name": "clawhub.ai/skills",
       "url": "https://clawhub.ai/skills",
       "context": "The skills directory page highlights the total number of published skills.",
-      "count": "17852",
-      "raw_match": "17852"
+      "count": "47124",
+      "raw_match": "47124"
     },
     {
       "name": "anthropics/skills",
@@ -26,29 +26,29 @@
       "name": "Agent Skills Directory",
       "url": "https://www.skillsdirectory.org",
       "context": "The landing page highlights unique skills vs. indexed files.",
-      "count": "1036455",
-      "raw_match": "1,036,455"
+      "count": "1395438",
+      "raw_match": "1,395,438"
     },
     {
       "name": "agentskill.sh",
       "url": "https://agentskill.sh",
       "context": "The homepage callout is the primary counter.",
-      "count": "106000",
-      "raw_match": "106,000"
+      "count": "107000",
+      "raw_match": "107,000"
     },
     {
       "name": "skills.sh",
       "url": "https://skills.sh",
       "context": "Leaderboard stats include the \u201cAll Time\u201d total.",
-      "count": "88600",
-      "raw_match": "88600"
+      "count": "91581",
+      "raw_match": "91581"
     },
     {
       "name": "MCP Market \u2013 Skills",
       "url": "https://mcpmarket.com/tools/skills",
       "context": "The Tools / Skills section exposes a tally near the top.",
-      "count": "62236",
-      "raw_match": "62236"
+      "count": "26",
+      "raw_match": "0026"
     },
     {
       "name": "AwesomeSkill.ai",
@@ -68,8 +68,8 @@
       "name": "LobeHub",
       "url": "https://lobehub.com/bg/skills",
       "context": "The skills catalog view typically surfaces a total listing count.",
-      "count": "223626",
-      "raw_match": "223,626"
+      "count": "255924",
+      "raw_match": "255,924"
     },
     {
       "name": "prompts.chat",
@@ -82,8 +82,8 @@
       "name": "K-Dense-AI/scientific-skills",
       "url": "https://github.com/K-Dense-AI/claude-scientific-skills",
       "context": "Repository docs may advertise the number of scientific skills included.",
-      "count": "170",
-      "raw_match": "170"
+      "count": "134",
+      "raw_match": "134"
     },
     {
       "name": "agent-skills.cc",
@@ -110,8 +110,8 @@
       "name": "Awesome Claude Skills",
       "url": "https://awesome-skills.com",
       "context": "Metadata includes a \u201c122+\u201d curated skill count.",
-      "count": "125",
-      "raw_match": "125"
+      "count": "146",
+      "raw_match": "146"
     },
     {
       "name": "Skill Registry",
