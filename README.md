@@ -87,6 +87,7 @@ Path: `skills/<function-department>/`
 
 | Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
+| `claude-jobs` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [OpenSkillsReview](skills/Skill-Information/claude-jobs) | ✅ |
 | `polymarket-market-data` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/OpenSkillsReview](skills/Skill-Information/polymarket-market-data) | ✅ |
 | `6551-daily-news` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [OpenSkillsReview](skills/Skill-Information/6551-daily-news) | ✅ |
 
