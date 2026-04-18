@@ -1,13 +1,13 @@
 # Open Skills Review (Find Skill You Can Trust)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 [![Databases](https://img.shields.io/badge/Databases-10%2B-orange.svg)](#whats-included)
-[![Agent Skills](https://img.shields.io/badge/Verified-Agent_Skills-blueviolet.svg)](https://agentskills.io/)
+[![Agent Skills](https://img.shields.io/badge/Verified-Agent_Skills-brightgreen.svg)](https://agentskills.io/)
 [![Works with](https://img.shields.io/badge/Works_with-All_|_AI_|_Agents-blue.svg)](#getting-started)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-LUFFING--FUTURE_LLC.-0A66C2?logo=linkedin)](https://www.linkedin.com/in/xiangli-lucky-guy/)
 
 <img src="images/header.png" alt="OpenSkillsReview Header" width="80%">
 
-[![Skills Verified](https://img.shields.io/badge/Skills%20Verified-1208-brightgreen.svg)](#human-verified-skills)
+[![Skills Verified](https://img.shields.io/badge/Skills%20Verified-239-brightgreen.svg)](#human-verified-skills)
 [![Skills To Be Verified](https://img.shields.io/badge/Skills%20To%20Be%20Verified-1533-lightgrey.svg)](#human-verified-skills)
 
 
