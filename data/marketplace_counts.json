@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-05T21:40:16.843027",
+  "timestamp": "2026-04-18T19:31:47.775301",
   "entries": [
     {
       "name": "SkillsMP (Agent Skills Marketplace)",
@@ -12,8 +12,8 @@
       "name": "clawhub.ai/skills",
       "url": "https://clawhub.ai/skills",
       "context": "The skills directory page highlights the total number of published skills.",
-      "count": "47124",
-      "raw_match": "47124"
+      "count": "56443",
+      "raw_match": "56443"
     },
     {
       "name": "anthropics/skills",
@@ -24,10 +24,10 @@
     },
     {
       "name": "Agent Skills Directory",
-      "url": "https://www.skillsdirectory.org",
+      "url": "https://www.skillsdirectory.com/",
       "context": "The landing page highlights unique skills vs. indexed files.",
-      "count": "1395438",
-      "raw_match": "1,395,438"
+      "count": "36109",
+      "raw_match": "36,109"
     },
     {
       "name": "agentskill.sh",
@@ -40,8 +40,8 @@
       "name": "skills.sh",
       "url": "https://skills.sh",
       "context": "Leaderboard stats include the \u201cAll Time\u201d total.",
-      "count": "91581",
-      "raw_match": "91581"
+      "count": "91058",
+      "raw_match": "91058"
     },
     {
       "name": "MCP Market \u2013 Skills",
@@ -68,8 +68,8 @@
       "name": "LobeHub",
       "url": "https://lobehub.com/bg/skills",
       "context": "The skills catalog view typically surfaces a total listing count.",
-      "count": "255924",
-      "raw_match": "255,924"
+      "count": "275916",
+      "raw_match": "275,916"
     },
     {
       "name": "prompts.chat",
@@ -82,8 +82,8 @@
       "name": "K-Dense-AI/scientific-skills",
       "url": "https://github.com/K-Dense-AI/claude-scientific-skills",
       "context": "Repository docs may advertise the number of scientific skills included.",
-      "count": "134",
-      "raw_match": "134"
+      "count": "133",
+      "raw_match": "133"
     },
     {
       "name": "agent-skills.cc",
@@ -110,8 +110,8 @@
       "name": "Awesome Claude Skills",
       "url": "https://awesome-skills.com",
       "context": "Metadata includes a \u201c122+\u201d curated skill count.",
-      "count": "146",
-      "raw_match": "146"
+      "count": "150",
+      "raw_match": "150"
     },
     {
       "name": "Skill Registry",

@@ -19,11 +19,11 @@ Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) 
 
 | Rank | Name & URL | Approx. # Skills | Review Stars | Access Methods|
 | --- | --- | --- | --- | --- |
-| 🥇 | [skills.sh](https://skills.sh) | **91,581+** | ⭐⭐⭐⭐☆ | Web, CLI |
-| 🥈 | [clawhub.ai/skills](https://clawhub.ai/skills) | **47,124+** | ⭐⭐⭐☆☆ | Web |
-| 🥉 | [Agent Skills Directory](https://www.skillsdirectory.org) | **1,395,438+** | ⭐⭐⭐☆☆ | Web |
+| 🥇 | [skills.sh](https://skills.sh) | **91,058+** | ⭐⭐⭐⭐☆ | Web, CLI |
+| 🥈 | [clawhub.ai/skills](https://clawhub.ai/skills) | **56,443+** | ⭐⭐⭐☆☆ | Web |
+| 🥉 | [Agent Skills Directory](https://www.skillsdirectory.com/) | **36,109+** | ⭐⭐⭐☆☆ | Web |
 ...
-| 10 | [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **134+** | ⭐⭐⭐⭐☆ | GitHub |
+| 10 | [K-Dense-AI/scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | **133+** | ⭐⭐⭐⭐☆ | GitHub |
 
 <details>
 <summary>Show more skills source</summary>
@@ -33,14 +33,14 @@ Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) 
 | 4 | [SkillsMP](https://skillsmp.com) | **508,758+** | ⭐⭐⭐☆☆ | Web |
 | 6 | [agentskill.sh](https://agentskill.sh) | **107,000+** | ⭐⭐⭐☆☆ | Web, CLI |
 | 7 | [AgentSkills](https://agentskills.to/skills) | **24,000+**  | ⭐⭐⭐☆☆ | Web |
-| 8 | [LobeHub](https://lobehub.com/bg/skills) | **255,924+** | ⭐⭐⭐☆☆ | Web |
+| 8 | [LobeHub](https://lobehub.com/bg/skills) | **275,916+** | ⭐⭐⭐☆☆ | Web |
 | 9 | [prompts.chat](https://prompts.chat) | **35+** | ⭐⭐⭐☆☆ | Web |
 | 11 | [MCP Market](https://mcpmarket.com/tools/skills) | **26+** | ⭐⭐☆☆☆ | Web |
 | 12 | [agent-skills.cc](https://agent-skills.cc/) | **63,000+** | ⭐⭐☆☆☆ | Web |
 | 13 | [AwesomeSkill.ai](https://awesomeskill.ai) | **50,000+** | ⭐⭐☆☆☆ | Web |
 | 14 | [awesomeskills.dev](https://awesomeskills.dev) | **2,287+** | ⭐⭐☆☆☆ | Web |
 | 15 | [AgentSkillsHub](https://agentskillshub.dev/) | **460+** | ⭐☆☆☆☆ | Web |
-| 16 | [Awesome Claude Skills](https://awesome-skills.com) | **146+** | ⭐☆☆☆☆ | Web |
+| 16 | [Awesome Claude Skills](https://awesome-skills.com) | **150+** | ⭐☆☆☆☆ | Web |
 | 17 | [Skill Registry](https://skillregistry.io/) | **61+** | ⭐☆☆☆☆ | Web |
 
 </details>
@@ -81,15 +81,15 @@ Path: `skills/<function-department>/`
 | Skill | Platform | Source | Verified |
 | --- | --- | --- | --- |
 | `skill-scanner` | `openclaw, MCP` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/bvinci1-design/skill-scanner](https://github.com/bvinci1-design/skill-scanner) | ✅ |
-| `skill-review` | `openclaw, MCP` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [OpenSkillReview](skills/Skill-Safe/skill-review) | ✅ |
+| `skill-review` | `openclaw, MCP` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [OpenSkillsReview](skills/Skill-Safe/skill-review) | ✅ |
 
 ### Skill for Information
 
 | Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
-| `claude-jobs` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [OpenSkillsReview](skills/Skill-Information/claude-jobs) | ✅ |
+| `claude-jobs` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [jshchnz/claude-jobs](https://github.com/jshchnz/claude-jobs) | ✅ |
 | `polymarket-market-data` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/OpenSkillsReview](skills/Skill-Information/polymarket-market-data) | ✅ |
-| `6551-daily-news` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [OpenSkillsReview](skills/Skill-Information/6551-daily-news) | ✅ |
+| `6551-daily-news` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [6551](skills/Skill-Information/6551-daily-news) | ✅ |
 
 ### Skill for Science
 

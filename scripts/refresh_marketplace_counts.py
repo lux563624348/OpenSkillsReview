@@ -61,7 +61,7 @@ MARKETPLACES: Iterable[Marketplace] = [
     ),
     Marketplace(
         name="Agent Skills Directory",
-        url="https://www.skillsdirectory.org",
+        url="https://www.skillsdirectory.com/",
         patterns=[
             r"([\d,]+)\s+unique skills",
             r"([\d,]+)\s+indexed skill files",

@@ -1,5 +1,5 @@
 ---
-name: Protein Interaction Network Analysis
+name: protein-interaction-network-analysis
 description: Analyze protein-protein interaction networks using STRING, BioGRID, and SASBDB databases. Maps protein identifiers, retrieves interaction networks with confidence scores, performs functional enrichment analysis (GO/KEGG/Reactome), and optionally includes structural data. No API key required for core functionality (STRING). Use when analyzing protein networks, discovering interaction partners, identifying functional modules, or studying protein complexes.
 ---
 

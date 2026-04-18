@@ -19,8 +19,8 @@ for rel_repo_path in "${SKILL_REPO_PATHS[@]}"; do
   dest_dir="$REPO_ROOT/skills/$rel_dest_path"
 
   if [[ ! -d "$upstream_repo_dir/.git" ]]; then
-    echo "Error: source repo not found at $upstream_repo_dir"
-    exit 1
+    echo "Skipping: source repo not found at $upstream_repo_dir"
+    continue
   fi
 
   if [[ "$rel_dest_path" == "$rel_repo_path" ]]; then
@@ -28,8 +28,16 @@ for rel_repo_path in "${SKILL_REPO_PATHS[@]}"; do
     exit 1
   fi
 
+  if [[ -n "$(git -C "$upstream_repo_dir" status --porcelain)" ]]; then
+    echo "Skipping: local changes present in $upstream_repo_dir"
+    continue
+  fi
+
   echo "Running git pull in: $upstream_repo_dir"
-  git -C "$upstream_repo_dir" pull
+  if ! git -C "$upstream_repo_dir" pull --no-rebase; then
+    echo "Skipping: git pull failed in $upstream_repo_dir"
+    continue
+  fi
 
   echo "Syncing $source_dir -> $dest_dir"
   mkdir -p "$dest_dir"

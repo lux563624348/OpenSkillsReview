@@ -574,8 +574,8 @@ function() {
         with gr.Row(equal_height=True):
             # Left side inputs and buttons
             with gr.Column(scale=1):
-                base_url_in = gr.Textbox(label="Base URL", value="https://sg.uiuiapi.com/v1")
-                api_key_in = gr.Textbox(label="API Key", value="sk-xxx...")
+                base_url_in = gr.Textbox(label="Base URL", value="openAI base URL here")
+                api_key_in = gr.Textbox(label="API Key", value="your openAI key here")
                 goal_in = gr.Textbox(label="Goal", value="please do rna-seq analysis.")
                 datalist_in = gr.Textbox(
                     label="Data List (One item per line. Format: Path: Description)",
