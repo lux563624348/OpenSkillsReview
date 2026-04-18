@@ -1,1 +1,0 @@
-# genome-compare skill package

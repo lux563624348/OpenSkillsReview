@@ -1,7 +1,0 @@
-# Auto-generated patient files (re-generate with generate_patient.py)
-examples/data/patient_*.csv
-
-__pycache__/
-*.py[cod]
-.venv/
-.DS_Store

@@ -13,6 +13,21 @@
 
 Create Your Own Skill: [Anthropic Skills](https://github.com/anthropics/skills) & [OpenAI Skills](https://github.com/openai/skills)
 
+## Usage
+
+Install skills from this repository with `npx skills add`:
+
+```bash
+# list all skills in a repo
+npx skills add https://github.com/lux563624348/OpenSkillsReview --list
+
+# list skills only inside a subfolder
+npx skills add https://github.com/lux563624348/OpenSkillsReview/tree/main/skills/Skill-Finance --list
+
+# install a specific skill from that folder
+npx skills add https://github.com/lux563624348/OpenSkillsReview/tree/main/skills/Skill-Finance --skill ai-trade-ecometrics
+```
+
 
 
 ## Review Table for Skills-Source 
@@ -95,7 +110,7 @@ Path: `skills/<function-department>/`
 
 | Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
-| `scientific-skills` | `claude` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
+| `scientific-skills` | `claude` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/K-Dense-AI](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
 | `academic-research` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [Imbad0202](https://github.com/Imbad0202/academic-research-skills) | ✅ |
 | `ClawBio` | `openclaw` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [ClawBio](https://github.com/ClawBio/ClawBio) | ❓ |
 
@@ -120,9 +135,9 @@ Intro article: https://mp.weixin.qq.com/s/i8Mm147XfD0DR41K_nQCnw
 
 | Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
-| `binance-skills-hub` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/binance/binance-skills-hub](https://github.com/binance/binance-skills-hub) | ✅ |
+| `binance-skills-hub` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/binance](https://github.com/binance/binance-skills-hub) | ✅ |
 | `mxClaw-skills` | `mxClaw` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [mxClaw](https://ai.eastmoney.com/) | ✅ |
-| `awesome-finance-skills` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/RKiding/Awesome-finance-skills](https://github.com/RKiding/Awesome-finance-skills) | ❓ |
+| `awesome-finance-skills` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/RKiding](https://github.com/RKiding/Awesome-finance-skills) | ❓ |
 | `open-fintech` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/ly229/OpenFinTech](https://github.com/ly229/OpenFinTech) | ❓ |
 
 

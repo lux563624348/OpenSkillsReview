@@ -1,1 +1,0 @@
-# gwas-lookup core modules
