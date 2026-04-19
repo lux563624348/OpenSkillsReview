@@ -1,0 +1,5 @@
+interface:
+  display_name: "WRDS Data Collection"
+  short_description: "Extract WRDS data with Python and SQL"
+  default_prompt: "Use $skill-wrds-data-collection to draft a reproducible WRDS Python connection and SQL extraction procedure for finance research."
+
