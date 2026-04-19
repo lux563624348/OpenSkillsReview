@@ -135,11 +135,10 @@ Intro article: https://mp.weixin.qq.com/s/i8Mm147XfD0DR41K_nQCnw
 
 | Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
-| `wrds-data-collection` | `open-fintech` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [OpenFinTech](skills/Skill-Finance/wrds-data-collection) | ✅ |
+| `wrds-data-collection` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [OpenFinTech](skills/Skill-Finance/wrds-data-collection) | ✅ |
 | `binance-skills-hub` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/binance](https://github.com/binance/binance-skills-hub) | ✅ |
 | `mxClaw-skills` | `mxClaw` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [mxClaw](https://ai.eastmoney.com/) | ✅ |
 | `awesome-finance-skills` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/RKiding](https://github.com/RKiding/Awesome-finance-skills) | ❓ |
-| `open-fintech` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/ly229/OpenFinTech](https://github.com/ly229/OpenFinTech) | ❓ |
 
 
 ## Goals
