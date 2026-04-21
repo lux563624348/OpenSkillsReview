@@ -106,6 +106,14 @@ Path: `skills/<function-department>/`
 | `polymarket-market-data` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/OpenSkillsReview](skills/Skill-Information/polymarket-market-data) | ✅ |
 | `6551-daily-news` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [6551](skills/Skill-Information/6551-daily-news) | ✅ |
 
+### Skill for Image
+
+| Skill | Platform | Source | Verified(❓) |
+| --- | --- | --- | --- |
+| `ai-image-generation` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [OpenSkillsReview](skills/Skill-Image/ai-image-generation) | ✅ |
+
+`skills/Skill-Image/ai-image-generation` is the image-generation reference skill for creating and editing AI images with `infsh`, and it includes generated example outputs under `generated_images/`.
+
 ### Skill for Science
 
 | Skill | Platform | Source | Verified(❓) |

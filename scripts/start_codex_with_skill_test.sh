@@ -9,7 +9,7 @@ LAUNCH_CODEX_HOME="${LAUNCH_CODEX_HOME:-$REPO_ROOT/.codex-skill-test-home}"
 BASE_CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
 
 if [[ $# -lt 1 ]]; then
-  echo "Usage: $0 <work_dir> [skill_path] [codex args...]" >&2
+  echo "Usage: $0 <work_dir> [skill_root_or_skill_path] [codex args...]" >&2
   exit 1
 fi
 
@@ -44,14 +44,14 @@ if [[ -n "$INPUT_SKILL_PATH" ]]; then
 
   mkdir -p "$SKILL_SOURCE_DIR"
 
-  if [[ ! -f "$INPUT_SKILL_PATH/SKILL.md" ]]; then
-    echo "Error: SKILL.md not found in: $INPUT_SKILL_PATH" >&2
+  if ! find "$INPUT_SKILL_PATH" -type f -name "SKILL.md" -print -quit | grep -q .; then
+    echo "Error: no SKILL.md files found under: $INPUT_SKILL_PATH" >&2
     exit 1
   fi
 
-  # Replace previous test skills with the selected one.
+  # Replace previous test skills with the selected skill tree.
   find "$SKILL_SOURCE_DIR" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
-  cp -a "$INPUT_SKILL_PATH" "$SKILL_SOURCE_DIR/"
+  cp -a "$INPUT_SKILL_PATH"/. "$SKILL_SOURCE_DIR/"
 fi
 
 # Reuse existing Codex settings and auth when available.
