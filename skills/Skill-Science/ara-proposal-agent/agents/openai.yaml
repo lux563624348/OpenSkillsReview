@@ -1,0 +1,4 @@
+interface:
+  display_name: "ARA Proposal Agent"
+  short_description: "Draft Amazon Research Awards proposals"
+  default_prompt: "Use $skill-ara-proposal-agent to draft an Amazon Research Awards proposal, check eligibility, and fill the official template."
