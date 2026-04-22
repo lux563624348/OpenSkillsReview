@@ -135,6 +135,7 @@ Path: `skills/<function-department>/`
 
 | Skill | Platform | Source | Verified(❓) |
 | --- | --- | --- | --- |
+| `Skill-Dev` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | ❓ |
 | `minimax-ai-skills` | `Claude Code, Cursor, Windsurf, OpenCode` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [MiniMax-AI/skills](https://github.com/MiniMax-AI/skills) | ❓ |
 
 Intro article: https://mp.weixin.qq.com/s/i8Mm147XfD0DR41K_nQCnw
