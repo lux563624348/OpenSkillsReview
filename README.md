@@ -116,6 +116,7 @@ Path: `skills/<function-department>/`
 | --- | --- | --- | --- |
 | `scientific-skills` | `claude` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [github.com/K-Dense-AI](https://github.com/K-Dense-AI/claude-scientific-skills) | ✅ |
 | `academic-research` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [Imbad0202](https://github.com/Imbad0202/academic-research-skills) | ✅ |
+| `aitmpl-research-grants` | `AI Templates` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [aitmpl.com](https://www.aitmpl.com/) | ❓ Some inconsistancy |
 | `ClawBio` | `openclaw` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [ClawBio](https://github.com/ClawBio/ClawBio) | ❓ |
 
 <details>
