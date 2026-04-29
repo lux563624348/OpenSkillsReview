@@ -4,6 +4,27 @@ set -euo pipefail
 CONFIG_DIR="${HOME}/.cc-connect"
 CONFIG_FILE="${CONFIG_DIR}/config.toml"
 
+RESTART_ONLY=false
+if [[ "${1:-}" == "--restart-only" ]]; then
+  RESTART_ONLY=true
+  shift
+fi
+
+if [[ "${RESTART_ONLY}" == true ]]; then
+  if [[ $# -ne 0 ]]; then
+    echo "Usage: $0 --restart-only" >&2
+    exit 1
+  fi
+
+  if cc-connect daemon status 2>/dev/null | rg -q 'Status:\s+Running'; then
+    cc-connect daemon restart
+    exit 0
+  fi
+
+  echo "cc-connect daemon is not running" >&2
+  exit 1
+fi
+
 TOKEN="${1:-}"
 TELEGRAM_USER_ID="${2:-}"
 ALLOW_FROM="${CC_CONNECT_ALLOW_FROM:-${TELEGRAM_USER_ID}}"

@@ -34,6 +34,12 @@ Set up `cc-connect` with the setup script:
 scripts/setup-cc-connect.sh "<TELEGRAM_BOT_TOKEN>" "<TELEGRAM_USER_ID>"
 ```
 
+Restart an existing `cc-connect` daemon without rewriting the config:
+
+```bash
+scripts/setup-cc-connect.sh --restart-only
+```
+
 
 
 ## Review Table for Skills-Source 
