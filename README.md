@@ -28,6 +28,12 @@ npx skills add https://github.com/lux563624348/OpenSkillsReview/tree/main/skills
 npx skills add https://github.com/lux563624348/OpenSkillsReview/tree/main/skills/Skill-Finance --skill ai-trade-ecometrics
 ```
 
+Set up `cc-connect` with the setup script:
+
+```bash
+scripts/setup-cc-connect.sh "<TELEGRAM_BOT_TOKEN>" "<TELEGRAM_USER_ID>"
+```
+
 
 
 ## Review Table for Skills-Source 
