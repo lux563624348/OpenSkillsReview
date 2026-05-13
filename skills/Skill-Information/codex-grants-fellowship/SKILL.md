@@ -76,6 +76,12 @@ Use this skill to find current grant, fellowship, residency, research award, acc
 | google ai residency | https://research.google.com/teams/brain/residency/ |
 | google cloud for researchers | https://cloud.google.com/edu/researchers |
 
+## Government Programs
+
+| Org | Endpoint |
+|---------|----------|
+| nsf career | https://www.nsf.gov/funding/opportunities/career-faculty-early-career-development-program |
+
 ## Nonprofit Organizations
 
 | Org | Endpoint |
