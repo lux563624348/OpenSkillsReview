@@ -130,6 +130,7 @@ Path: `skills/<function-department>/`
 | `academic-research` | `all` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [Imbad0202](https://github.com/Imbad0202/academic-research-skills) | ✅ |
 | `aitmpl-research-grants` | `AI Templates` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [aitmpl.com](https://www.aitmpl.com/) | ❓ Some inconsistancy |
 | `ClawBio` | `openclaw` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [ClawBio](https://github.com/ClawBio/ClawBio) | ❓ |
+| `terminal-bench-science` | `OpenSkillsReview` ![Free](https://img.shields.io/badge/Free_to_use-yes-2ea44f?logo=opensourceinitiative&logoColor=white) | [OpenSkillsReview](skills/Skill-Science/terminal-bench-science) | ❓ |
 
 <details>
 <summary>Show more</summary>
