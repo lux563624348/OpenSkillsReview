@@ -40,6 +40,26 @@ Restart an existing `cc-connect` daemon without rewriting the config:
 scripts/setup-cc-connect.sh --restart-only
 ```
 
+### Local Sync
+
+If you maintain local upstream checkouts under `Skills_Hub/`, you can mirror them into this repo with:
+
+```bash
+bash scripts/skills_sync.sh
+```
+
+The sync script:
+- pulls each configured local repo if it exists and is clean
+- mirrors the repo contents into the matching `skills/...` directory here
+- skips any source repo that is missing or has local changes
+- currently expects these local source paths:
+  - `Skills_Hub/Skill-Science/claude-scientific-skills`
+  - `Skills_Hub/Skill-Science/ClawBio`
+  - `Skills_Hub/Skill-Science/OpenClaw-Medical-Skills`
+  - `Skills_Hub/Skill-Finance/Awesome-finance-skills`
+  - `Skills_Hub/Skill-Finance/OpenFinTech`
+  - `Skills_Hub/Skill-Finance/binance-skills-hub`
+
 
 
 ## Review Table for Skills-Source 
